@@ -85,37 +85,23 @@ body {
   font-weight: 600;
 }
 .banner button {
-  -webkit-text-size-adjust: 100%;
   font-family: Poppins, sans-serif;
   letter-spacing: 0.4px;
-  -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
-  background: transparent;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  user-select: none;
   text-transform: uppercase;
   border-radius: 3px;
-  white-space: normal;
-  color: #fff;
   background-color: #4183d7;
-  border-color: #4183d7;
-  height: auto;
-  padding: 15px 30px;
+  border: 1px solid #4183d7;
+  color: #fff;
+  padding: 5px 20px;
   font-size: 1.25rem;
   line-height: 50px;
-  margin-bottom: 1.125rem;
-  margin-top: 1.938rem;
+  margin: 1.938rem 0 1.125rem;
+  cursor: pointer;
 }
 .banner button:hover {
   background-color: #0056b3;
-  border-color: #4183d7;
+  border-color: #0056b3;
 }
 
 /* Media Queries for responsiveness */

@@ -1,0 +1,131 @@
+.about {
+  background-color: #323544; /* Dark background matching footer */
+  color: #fff; /* White text for readability */
+  padding: 50px 0;
+}
+
+.about-row {
+  display: flex;
+  justify-content: space-between; /* Ensure sections are left and right */
+  gap: 30px; /* Add space between the sections */
+}
+
+.welcome-section,
+.clients-section {
+  flex: 1; /* Equal space for both sections */
+}
+
+/* Welcome Section */
+h1 {
+  font-family: Poppins, sans-serif;
+  font-size: 2.25rem;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  color: #fff;
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+}
+
+/* Clients Section */
+.clients-section .testimonial {
+  margin-bottom: 20px; /* Space between testimonials */
+}
+
+.clients-section .stars {
+  font-size: 1.5rem;
+  color: #FFD700; /* Gold stars */
+  margin-bottom: 10px;
+}
+
+.clients-section p {
+  font-family: Poppins, sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.4px;
+  color: #fff;
+  line-height: 1.875rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.clients-section .testimonial span {
+  font-family: Poppins, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.4px;
+  line-height: 1.875rem;
+  color: #a3a8ac;
+  font-weight: 600;
+}
+
+/* Stars */
+.clients-section .stars {
+  font-family: FontAwesome;
+  font-size: 50px;
+  color: orange;
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+.choose-button button {
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  color: #fff;
+  background-color: #272936; /* Default button color */
+  padding: 10px 30px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 17px;
+  letter-spacing: 0.4px;
+  line-height: 35px;
+}
+
+.choose-button button:hover {
+  background-color: #444654; /* Slightly lighter on hover */
+}
+
+/* Google button */
+.choose-button .google {
+  background-color: #4285F4; /* Blue color for Google */
+}
+
+.choose-button .google:hover {
+  background-color: #357ae8; /* Darker blue on hover */
+}
+
+/* Trustpilot button */
+.choose-button .trustpilot {
+  background-color: #00b67a; /* Green color for Trustpilot */
+}
+
+.choose-button .trustpilot:hover {
+  background-color: #008c5a; /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+  .about-row {
+    flex-direction: column; /* Stacks sections on small screens */
+  }
+}
+@media (min-width: 992px) {
+  .about-row {
+    flex: 20%;
+  }
+}
+@media (min-width: 1260px) {
+  .about-row {
+    margin-bottom: 40px;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

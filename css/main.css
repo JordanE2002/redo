@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
 }
@@ -906,6 +907,47 @@ footer {
   .footer-menu {
     margin-bottom: 40px;
   }
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?xu9142");
+  src: url("../fonts/icomoon.eot?xu9142#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?xu9142") format("truetype"), url("../fonts/icomoon.woff?xu9142") format("woff"), url("../fonts/icomoon.svg?xu9142#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-screen:before {
+  content: "🌌";
+}
+
+.icon-comment:before {
+  content: "\ea80";
+}
+
+/* Target the specific icons and apply custom styles */
+.icon-screen, .icon-comment {
+  font-size: 300px; /* Change the size of the icons */
+  color: #ff5733; /* Change the color of the icons */
+  transition: all 0.3s ease; /* Optional: Smooth transition effect for hover */
+}
+
+/* Optional: Add a hover effect for interaction */
+.icon-screen:hover, .icon-comment:hover {
+  color: #007bff; /* Change color when hovering */
+  transform: scale(1.2); /* Slightly enlarge the icon when hovered */
 }
 
 /*# sourceMappingURL=main.css.map */

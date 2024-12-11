@@ -116,15 +116,11 @@ h1 {
 }
 
 
-@media (max-width: 768px) {
-    .about-row {
-        flex-direction: column; 
-    }
-}
 
-@media (min-width: 992px) {
+
+@media (max-width: 992px) {
     .about-row {
-        flex: 20%;
+        flex-direction: column;
     }
 }
 
@@ -132,4 +128,7 @@ h1 {
     .about-row {
         margin-bottom: 40px;
     }
-}
+    
+
+    }
+

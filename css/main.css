@@ -168,6 +168,126 @@ body {
   transform: translate(-50%, -10px); /* Slight lift */
 }
 
+/* Latest News Section Styling */
+.latest-news-section {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+}
+
+.latest-news-section h2 {
+  font-size: 2rem;
+  color: #333645;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.news-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* News Card Styling */
+.news-card {
+  flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-8px);
+}
+
+/* News Image */
+.news-image img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  object-fit: cover;
+}
+
+/* News Content */
+.news-content {
+  padding: 15px;
+}
+
+.news-content h3 {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  letter-spacing: 0.4px;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  box-sizing: border-box;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: #926fb1;
+}
+
+.news-content p {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 5px 0;
+}
+
+.news-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  background-color: #db8c0d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.news-button:hover {
+  background-color: #c47a09;
+}
+
+/* News Footer */
+.news-footer {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  margin-top: auto;
+}
+
+.author-image img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.author-info p {
+  font-size: 0.8rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .news-card {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row */
+  }
+}
+@media (max-width: 768px) {
+  .news-card {
+    flex: 1 1 100%; /* Stacks cards vertically */
+  }
+}
 .about {
   background-color: #323544;
   color: #fff;
@@ -282,14 +402,9 @@ p {
   background-color: #008c5a;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .about-row {
     flex-direction: column;
-  }
-}
-@media (min-width: 992px) {
-  .about-row {
-    flex: 20%;
   }
 }
 @media (min-width: 1260px) {

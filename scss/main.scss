@@ -51,14 +51,14 @@
 
 
   /* Target the specific icons and apply custom styles */
-.icon-screen, .icon-comment {
+.icon-screen-poo{
     font-size: 300px;        /* Change the size of the icons */
     color: #ff5733;         /* Change the color of the icons */
     transition: all 0.3s ease;  /* Optional: Smooth transition effect for hover */
 }
 
 /* Optional: Add a hover effect for interaction */
-.icon-screen:hover, .icon-comment:hover {
+.icon-screen-poo:hover {
     color: #007bff;  /* Change color when hovering */
     transform: scale(1.2);  /* Slightly enlarge the icon when hovered */
 }

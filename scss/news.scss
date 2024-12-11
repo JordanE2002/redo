@@ -20,7 +20,7 @@
 
 /* News Card Styling */
 .news-card {
-    flex: 1 1 calc(33.333% - 20px); 
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row by default */
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 0;
@@ -121,9 +121,12 @@
     display: flex;
     align-items: center;
     padding: 15px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ccc;
     margin-top: auto;
 }
+
+
+
 
 .author-image img {
     width: 40px;

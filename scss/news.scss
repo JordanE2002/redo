@@ -20,15 +20,16 @@
 
 /* News Card Styling */
 .news-card {
-    flex: 1 1 calc(33.333% - 20px); /* Three cards per row by default */
+    flex: 1 1 calc(33.333% - 20px); 
     background: #fff;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .news-card:hover {
@@ -50,16 +51,24 @@
 
 .news-content h3 {
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    letter-spacing: .4px;
-    font-family: poppins,sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    letter-spacing: 0.4px;
+    font-family: Poppins, sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
     box-sizing: border-box;
     background: transparent;
     text-decoration: none;
     font-weight: 600;
-    color: #926fb1;
+}
+
+/* Alternating header colors */
+.news-card:nth-child(odd) .news-content h3 {
+    color: #db8c0d; /* Orange */
+}
+
+.news-card:nth-child(even) .news-content h3 {
+    color: #926fb1; /* Purple */
 }
 
 .news-content p {
@@ -68,11 +77,12 @@
     margin: 5px 0;
 }
 
+/* News Button Styling */
 .news-button {
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    font-family: Poppins,sans-serif;
-    letter-spacing: .4px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: Poppins, sans-serif;
+    letter-spacing: 0.4px;
     box-sizing: border-box;
     background: transparent;
     text-decoration: none;
@@ -80,7 +90,6 @@
     margin-bottom: 0;
     text-align: center;
     vertical-align: middle;
-    cursor: pointer;
     background-image: none;
     border: 1px solid transparent;
     user-select: none;
@@ -92,14 +101,20 @@
     border-radius: 3px;
     white-space: normal;
     color: #fff;
-    background-color: #2ecc71;
-    border-color: #2ecc71;
     font-weight: 400;
 }
 
-.news-button:hover {
-    background-color: #c47a09;
+/* Alternating button colors */
+.news-card:nth-child(odd) .news-button {
+    background-color: #db8c0d; /* Orange */
+    border-color: #db8c0d;
 }
+
+.news-card:nth-child(even) .news-button {
+    background-color: #926fb1; /* Purple */
+    border-color: #926fb1;
+}
+
 
 /* News Footer */
 .news-footer {

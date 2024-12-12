@@ -135,11 +135,6 @@ body {
   text-align: center;
 }
 
-.our-services-icon-arrow-right {
-  margin-left: 8px;
-}
-
-/* Service List Styles */
 .service-list {
   display: flex;
   flex-wrap: wrap;
@@ -218,26 +213,20 @@ body {
   width: 100%;
 }
 
-/* Button Styling */
 .service-button {
   font-family: Poppins, sans-serif;
   letter-spacing: 0.4px;
-  box-sizing: border-box;
   background: transparent;
   text-decoration: none;
   display: inline-block;
   text-align: center;
-  vertical-align: middle;
   cursor: pointer;
   border: 1px solid transparent;
-  user-select: none;
-  height: auto;
   line-height: 35px;
   padding: 5px 15px;
   text-transform: uppercase;
   font-size: 1.063rem;
   border-radius: 3px;
-  white-space: normal;
   font-weight: 400;
 }
 
@@ -266,6 +255,16 @@ body {
   background-color: #926fb1;
 }
 
+.cyber-security-button {
+  color: white;
+  background-color: #f62459;
+}
+
+.developer-training-button {
+  color: white;
+  background-color: #ce4125;
+}
+
 .our-services-bottom {
   display: flex;
   flex-wrap: wrap;
@@ -273,172 +272,45 @@ body {
 }
 
 /* Hover Effects */
-.software:hover {
-  color: #fff;
-  border-color: transparent;
-  top: -10px;
-  transition: 0.5s ease;
-  background-color: #67809f;
-}
-
-.software:hover h2,
-.software:hover p {
-  color: #fff;
-}
-
-.software:hover a {
-  background-color: #fff;
-  color: #67809f;
-  border-color: transparent;
-}
-
-.software:hover span {
-  color: #67809f;
-  background-color: #fff;
-}
-
-.IT-support:hover {
-  color: #fff;
-  border-color: transparent;
-  top: -10px;
-  transition: 0.5s ease;
-  background-color: #4183d7;
-}
-
-.IT-support:hover h2,
-.IT-support:hover p {
-  color: #fff;
-}
-
-.IT-support:hover a {
-  background-color: #fff;
-  color: #4183d7;
-  border-color: transparent;
-}
-
-.IT-support:hover span {
-  color: #4183d7;
-  background-color: #fff;
-}
-
-.digital-marketing:hover {
-  color: #fff;
-  border-color: transparent;
-  top: -10px;
-  transition: 0.5s ease;
-  background-color: #2ecc71;
-}
-
-.digital-marketing:hover h2,
-.digital-marketing:hover p {
-  color: #fff;
-}
-
-.digital-marketing:hover a {
-  background-color: #fff;
-  color: #2ecc71;
-  border-color: transparent;
-}
-
-.digital-marketing:hover span {
-  color: #2ecc71;
-  background-color: #fff;
-}
-
-.telecoms-service:hover {
-  color: #fff;
-  border-color: transparent;
-  top: -10px;
-  transition: 0.5s ease;
-  background-color: #d64541;
-}
-
-.telecoms-service:hover h2,
-.telecoms-service:hover p {
-  color: #fff;
-}
-
-.telecoms-service:hover a {
-  background-color: #fff;
-  color: #d64541;
-  border-color: transparent;
-}
-
-.telecoms-service:hover span {
-  color: #d64541;
-  background-color: #fff;
-}
-
-.web-design:hover {
-  color: #fff;
-  border-color: transparent;
-  top: -10px;
-  transition: 0.5s ease;
-  background-color: #926fb1;
-}
-
-.web-design:hover h2,
-.web-design:hover p {
-  color: #fff;
-}
-
-.web-design:hover a {
-  background-color: #fff;
-  color: #926fb1;
-  border-color: transparent;
-}
-
-.web-design:hover span {
-  color: #926fb1;
-  background-color: #fff;
-}
-
-.cyber-security:hover {
-  color: #fff;
-  border-color: transparent;
-  top: -10px;
-  transition: 0.5s ease;
-  background-color: #f62459;
-}
-
-.cyber-security:hover h2,
-.cyber-security:hover p {
-  color: #fff;
-}
-
-.cyber-security:hover a {
-  background-color: #fff;
-  color: #f62459;
-  border-color: transparent;
-}
-
-.cyber-security:hover span {
-  color: #f62459;
-  background-color: #fff;
-}
-
+.software:hover,
+.IT-support:hover,
+.digital-marketing:hover,
+.telecoms-service:hover,
+.web-design:hover,
+.cyber-security:hover,
 .developer-training:hover {
   color: #fff;
   border-color: transparent;
   top: -10px;
   transition: 0.5s ease;
+}
+
+.software:hover {
+  background-color: #67809f;
+}
+
+.IT-support:hover {
+  background-color: #4183d7;
+}
+
+.digital-marketing:hover {
+  background-color: #2ecc71;
+}
+
+.telecoms-service:hover {
+  background-color: #d64541;
+}
+
+.web-design:hover {
+  background-color: #926fb1;
+}
+
+.cyber-security:hover {
+  background-color: #f62459;
+}
+
+.developer-training:hover {
   background-color: #ce4125;
-}
-
-.developer-training:hover h2,
-.developer-training:hover p {
-  color: #fff;
-}
-
-.developer-training:hover a {
-  background-color: #fff;
-  color: #ce4125;
-  border-color: transparent;
-}
-
-.developer-training:hover span {
-  color: #ce4125;
-  background-color: #fff;
 }
 
 /* Media Queries */
@@ -446,22 +318,24 @@ body {
   .service-list {
     flex-direction: row;
   }
+  .service-container-small {
+    width: 50%;
+  }
+  .service-small-1,
+  .service-small-3 {
+    padding-right: 15px;
+  }
+  .service-small-2,
+  .service-small-4 {
+    padding-left: 15px;
+  }
 }
-
 @media (min-width: 992px) {
   .service-container {
     width: 33.33333333%;
     padding-left: 15px;
     padding-right: 15px;
   }
-}
-
-@media (min-width: 767px) {
-  .service-container-small {
-    width: 50%;
-  }
-}
-@media (min-width: 992px) {
   .service-container-small {
     width: 50%;
   }
@@ -470,64 +344,20 @@ body {
   .service-container-small {
     width: 25%;
   }
-}
-
-@media (min-width: 767px) {
-  .service-small-1, .service-small-3 {
-    padding-right: 15px;
-  }
-}
-
-@media (min-width: 767px) {
-  .service-small-2, .service-small-4 {
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 992px) {
-  .service-small-1, .service-small-3 {
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 992px) {
-  .service-small-2, .service-small-4 {
-    padding-right: 15px;
-  }
-}
-
-@media (min-width: 1260px) {
   .service-small-4 {
     padding-right: 13px;
   }
 }
-
 @media (max-width: 767px) {
   .our-services-top h1 {
     display: none;
   }
 }
-
 @media (min-width: 767px) {
   .our-services-bottom {
     display: none;
   }
 }
-
-/* IT Support Button Hover */
-.IT-support:hover .IT-button {
-  background-color: #fff;
-  color: #4183d7;
-  border-color: transparent;
-}
-
-/* Digital Marketing Button Hover */
-.digital-marketing:hover .digital-marketing-button {
-  background-color: #fff;
-  color: #2ecc71;
-  border-color: transparent;
-}
-
 /* Partners Section */
 .partners {
   display: flex;

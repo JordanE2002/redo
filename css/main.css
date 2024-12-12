@@ -106,15 +106,13 @@ body {
     align-items: flex-start;
   }
 }
-.our-services {
-  padding-top: 30px;
-}
 .our-services h2 {
   font-size: 2.7rem;
   line-height: 1.1;
   color: #333645;
   font-weight: 400;
 }
+
 .our-services h3 {
   line-height: 1.1;
   font-size: 1.625rem;
@@ -123,11 +121,13 @@ body {
   text-align: right;
 }
 
+/* Top Section Styles */
 .our-services-top {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .our-services-top h1 {
   font-size: 2.25rem;
   font-weight: 600;
@@ -139,12 +139,14 @@ body {
   margin-left: 8px;
 }
 
+/* Service List Styles */
 .service-list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
-.service-list .service {
+
+.service {
   display: block;
   border: 1px solid #ccc;
   padding: 30px;
@@ -155,20 +157,23 @@ body {
   top: 0;
   position: relative;
 }
-.service-list p {
+
+.service p {
   font-size: 0.8125rem;
   font-weight: 400;
   margin-bottom: 13px;
   line-height: 1.375rem;
   color: #333645;
 }
-.service-list h2 {
+
+.service h2 {
   font-size: 1.3rem;
   position: relative;
   padding-bottom: 10px;
   margin: 0 0 11px;
 }
-.service-list span {
+
+.service span {
   display: block;
   font-size: 2rem;
   line-height: 62px;
@@ -179,8 +184,81 @@ body {
   border-radius: 50%;
 }
 
+/* Service Color Classes */
+.software-color {
+  background-color: #67809f;
+}
+
+.IT-support-color {
+  background-color: #4183d7;
+}
+
+.digital-marketing-color {
+  background-color: #2ecc71;
+}
+
+.telecoms-service-color {
+  background-color: #d64541;
+}
+
+.web-design-color {
+  background-color: #926fb1;
+}
+
+.cyber-security-color {
+  background-color: #f62459;
+}
+
+.developer-training-color {
+  background-color: #ce4125;
+}
+
+/* Service Container Styles */
 .service-container {
   width: 100%;
+}
+
+/* Button Styling */
+.service-button {
+  font-family: Poppins, sans-serif;
+  letter-spacing: 0.4px;
+  box-sizing: border-box;
+  background: transparent;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  user-select: none;
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  white-space: normal;
+  font-weight: 400;
+}
+
+.software-button {
+  color: white;
+  background-color: #f7b322;
+}
+
+.IT-button {
+  color: white;
+  background-color: #4183d7;
+}
+
+.IT-button:hover {
+  color: #4183d7;
+  background-color: white;
+}
+
+.digital-marketing-button {
+  color: white;
+  background-color: #2ecc71;
 }
 
 .our-services-bottom {
@@ -189,6 +267,7 @@ body {
   justify-content: center;
 }
 
+/* Hover Effects */
 .software:hover {
   color: #fff;
   border-color: transparent;
@@ -196,41 +275,43 @@ body {
   transition: 0.5s ease;
   background-color: #67809f;
 }
-.software:hover h2 {
-  color: #fff;
-}
+
+.software:hover h2,
 .software:hover p {
   color: #fff;
 }
+
 .software:hover a {
   background-color: #fff;
   color: #67809f;
   border-color: transparent;
 }
+
 .software:hover span {
   color: #67809f;
   background-color: #fff;
 }
 
-.it-support:hover {
+.IT-support:hover {
   color: #fff;
   border-color: transparent;
   top: -10px;
   transition: 0.5s ease;
   background-color: #4183d7;
 }
-.it-support:hover h2 {
+
+.IT-support:hover h2,
+.IT-support:hover p {
   color: #fff;
 }
-.it-support:hover p {
-  color: #fff;
-}
-.it-support:hover a {
+
+.IT-support:hover a {
   background-color: #fff;
   color: #4183d7;
   border-color: transparent;
 }
-.it-support:hover span {
+
+.IT-support:hover span {
   color: #4183d7;
   background-color: #fff;
 }
@@ -242,17 +323,18 @@ body {
   transition: 0.5s ease;
   background-color: #2ecc71;
 }
-.digital-marketing:hover h2 {
-  color: #fff;
-}
+
+.digital-marketing:hover h2,
 .digital-marketing:hover p {
   color: #fff;
 }
+
 .digital-marketing:hover a {
   background-color: #fff;
   color: #2ecc71;
   border-color: transparent;
 }
+
 .digital-marketing:hover span {
   color: #2ecc71;
   background-color: #fff;
@@ -265,17 +347,18 @@ body {
   transition: 0.5s ease;
   background-color: #d64541;
 }
-.telecoms-service:hover h2 {
-  color: #fff;
-}
+
+.telecoms-service:hover h2,
 .telecoms-service:hover p {
   color: #fff;
 }
+
 .telecoms-service:hover a {
   background-color: #fff;
   color: #d64541;
   border-color: transparent;
 }
+
 .telecoms-service:hover span {
   color: #d64541;
   background-color: #fff;
@@ -288,17 +371,18 @@ body {
   transition: 0.5s ease;
   background-color: #926fb1;
 }
-.web-design:hover h2 {
-  color: #fff;
-}
+
+.web-design:hover h2,
 .web-design:hover p {
   color: #fff;
 }
+
 .web-design:hover a {
   background-color: #fff;
   color: #926fb1;
   border-color: transparent;
 }
+
 .web-design:hover span {
   color: #926fb1;
   background-color: #fff;
@@ -311,17 +395,18 @@ body {
   transition: 0.5s ease;
   background-color: #f62459;
 }
-.cyber-security:hover h2 {
-  color: #fff;
-}
+
+.cyber-security:hover h2,
 .cyber-security:hover p {
   color: #fff;
 }
+
 .cyber-security:hover a {
   background-color: #fff;
   color: #f62459;
   border-color: transparent;
 }
+
 .cyber-security:hover span {
   color: #f62459;
   background-color: #fff;
@@ -334,22 +419,24 @@ body {
   transition: 0.5s ease;
   background-color: #ce4125;
 }
-.developer-training:hover h2 {
-  color: #fff;
-}
+
+.developer-training:hover h2,
 .developer-training:hover p {
   color: #fff;
 }
+
 .developer-training:hover a {
   background-color: #fff;
   color: #ce4125;
   border-color: transparent;
 }
+
 .developer-training:hover span {
   color: #ce4125;
   background-color: #fff;
 }
 
+/* Media Queries */
 @media (min-width: 767px) {
   .service-list {
     flex-direction: row;

@@ -251,14 +251,19 @@ body {
   background-color: #4183d7;
 }
 
-.IT-button:hover {
-  color: #4183d7;
-  background-color: white;
-}
-
 .digital-marketing-button {
   color: white;
   background-color: #2ecc71;
+}
+
+.telecoms-button {
+  color: white;
+  background-color: #d64541;
+}
+
+.cyber-security-button {
+  color: white;
+  background-color: #926fb1;
 }
 
 .our-services-bottom {
@@ -507,6 +512,20 @@ body {
   .our-services-bottom {
     display: none;
   }
+}
+
+/* IT Support Button Hover */
+.IT-support:hover .IT-button {
+  background-color: #fff;
+  color: #4183d7;
+  border-color: transparent;
+}
+
+/* Digital Marketing Button Hover */
+.digital-marketing:hover .digital-marketing-button {
+  background-color: #fff;
+  color: #2ecc71;
+  border-color: transparent;
 }
 
 /* Partners Section */

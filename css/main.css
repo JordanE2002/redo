@@ -59,7 +59,7 @@ body {
 .banner-background .banner {
   position: relative;
   z-index: 2;
-  color: #fff;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,7 +69,7 @@ body {
 .banner-background .banner h1 {
   letter-spacing: 0.4px;
   margin: 0 0 1.25rem;
-  color: #fff;
+  color: white;
   font-weight: 600;
   font-size: 4rem;
   line-height: 5rem;
@@ -90,7 +90,7 @@ body {
   border-radius: 3px;
   background-color: #4183d7;
   border: 1px solid #4183d7;
-  color: #fff;
+  color: white;
   padding: 5px 20px;
   font-size: 1.25rem;
   line-height: 50px;
@@ -115,7 +115,7 @@ body {
     align-items: flex-start;
   }
   .banner-background .banner p {
-    text-align: left; /* Align text to the left on larger screens */
+    text-align: left;
   }
 }
 .our-services h2 {
@@ -149,7 +149,7 @@ body {
 
 .service {
   display: block;
-  border: 1px solid #ccc;
+  border: 1px solid grey;
   padding: 30px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -184,7 +184,7 @@ body {
   height: 65px;
   width: 65px;
   margin: 0 auto 17px;
-  color: #fff;
+  color: white;
   border-radius: 50%;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
@@ -196,46 +196,46 @@ body {
 }
 
 .service:hover h2 {
-  color: #fff;
+  color: white;
 }
 
 .service:hover p {
-  color: #f1f1f1;
+  color: white;
 }
 
-/* Hover Effects for Individual Services */
+/* Hover Effects for each service box*/
 .software:hover span {
-  background-color: #fff;
+  background-color: white;
   color: #67809f;
 }
 
 .IT-support:hover span {
-  background-color: #fff;
+  background-color: white;
   color: #4183d7;
 }
 
 .digital-marketing:hover span {
-  background-color: #fff;
+  background-color: white;
   color: #2ecc71;
 }
 
 .telecoms-service:hover span {
-  background-color: #fff;
+  background-color: white;
   color: #d64541;
 }
 
 .web-design:hover span {
-  background-color: #fff;
+  background-color: white;
   color: #926fb1;
 }
 
 .cyber-security:hover span {
-  background-color: #fff;
+  background-color: white;
   color: #f62459;
 }
 
 .developer-training:hover span {
-  background-color: #fff;
+  background-color: white;
   color: #ce4125;
 }
 
@@ -493,7 +493,7 @@ body {
   transform: translate(-50%, -10px); /* Slight lift */
 }
 
-/* Latest News Section Styling */
+/* News styles*/
 .latest-news-section {
   padding: 40px 0;
   background-color: #f9f9f9;
@@ -534,7 +534,7 @@ body {
 
 .news-card {
   flex: 1 1 calc(33.333% - 20px);
-  background: #fff;
+  background: white;
   border: 1px solid #ccc;
   border-radius: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -748,7 +748,7 @@ p {
 .choose-button button {
   font-family: Poppins, sans-serif;
   font-size: 20px;
-  color: #fff;
+  color: white;
   background-color: #272936;
   padding: 10px 30px;
   border: 1px solid transparent;
@@ -796,7 +796,7 @@ p {
 }
 footer {
   background-color: #323544;
-  color: #fff;
+  color: white;
   padding: 30px 0 0;
   position: relative;
 }
@@ -822,7 +822,7 @@ footer {
 
 /* The h4 follow us text  */
 .follow-us {
-  color: #fff;
+  color: white;
   text-transform: uppercase;
   font-size: 1rem;
   margin: 15px 0;
@@ -919,7 +919,7 @@ footer {
   background: #75788a;
   font-weight: 600;
   text-transform: capitalize;
-  color: #fff;
+  color: white;
   border: solid #75788a;
   border-width: 1px 1px 0 0;
   border-radius: 0;

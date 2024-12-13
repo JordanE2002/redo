@@ -30,7 +30,7 @@
 
 .service {
     display: block;
-    border: 1px solid #ccc;
+    border: 1px solid grey;
     padding: 30px;
     box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
@@ -65,7 +65,7 @@
     height: 65px;
     width: 65px;
     margin: 0 auto 17px;
-    color: #fff;
+    color: white;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
@@ -77,46 +77,46 @@
 }
 
 .service:hover h2 {
-    color: #fff;
+    color: white;
 }
 
 .service:hover p {
-    color: #f1f1f1;
+    color: white;
 }
 
-/* Hover Effects for Individual Services */
+/* Hover Effects for each service box*/
 .software:hover span {
-    background-color: #fff;
+    background-color: white;
     color: #67809f;
 }
 
 .IT-support:hover span {
-    background-color: #fff;
+    background-color: white;
     color: #4183d7;
 }
 
 .digital-marketing:hover span {
-    background-color: #fff;
+    background-color: white;
     color: #2ecc71;
 }
 
 .telecoms-service:hover span {
-    background-color: #fff;
+    background-color: white;
     color: #d64541;
 }
 
 .web-design:hover span {
-    background-color: #fff;
+    background-color: white;
     color: #926fb1;
 }
 
 .cyber-security:hover span {
-    background-color: #fff;
+    background-color: white;
     color: #f62459;
 }
 
 .developer-training:hover span {
-    background-color: #fff;
+    background-color: white;
     color: #ce4125;
 }
 

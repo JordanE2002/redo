@@ -1,4 +1,4 @@
-/* Latest News Section Styling */
+/* News styles*/
 .latest-news-section {
   padding: 40px 0;
   background-color: #f9f9f9;
@@ -39,7 +39,7 @@
 
 .news-card {
   flex: 1 1 calc(33.333% - 20px);
-  background: #fff;
+  background: white;
   border: 1px solid #ccc;
   border-radius: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

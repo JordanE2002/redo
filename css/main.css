@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   margin: 0;
 }
@@ -164,7 +163,6 @@ body {
   border-radius: 15px;
   text-align: center;
   margin-top: 30px;
-  top: 0;
   position: relative;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -213,9 +211,10 @@ body {
   color: #f1f1f1;
 }
 
+/* Hover Effects for Individual Services */
 .software:hover span {
-  background-color: #fff; /* Circle turns white */
-  color: #67809f; /* Icon color becomes the same as the service's background color */
+  background-color: #fff;
+  color: #67809f;
 }
 
 .IT-support:hover span {
@@ -277,7 +276,7 @@ body {
   background-color: #ce4125;
 }
 
-/* Individual Hover Effects */
+/* Individual Hover Backgrounds */
 .software:hover {
   background-color: #5a718a;
 }
@@ -310,7 +309,6 @@ body {
 .service-button {
   font-family: Poppins, sans-serif;
   letter-spacing: 0.4px;
-  background: transparent;
   text-decoration: none;
   display: inline-block;
   text-align: center;
@@ -325,43 +323,76 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.software-button {
-  color: white;
+/* Default Button Colors for Each Service */
+.software .service-button {
   background-color: #f7b322;
-}
-
-.IT-button {
   color: white;
-  background-color: #4183d7;
 }
 
-.digital-marketing-button {
+.IT-support .service-button {
+  background-color: #356fb5;
   color: white;
-  background-color: #2ecc71;
 }
 
-.telecoms-button {
+.digital-marketing .service-button {
+  background-color: #27b863;
   color: white;
-  background-color: #d64541;
 }
 
-.web-design-button {
+.telecoms-service .service-button {
+  background-color: #b53836;
   color: white;
-  background-color: #926fb1;
 }
 
-.cyber-security-button {
+.web-design .service-button {
+  background-color: #7b5a97;
   color: white;
-  background-color: #f62459;
 }
 
-.developer-training-button {
+.cyber-security .service-button {
+  background-color: #d11f4d;
   color: white;
-  background-color: #ce4125;
 }
 
-.service-button:hover {
-  transform: scale(1.05);
+.developer-training .service-button {
+  background-color: #b23920;
+  color: white;
+}
+
+/* Hover Effects for Buttons Inside Each Service */
+.software:hover .service-button {
+  background-color: white;
+  color: #67809f;
+}
+
+.IT-support:hover .service-button {
+  background-color: white;
+  color: #356fb5;
+}
+
+.digital-marketing:hover .service-button {
+  background-color: white;
+  color: #27b863;
+}
+
+.telecoms-service:hover .service-button {
+  background-color: white;
+  color: #b53836;
+}
+
+.web-design:hover .service-button {
+  background-color: white;
+  color: #7b5a97;
+}
+
+.cyber-security:hover .service-button {
+  background-color: white;
+  color: #d11f4d;
+}
+
+.developer-training:hover .service-button {
+  background-color: white;
+  color: #b23920;
 }
 
 /* Service Container Styles */
@@ -379,22 +410,14 @@ body {
     padding: 0 15px;
     box-sizing: border-box;
   }
-  .service-small-1,
-  .service-small-2,
-  .service-small-3,
-  .service-small-4 {
-    padding-right: 15px;
-    padding-left: 15px;
+  .service-small-1, .service-small-2, .service-small-3, .service-small-4 {
+    padding: 0 15px;
   }
 }
 @media (min-width: 992px) {
   .service-container {
     width: 33.33333333%;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .service-container-small {
-    width: 50%;
+    padding: 0 15px;
   }
 }
 @media (min-width: 1260px) {
@@ -921,8 +944,8 @@ footer {
 
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?xu9142");
-  src: url("../fonts/icomoon.eot?xu9142#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?xu9142") format("truetype"), url("../fonts/icomoon.woff?xu9142") format("woff"), url("../fonts/icomoon.svg?xu9142#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?f5hu2r");
+  src: url("../fonts/icomoon.eot?f5hu2r#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?f5hu2r") format("truetype"), url("../fonts/icomoon.woff?f5hu2r") format("woff"), url("../fonts/icomoon.svg?f5hu2r#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -940,25 +963,408 @@ footer {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-screen:before {
-  content: "🌌";
+.icon-envelope:before {
+  content: "\e901";
 }
 
-.icon-comment:before {
+.icon-phone2:before {
+  content: "\e921";
+}
+
+.icon-mobile:before {
+  content: "\e922";
+}
+
+.icon-headphone:before {
+  content: "\e923";
+}
+
+.icon-cloud:before {
+  content: "\e924";
+}
+
+.icon-arrow-up:before {
+  content: "\e902";
+}
+
+.icon-arrow-down:before {
+  content: "\e907";
+}
+
+.icon-arrow-left:before {
+  content: "\e908";
+}
+
+.icon-arrow-right1:before {
+  content: "\e90c";
+}
+
+.icon-check-alt:before {
+  content: "\e90f";
+}
+
+.icon-x-altx-alt:before {
+  content: "\e910";
+}
+
+.icon-document-alt-stroke:before {
+  content: "\e911";
+}
+
+.icon-transfer:before {
+  content: "\e925";
+}
+
+.icon-headphones1:before {
+  content: "\e926";
+}
+
+.icon-iphone:before {
+  content: "\e927";
+}
+
+.icon-folder-stroke:before {
+  content: "\e912";
+}
+
+.icon-info:before {
+  content: "\e913";
+}
+
+.icon-comments:before {
+  content: "\e900";
+}
+
+.icon-star:before {
+  content: "\e90d";
+}
+
+.icon-grid:before {
+  content: "\e90e";
+}
+
+.icon-pencil:before {
+  content: "\e905";
+}
+
+.icon-book:before {
+  content: "\e91f";
+}
+
+.icon-phone:before {
+  content: "\e942";
+}
+
+.icon-address-book:before {
+  content: "\e944";
+}
+
+.icon-display:before {
+  content: "\e956";
+}
+
+.icon-laptop:before {
+  content: "\e957";
+}
+
+.icon-drive:before {
+  content: "\e963";
+}
+
+.icon-search:before {
+  content: "\e986";
+}
+
+.icon-stats-bars:before {
+  content: "\e99c";
+}
+
+.icon-stats-bars2:before {
+  content: "\e99d";
+}
+
+.icon-lab:before {
+  content: "\e9aa";
+}
+
+.icon-shield:before {
+  content: "\e9b4";
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
+
+.icon-star-full:before {
+  content: "\e9d9";
+}
+
+.icon-wondering:before {
+  content: "\e9fb";
+}
+
+.icon-arrow-right:before {
+  content: "\ea3c";
+}
+
+.icon-checkbox-unchecked:before {
+  content: "\ea53";
+}
+
+.icon-embed:before {
   content: "\ea80";
 }
 
-/* Target the specific icons and apply custom styles */
-.icon-screen-poo {
-  font-size: 300px; /* Change the size of the icons */
-  color: #ff5733; /* Change the color of the icons */
-  transition: all 0.3s ease; /* Optional: Smooth transition effect for hover */
+.icon-facebook:before {
+  content: "\ea90";
 }
 
-/* Optional: Add a hover effect for interaction */
-.icon-screen-poo:hover {
-  color: #007bff; /* Change color when hovering */
-  transform: scale(1.2); /* Slightly enlarge the icon when hovered */
+.icon-instagram:before {
+  content: "\ea92";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-linkedin:before {
+  content: "\eac9";
+}
+
+.icon-chat:before {
+  content: "\e903";
+}
+
+.icon-cloud_download:before {
+  content: "\e914";
+}
+
+.icon-folder_open:before {
+  content: "\e915";
+}
+
+.icon-keyboard_arrow_down:before {
+  content: "\e916";
+}
+
+.icon-keyboard_arrow_left:before {
+  content: "\e917";
+}
+
+.icon-keyboard_arrow_right:before {
+  content: "\e918";
+}
+
+.icon-keyboard_arrow_up:before {
+  content: "\e919";
+}
+
+.icon-mouse1:before {
+  content: "\e904";
+}
+
+.icon-security:before {
+  content: "\e906";
+}
+
+.icon-phone_in_talk:before {
+  content: "\e928";
+}
+
+.icon-thumb_down_alt:before {
+  content: "\e91a";
+}
+
+.icon-thumb_up_alt:before {
+  content: "\e91b";
+}
+
+.icon-trending_up:before {
+  content: "\e929";
+}
+
+.icon-info-large:before {
+  content: "\e91c";
+}
+
+.icon-social-linkedin:before {
+  content: "\e91d";
+}
+
+.icon-github1:before {
+  content: "\e91e";
+}
+
+.icon-hard-drive:before {
+  content: "\e92a";
+}
+
+.icon-menu1:before {
+  content: "\e920";
+}
+
+.icon-cloud1:before {
+  content: "\e92b";
+}
+
+.icon-graduate:before {
+  content: "\e909";
+}
+
+.icon-paperplane:before {
+  content: "\e90a";
+}
+
+.icon-study:before {
+  content: "\e90b";
+}
+
+.icon-envelope-o:before {
+  content: "\f003";
+}
+
+.icon-star1:before {
+  content: "\f005";
+}
+
+.icon-clock-o:before {
+  content: "\f017";
+}
+
+.icon-download:before {
+  content: "\f019";
+}
+
+.icon-lock:before {
+  content: "\f023";
+}
+
+.icon-headphones:before {
+  content: "\f025";
+}
+
+.icon-text-width:before {
+  content: "\f035";
+}
+
+.icon-pencil1:before {
+  content: "\f040";
+}
+
+.icon-question-circle:before {
+  content: "\f059";
+}
+
+.icon-shopping-cart:before {
+  content: "\f07a";
+}
+
+.icon-folder-open:before {
+  content: "\f07c";
+}
+
+.icon-cogs:before {
+  content: "\f085";
+}
+
+.icon-gears:before {
+  content: "\f085";
+}
+
+.icon-linkedin-square:before {
+  content: "\f08c";
+}
+
+.icon-phone1:before {
+  content: "\f095";
+}
+
+.icon-phone-square:before {
+  content: "\f098";
+}
+
+.icon-github:before {
+  content: "\f09b";
+}
+
+.icon-bullhorn:before {
+  content: "\f0a1";
+}
+
+.icon-globe:before {
+  content: "\f0ac";
+}
+
+.icon-briefcase:before {
+  content: "\f0b1";
+}
+
+.icon-group:before {
+  content: "\f0c0";
+}
+
+.icon-users:before {
+  content: "\f0c0";
+}
+
+.icon-money:before {
+  content: "\f0d6";
+}
+
+.icon-linkedin1:before {
+  content: "\f0e1";
+}
+
+.icon-dashboard:before {
+  content: "\f0e4";
+}
+
+.icon-tachometer:before {
+  content: "\f0e4";
+}
+
+.icon-clipboard:before {
+  content: "\f0ea";
+}
+
+.icon-paste:before {
+  content: "\f0ea";
+}
+
+.icon-cloud-download:before {
+  content: "\f0ed";
+}
+
+.icon-laptop1:before {
+  content: "\f109";
+}
+
+.icon-ticket:before {
+  content: "\f145";
+}
+
+.icon-graduation-cap:before {
+  content: "\f19d";
+}
+
+.icon-mortar-board:before {
+  content: "\f19d";
+}
+
+.icon-file-code-o:before {
+  content: "\f1c9";
+}
+
+.icon-television:before {
+  content: "\f26c";
+}
+
+.icon-tv:before {
+  content: "\f26c";
+}
+
+.icon-handshake-o:before {
+  content: "\f2b5";
 }
 
 /*# sourceMappingURL=main.css.map */

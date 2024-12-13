@@ -15,7 +15,7 @@
     flex: 1; 
 }
 
-/* Welcome section */
+/* Welcome Section */
 h1 {
     font-family: Poppins, sans-serif;
     font-size: 2.25rem;
@@ -37,7 +37,7 @@ h1 {
 
 
 
-/* Clients section */
+/* Clients Section */
 .clients-section .testimonial {
     margin-bottom: 20px; 
 }
@@ -97,8 +97,9 @@ h1 {
     background-color: #444654; 
 }
 
-/* Google button */
+/* Google button used margin top as for some reason now the buttons would not line up even though it  */
 .choose-button .google {
+    margin-top: 30px;
     background-color: #4285F4; 
 }
 

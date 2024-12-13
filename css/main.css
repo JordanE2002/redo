@@ -151,6 +151,7 @@ body {
   margin-top: 30px;
   top: 0;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 .service p {
@@ -166,6 +167,8 @@ body {
   position: relative;
   padding-bottom: 10px;
   margin: 0 0 11px;
+  color: #333645;
+  transition: color 0.3s ease-in-out;
 }
 
 .service span {
@@ -177,6 +180,56 @@ body {
   margin: 0 auto 17px;
   color: #fff;
   border-radius: 50%;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Base Hover Effects for Services */
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service:hover h2 {
+  color: #fff;
+}
+
+.service:hover p {
+  color: #f1f1f1;
+}
+
+.software:hover span {
+  background-color: #fff; /* Circle turns white */
+  color: #67809f; /* Icon color becomes the same as the service's background color */
+}
+
+.IT-support:hover span {
+  background-color: #fff;
+  color: #4183d7;
+}
+
+.digital-marketing:hover span {
+  background-color: #fff;
+  color: #2ecc71;
+}
+
+.telecoms-service:hover span {
+  background-color: #fff;
+  color: #d64541;
+}
+
+.web-design:hover span {
+  background-color: #fff;
+  color: #926fb1;
+}
+
+.cyber-security:hover span {
+  background-color: #fff;
+  color: #f62459;
+}
+
+.developer-training:hover span {
+  background-color: #fff;
+  color: #ce4125;
 }
 
 /* Service Color Classes */
@@ -208,11 +261,36 @@ body {
   background-color: #ce4125;
 }
 
-/* Service Container Styles */
-.service-container {
-  width: 100%;
+/* Individual Hover Effects */
+.software:hover {
+  background-color: #5a718a;
 }
 
+.IT-support:hover {
+  background-color: #356fb5;
+}
+
+.digital-marketing:hover {
+  background-color: #27b863;
+}
+
+.telecoms-service:hover {
+  background-color: #b53836;
+}
+
+.web-design:hover {
+  background-color: #7b5a97;
+}
+
+.cyber-security:hover {
+  background-color: #d11f4d;
+}
+
+.developer-training:hover {
+  background-color: #b23920;
+}
+
+/* Service Button Styles */
 .service-button {
   font-family: Poppins, sans-serif;
   letter-spacing: 0.4px;
@@ -228,6 +306,7 @@ body {
   font-size: 1.063rem;
   border-radius: 3px;
   font-weight: 400;
+  transition: all 0.3s ease-in-out;
 }
 
 .software-button {
@@ -265,52 +344,13 @@ body {
   background-color: #ce4125;
 }
 
-.our-services-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.service-button:hover {
+  transform: scale(1.05);
 }
 
-/* Hover Effects */
-.software:hover,
-.IT-support:hover,
-.digital-marketing:hover,
-.telecoms-service:hover,
-.web-design:hover,
-.cyber-security:hover,
-.developer-training:hover {
-  color: #fff;
-  border-color: transparent;
-  top: -10px;
-  transition: 0.5s ease;
-}
-
-.software:hover {
-  background-color: #67809f;
-}
-
-.IT-support:hover {
-  background-color: #4183d7;
-}
-
-.digital-marketing:hover {
-  background-color: #2ecc71;
-}
-
-.telecoms-service:hover {
-  background-color: #d64541;
-}
-
-.web-design:hover {
-  background-color: #926fb1;
-}
-
-.cyber-security:hover {
-  background-color: #f62459;
-}
-
-.developer-training:hover {
-  background-color: #ce4125;
+/* Service Container Styles */
+.service-container {
+  width: 100%;
 }
 
 /* Media Queries */
@@ -320,13 +360,14 @@ body {
   }
   .service-container-small {
     width: 50%;
+    padding: 0 15px;
+    box-sizing: border-box;
   }
   .service-small-1,
-  .service-small-3 {
-    padding-right: 15px;
-  }
   .service-small-2,
+  .service-small-3,
   .service-small-4 {
+    padding-right: 15px;
     padding-left: 15px;
   }
 }
@@ -844,6 +885,34 @@ footer {
     margin-bottom: 40px;
   }
 }
+/*Was not sure where to put contsent info, so i left it here */
+/* Styling for button */
+#consent {
+  position: fixed;
+  line-height: 22px;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  background: #75788a;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+  border: solid #75788a;
+  border-width: 1px 1px 0 0;
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* Hover effort for button */
+#consent:hover {
+  background-color: #6b6d7f;
+  border-color: #6b6d7f;
+}
+
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?xu9142");

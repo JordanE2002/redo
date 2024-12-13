@@ -1,0 +1,29 @@
+/*Was not sure where to put contsent info, so i left it here */
+/* Styling for button */
+#consent {
+  position: fixed;
+  line-height: 22px;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  background: #75788a;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+  border: solid #75788a;
+  border-width: 1px 1px 0 0;
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* Hover effort for button */
+#consent:hover {
+  background-color: #6b6d7f;
+  border-color: #6b6d7f;
+}
+
+/*# sourceMappingURL=consent.css.map */

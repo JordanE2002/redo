@@ -115,6 +115,9 @@ body {
     text-align: left;
     align-items: flex-start;
   }
+  .banner-background .banner p {
+    text-align: left; /* Align text to the left on larger screens */
+  }
 }
 .our-services h2 {
   font-size: 1.3rem;
@@ -857,7 +860,7 @@ footer {
   color: white;
 }
 
-.fa-twitter {
+.fa-indeed {
   background: #55ACEE;
   color: white;
 }

@@ -99,5 +99,9 @@
             text-align: left; 
             align-items: flex-start; 
         }
+
+        .banner p {
+            text-align: left; /* Align text to the left on larger screens */
     }
+}
 }

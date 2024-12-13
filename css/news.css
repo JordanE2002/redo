@@ -37,9 +37,8 @@
   justify-content: space-between;
 }
 
-/* News Card Styling */
 .news-card {
-  flex: 1 1 calc(33.333% - 20px); /* Three cards per row by default */
+  flex: 1 1 calc(33.333% - 20px);
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 0;
@@ -55,7 +54,6 @@
   transform: translateY(-8px);
 }
 
-/* News Image */
 .news-image img {
   width: 100%;
   height: auto;
@@ -63,7 +61,6 @@
   object-fit: cover;
 }
 
-/* News Content */
 .news-content {
   padding: 15px;
 }
@@ -81,13 +78,12 @@
   font-weight: 600;
 }
 
-/* Alternating header colors */
 .news-card:nth-child(odd) .news-content h3 {
-  color: #db8c0d; /* Orange */
+  color: #db8c0d;
 }
 
 .news-card:nth-child(even) .news-content h3 {
-  color: #926fb1; /* Purple */
+  color: #926fb1;
 }
 
 .news-content p {
@@ -101,7 +97,6 @@
   margin: 5px 0;
 }
 
-/* News Button Styling */
 .news-button {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -128,18 +123,16 @@
   font-weight: 400;
 }
 
-/* Alternating button colors */
 .news-card:nth-child(odd) .news-button {
-  background-color: #db8c0d; /* Orange */
+  background-color: #db8c0d;
   border-color: #db8c0d;
 }
 
 .news-card:nth-child(even) .news-button {
-  background-color: #926fb1; /* Purple */
+  background-color: #926fb1;
   border-color: #926fb1;
 }
 
-/* News Footer */
 .news-footer {
   display: flex;
   align-items: center;
@@ -162,17 +155,14 @@
 }
 
 /* Responsive Design */
-/* For screens between 768px and 1024px (two cards per row, hide the 3rd card) */
 @media (max-width: 1024px) and (min-width: 768px) {
   .news-card {
-    flex: 1 1 calc(50% - 20px); /* Two cards per row */
+    flex: 1 1 calc(50% - 20px);
   }
-  /* Hide the third card on screens between 768px and 1024px */
   .news-flexbox .news-card:nth-child(3) {
     display: none;
   }
 }
-/* For screens below 768px (cards stack vertically) */
 @media (max-width: 768px) {
   .news-flexbox {
     display: flex;
@@ -181,7 +171,7 @@
     justify-content: space-between;
   }
   .news-card {
-    flex: 1 1 48%; /* Two cards side by side */
+    flex: 1 1 48%;
   }
 }
 

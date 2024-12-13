@@ -649,7 +649,6 @@ body {
   margin: 0;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) and (min-width: 768px) {
   .news-card {
     flex: 1 1 calc(50% - 20px);

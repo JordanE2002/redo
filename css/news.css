@@ -187,6 +187,9 @@
   }
 }
 @media (max-width: 768px) {
+  h3 {
+    display: none;
+  }
   .news-flexbox {
     display: flex;
     flex-wrap: wrap;

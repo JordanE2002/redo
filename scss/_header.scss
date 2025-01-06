@@ -1,0 +1,25 @@
+header {
+    padding-top:  20px;
+    img{
+        padding: 0;
+        box-sizing: border-box;
+        display: block;
+        flex-shrink: 3;
+        align-self: center;
+        max-width: 100%;
+    }
+}
+.header-background {
+    background-color: #fff;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.header-logo-container {
+    display: flex;
+    align-items: center;
+}

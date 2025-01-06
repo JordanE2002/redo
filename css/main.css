@@ -761,7 +761,7 @@ body {
     display: none;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   h3 {
     display: none;
   }
@@ -839,6 +839,10 @@ h1 {
   margin-bottom: 40px;
 }
 
+.clients-section h1 {
+  margin-bottom: 40px;
+}
+
 p {
   font-family: Poppins, sans-serif;
   font-size: 1rem;
@@ -881,7 +885,7 @@ p {
 /* Stars */
 .clients-section .stars {
   font-family: FontAwesome;
-  font-size: 75px;
+  font-size: 50px;
   color: orange;
   margin-bottom: 25px;
 }
@@ -892,13 +896,14 @@ p {
   font-size: 20px;
   color: white;
   background-color: #272936;
-  padding: 10px 30px;
+  padding: 10px 25px;
   border: 1px solid transparent;
   border-radius: 6px;
   text-transform: uppercase;
   cursor: pointer;
   text-align: center;
   margin-bottom: 17px;
+  margin-right: 10px;
   letter-spacing: 0.4px;
   line-height: 35px;
 }
@@ -909,7 +914,7 @@ p {
 
 /* Google button used margin top as for some reason now the buttons would not line up even though it  */
 .choose-button .google {
-  margin-top: 30px;
+  gap: 20px;
   background-color: #4285F4;
 }
 
@@ -942,7 +947,13 @@ p {
     display: block;
   }
   .choose-button .google {
-    margin-top: 10px; /* Ensure space between the buttons */
+    margin-top: 30px; /* Ensure space between the buttons */
+  }
+}
+/* When screen width is 1025px or larger (buttons aligned next to each other) */
+@media (min-width: 1025px) {
+  .choose-button button {
+    display: inline-block; /* Ensure buttons are next to each other */
   }
 }
 footer {
@@ -968,7 +979,7 @@ footer {
 
 /* Generic size for now to not make it too big*/
 .footer-logo img {
-  max-width: 250px;
+  max-width: 350px;
 }
 
 /* The h4 follow us text  */
@@ -992,9 +1003,30 @@ footer {
 }
 
 .footer-menu h4 {
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  margin: 0 0 15px;
   text-transform: uppercase;
   font-size: 1rem;
   margin-bottom: 20px;
+  font-family: Poppins, sans-serif;
+}
+
+/* Footer anchor tags styling */
+.footer-menu a {
+  font-family: Poppins, sans-serif;
+  letter-spacing: 0.4px;
+  list-style: none;
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  box-sizing: border-box;
+  background: transparent;
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-menu a:hover {
+  text-decoration: underline; /* Adds underline on hover for better user experience */
 }
 
 .footer-menu ul {
@@ -1002,9 +1034,10 @@ footer {
   padding: 0;
   margin: 0;
   line-height: 1.5;
+  font-family: Poppins, sans-serif;
 }
 
-.footer-menu ul li:hover {
+.footer-menu ul li a:hover {
   text-decoration: underline;
 }
 

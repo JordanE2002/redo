@@ -24,6 +24,12 @@ h1 {
     letter-spacing: .4px;
     line-height: 1.1;
     margin-bottom: 20px;
+    
+}
+
+.welcome-section h1{
+
+margin-bottom: 40px;
 }
 
     p{
@@ -71,7 +77,7 @@ h1 {
 /* Stars */
 .clients-section .stars {
     font-family: FontAwesome;
-    font-size: 50px;
+    font-size: 75px;
     color: orange;
     margin-bottom: 25px;
 }
@@ -125,6 +131,8 @@ h1 {
     }
 }
 
+
+
 @media (min-width: 1260px) {
     .about-row {
         margin-bottom: 40px;
@@ -132,4 +140,14 @@ h1 {
     
 
     }
+/* Ensure buttons are stacked for min-width: 992px */
+@media (min-width: 992px) {
+    .choose-button button {
+        display: block;
 
+    }
+
+    .choose-button .google {
+        margin-top: 10px; /* Ensure space between the buttons */
+    }
+}

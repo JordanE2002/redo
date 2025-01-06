@@ -173,5 +173,35 @@
     flex: 1 1 48%;
   }
 }
+/* News article button */
+.news-art-button {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: Poppins, sans-serif;
+  letter-spacing: 0.4px;
+  box-sizing: border-box;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  top: 10px;
+  position: absolute;
+  right: 0;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0 10px;
+  line-height: 1.438rem;
+  text-transform: uppercase;
+  z-index: 1000;
+  background-color: #4183d7;
+}
+
+.news-art-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.news-image {
+  position: relative; /* Ensure relative positioning for the absolute button */
+  overflow: hidden; /* Helps in keeping the image and button contained */
+}
 
 /*# sourceMappingURL=news.css.map */

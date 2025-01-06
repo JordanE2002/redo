@@ -1,37 +1,53 @@
- /* News styles*/ 
- .latest-news-section {
+/* News styles */
+.latest-news-section {
     padding: 40px 0;
     background-color: #f9f9f9;
 }
 
 .latest-news-section h2 {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
     letter-spacing: .4px;
-    font-family: inherit;
+    font-family: Lato, Helvetica, Arial, sans-serif;
     line-height: 1.1;
     font-size: 2.25rem;
     box-sizing: border-box;
     font-weight: 600;
     color: #333645;
-
-
-    
+    text-align: left;
+    cursor: pointer;
 }
 
-.latest-news-section h3{
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+.latest-news-section h3 {
     letter-spacing: .4px;
-    font-family: inherit;
+    font-family: Poppins, sans-serif;
     line-height: 1.1;
     font-size: 1.625rem;
     box-sizing: border-box;
-    background: transparent;
-    text-decoration: none;
     font-weight: 600;
     color: #333645;
+    text-align: right;
+    position: relative; /* To position the underline */
+        cursor: pointer;
 }
+
+/* Underline on hover for h3 */
+.latest-news-section h3:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust the underline thickness */
+    background-color: #333645; /* Underline color */
+}
+
+/* New styles for heading alignment */
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 
 .news-flexbox {
     display: flex;
@@ -40,7 +56,7 @@
     justify-content: space-between;
 }
 
-
+/* The rest of the styles remain unchanged */
 .news-card {
     flex: 1 1 calc(33.333% - 20px); 
     background: white;
@@ -58,14 +74,12 @@
     transform: translateY(-8px);
 }
 
-
 .news-image img {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
     object-fit: cover;
 }
-
 
 .news-content {
     padding: 15px;
@@ -82,8 +96,6 @@
     background: transparent;
     text-decoration: none;
     font-weight: 600;
-
-
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -105,7 +117,6 @@
     font-size: 0.9rem;
     color: #666;
     margin: 5px 0;
-
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -136,7 +147,6 @@
     font-weight: 400;
 }
 
-
 .news-card:nth-child(odd) .news-button {
     background-color: #db8c0d; 
     border-color: #db8c0d;
@@ -147,8 +157,6 @@
     border-color: #926fb1;
 }
 
-
-
 .news-footer {
     display: flex;
     align-items: center;
@@ -156,9 +164,6 @@
     border-top: 1px solid #ccc;
     margin-top: auto;
 }
-
-
-
 
 .author-image img {
     width: 40px;
@@ -174,19 +179,15 @@
     line-height: 1.4;
 }
 
-
-
 @media (max-width: 1024px) and (min-width: 768px) {
     .news-card {
         flex: 1 1 calc(50% - 20px); 
     }
 
-
     .news-flexbox .news-card:nth-child(3) {
         display: none;
     }
 }
-
 
 @media (max-width: 768px) {
     .news-flexbox {
@@ -199,13 +200,9 @@
     .news-card {
         flex: 1 1 48%; 
     }
-    
- 
 }
 
-
-  /* News article button */
-  .news-art-button {
+.news-art-button {
     font-family: Poppins, sans-serif;
     letter-spacing: .4px;
     box-sizing: border-box;
@@ -233,6 +230,6 @@
 }
 
 .news-image {
-    position: relative; /* Ensure relative positioning for the absolute button */
-    overflow: hidden; /* Helps in keeping the image and button contained */
+    position: relative;
+    overflow: hidden;
 }

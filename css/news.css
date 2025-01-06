@@ -1,33 +1,51 @@
-/* News styles*/
+/* News styles */
 .latest-news-section {
   padding: 40px 0;
   background-color: #f9f9f9;
 }
 
 .latest-news-section h2 {
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   letter-spacing: 0.4px;
-  font-family: inherit;
+  font-family: Lato, Helvetica, Arial, sans-serif;
   line-height: 1.1;
   font-size: 2.25rem;
   box-sizing: border-box;
   font-weight: 600;
   color: #333645;
+  text-align: left;
+  cursor: pointer;
 }
 
 .latest-news-section h3 {
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   letter-spacing: 0.4px;
-  font-family: inherit;
+  font-family: Poppins, sans-serif;
   line-height: 1.1;
   font-size: 1.625rem;
   box-sizing: border-box;
-  background: transparent;
-  text-decoration: none;
   font-weight: 600;
   color: #333645;
+  text-align: right;
+  position: relative; /* To position the underline */
+  cursor: pointer;
+}
+
+/* Underline on hover for h3 */
+.latest-news-section h3:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Adjust the underline thickness */
+  background-color: #333645; /* Underline color */
+}
+
+/* New styles for heading alignment */
+.news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .news-flexbox {
@@ -37,6 +55,7 @@
   justify-content: space-between;
 }
 
+/* The rest of the styles remain unchanged */
 .news-card {
   flex: 1 1 calc(33.333% - 20px);
   background: white;
@@ -178,7 +197,6 @@
     flex: 1 1 48%;
   }
 }
-/* News article button */
 .news-art-button {
   font-family: Poppins, sans-serif;
   letter-spacing: 0.4px;
@@ -207,8 +225,8 @@
 }
 
 .news-image {
-  position: relative; /* Ensure relative positioning for the absolute button */
-  overflow: hidden; /* Helps in keeping the image and button contained */
+  position: relative;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=news.css.map */

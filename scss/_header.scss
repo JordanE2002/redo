@@ -43,33 +43,27 @@
     display: inline-block;
 }
 
+/* Contact Button - Specific styles for the contact button */
 .header-contact-button {
     background-color: #999aa2; 
     border-color: #999aa2;  
     margin-left: 20px;
-      
 }
 
-
+/* Support Button - Specific styles for the support button */
 .header-support-button {
     background-color: #4183d7; 
     border-color: #4183d7;    
-    
 }
 
-.header-contact-button:hover{
+/* Button Hover Effects */
+.header-contact-button:hover {
     background-color: #7e808a;
-
 }
 
-//Cannot find specific color anywhere for some reason
-
-.header-support-button:hover{
-  background-color: darkblue;
-
+.header-support-button:hover {
+    background-color: darkblue;
 }
-
-
 
 /* Form Styles - Container and input field for the small form */
 .header-form-container {
@@ -285,3 +279,4 @@
         display: inline;
     }
 }
+

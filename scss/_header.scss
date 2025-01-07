@@ -143,6 +143,7 @@
 /* Large Form Icon Button Hover - Hover styles for the search icon button */
 .header-large-form-icon-container:hover {
     background-color: #7e808a;
+    cursor: pointer;
 }
 
 /* Phone Icon - Styles for the phone icon in the header */
@@ -152,6 +153,7 @@
     align-self: center;
     margin-left: 15px;
     max-width: 100%;
+    
 }
 
 /* Hamburger Menu Container - Container for the hamburger menu button */
@@ -221,6 +223,8 @@
     align-self: center;
     position: relative;
     top: -2px;
+
+    
 }
 
 /* Actions Container - Container for the action buttons in the header */

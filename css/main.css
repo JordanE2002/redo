@@ -173,6 +173,7 @@ body {
 /* Large Form Icon Button Hover - Hover styles for the search icon button */
 .header-large-form-icon-container:hover {
   background-color: #7e808a;
+  cursor: pointer;
 }
 
 /* Phone Icon - Styles for the phone icon in the header */

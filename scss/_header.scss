@@ -23,3 +23,49 @@ header {
     display: flex;
     align-items: center;
 }
+
+
+
+.contact-button, .support-button {
+    
+    font-family: Poppins, sans-serif;
+    letter-spacing: .4px;
+    box-sizing: border-box;
+    background: transparent;
+    text-decoration: none;
+ 
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+
+    border: 1px solid transparent;
+
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    height: 56px;
+    line-height: 46px;
+    font-size: 1.125rem;
+  
+}
+
+.contact-button {
+    background-color: #4183d7;
+    border-color: #4183d7;
+}
+
+.support-button {
+    background-color: #999aa2;
+    border-color: #999aa2;
+    margin-left: 20px;
+}
+
+/* Media query to hide both buttons on smaller screens */
+@media (max-width: 780px) {
+    .contact-button, .support-button {
+        display: none;
+    }
+}

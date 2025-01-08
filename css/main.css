@@ -1253,12 +1253,12 @@ footer {
   gap: 15px;
 }
 
-/* Generic size for now to not make it too big*/
+/* Generic size for now to not make it too big */
 .footer-logo img {
   max-width: 350px;
 }
 
-/* The h4 follow us text  */
+/* The h4 follow us text */
 .follow-us {
   color: white;
   text-transform: uppercase;
@@ -1267,9 +1267,21 @@ footer {
 }
 
 /* Social media icons horizontally */
-.footer-logo .fa {
+.social-media-icons .icon {
   display: inline-block;
   margin-right: 10px;
+  padding: 10px;
+  font-size: 24px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0;
+  color: white;
+  background: #555; /* Default background color */
+}
+
+.social-media-icons .icon:nth-child(1) {
+  background: blue;
 }
 
 /* Footer Menu */
@@ -1317,40 +1329,6 @@ footer {
   text-decoration: underline;
 }
 
-.fa {
-  padding: 10px;
-  font-size: 24px;
-  width: 40px;
-  text-align: center;
-  text-decoration: none;
-  margin-right: 5px;
-  border-radius: 0;
-}
-
-.fa:hover {
-  opacity: 0.8;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-indeed {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-instagram {
-  background: #E4405F;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #0077B5;
-  color: white;
-}
-
 /* Media Queries */
 @media (min-width: 768px) {
   .footer-menu {
@@ -1362,9 +1340,16 @@ footer {
     flex: 20%;
   }
 }
-@media (min-width: 1260px) {
+@media (min-width: 1024px) {
+  .footer-row {
+    flex-wrap: nowrap;
+  }
+  .footer-logo {
+    flex: 25%;
+  }
   .footer-menu {
-    margin-bottom: 40px;
+    flex: 1;
+    margin-bottom: 0; /* Remove margin for better alignment */
   }
 }
 /*Was not sure where to put contsent info, so i left it here */

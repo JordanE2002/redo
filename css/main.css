@@ -1592,7 +1592,12 @@ footer {
 
 .main-nav-ddm-1:hover {
   /* Icon style for the 'Software' dropdown */
-  background-color: pink;
+  background-color: #67809f;
+}
+
+.main-nav-ddm-1:hover .icon-laptop {
+  /* Change the icon color when hovering over the 'Software' dropdown */
+  color: #fff; /* Change to white or any desired hover color */
 }
 
 .icon-display {
@@ -1600,9 +1605,29 @@ footer {
   font-size: 1.6rem;
 }
 
+.main-nav-ddm-2:hover {
+  /* Icon style for the 'Software' dropdown */
+  background-color: #4183d7;
+}
+
+.main-nav-ddm-2:hover .icon-display {
+  /* Change the icon color when hovering over the 'Software' dropdown */
+  color: #fff; /* Change to white or any desired hover color */
+}
+
 .icon-stats-bars {
   color: #2ecc71; /* Matching the Digital Marketing theme */
   font-size: 1.6rem;
+}
+
+.main-nav-ddm-3:hover {
+  /* Icon style for the 'Software' dropdown */
+  background-color: #2ecc71;
+}
+
+.main-nav-ddm-3:hover .icon-stats-bars {
+  /* Change the icon color when hovering over the 'Software' dropdown */
+  color: #fff; /* Change to white or any desired hover color */
 }
 
 .icon-phone_in_talk {
@@ -1611,9 +1636,29 @@ footer {
   font-size: 1.6rem;
 }
 
+.main-nav-ddm-4:hover {
+  /* Icon style for the 'Software' dropdown */
+  background-color: #d64541;
+}
+
+.main-nav-ddm-4:hover .icon-phone_in_talk {
+  /* Change the icon color when hovering over the 'Software' dropdown */
+  color: #fff; /* Change to white or any desired hover color */
+}
+
 .icon-embed {
   color: #926fb1;
   font-size: 1.6rem;
+}
+
+.main-nav-ddm-5:hover {
+  /* Icon style for the 'Software' dropdown */
+  background-color: #926fb1;
+}
+
+.main-nav-ddm-5:hover .icon-embed {
+  /* Change the icon color when hovering over the 'Software' dropdown */
+  color: #fff; /* Change to white or any desired hover color */
 }
 
 .icon-security {
@@ -1621,9 +1666,29 @@ footer {
   font-size: 1.6rem;
 }
 
+.main-nav-ddm-6:hover {
+  /* Icon style for the 'Software' dropdown */
+  background-color: #d11f4d;
+}
+
+.main-nav-ddm-6:hover .icon-security {
+  /* Change the icon color when hovering over the 'Software' dropdown */
+  color: #fff; /* Change to white or any desired hover color */
+}
+
 .icon-graduate {
   color: #b23920;
   font-size: 1.6rem;
+}
+
+.main-nav-ddm-7:hover {
+  /* Icon style for the 'Software' dropdown */
+  background-color: #b23920;
+}
+
+.main-nav-ddm-7:hover .icon-graduate {
+  /* Change the icon color when hovering over the 'Software' dropdown */
+  color: #fff; /* Change to white or any desired hover color */
 }
 
 /* Dropdown Triangle (Arrow) Styling */

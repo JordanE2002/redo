@@ -1553,10 +1553,76 @@ footer {
   background-color: #526781;
 }
 
+.main-nav-ddm-2:hover .sub-menu-container {
+  /* Background color for the sub-menu of the first dropdown item on hover */
+  background-color: #4183d7;
+}
+
+.main-nav-ddm-3:hover .sub-menu-container {
+  /* Background color for the sub-menu of the first dropdown item on hover */
+  background-color: #2ecc71;
+}
+
+.main-nav-ddm-4:hover .sub-menu-container {
+  /* Background color for the sub-menu of the first dropdown item on hover */
+  background-color: #d64541;
+}
+
+.main-nav-ddm-5:hover .sub-menu-container {
+  /* Background color for the sub-menu of the first dropdown item on hover */
+  background-color: #926fb1;
+}
+
+.main-nav-ddm-6:hover .sub-menu-container {
+  /* Background color for the sub-menu of the first dropdown item on hover */
+  background-color: #d11f4d;
+}
+
+.main-nav-ddm-7:hover .sub-menu-container {
+  /* Background color for the sub-menu of the first dropdown item on hover */
+  background-color: #b23920;
+}
+
 /* Icons for Dropdown */
-.icon-software-ddm {
+.icon-laptop {
   /* Icon style for the 'Software' dropdown */
   color: #67809f;
+  font-size: 1.6rem;
+}
+
+.main-nav-ddm-1:hover {
+  /* Icon style for the 'Software' dropdown */
+  background-color: pink;
+}
+
+.icon-display {
+  color: #4183d7;
+  font-size: 1.6rem;
+}
+
+.icon-stats-bars {
+  color: #2ecc71; /* Matching the Digital Marketing theme */
+  font-size: 1.6rem;
+}
+
+.icon-phone_in_talk {
+  /* Icon style for the 'Software' dropdown */
+  color: #d64541;
+  font-size: 1.6rem;
+}
+
+.icon-embed {
+  color: #926fb1;
+  font-size: 1.6rem;
+}
+
+.icon-security {
+  color: #d11f4d;
+  font-size: 1.6rem;
+}
+
+.icon-graduate {
+  color: #b23920;
   font-size: 1.6rem;
 }
 

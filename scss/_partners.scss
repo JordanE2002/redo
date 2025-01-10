@@ -30,7 +30,6 @@
 }
 
 .case-study h3{
-    -webkit-text-size-adjust: 100%;
     letter-spacing: .4px;
     text-align: center;
     -webkit-tap-highlight-color: transparent;
@@ -66,13 +65,11 @@
 
 /* Styling for h3 inside hover-banner */
 .pictures-section .case-study .hover-banner h3 {
-    -webkit-text-size-adjust: 100%;
-    letter-spacing: .4px;
     text-align: center;  /* Centering the text */
     -webkit-tap-highlight-color: transparent;
     user-select: auto;
     box-sizing: border-box;
-    font-family: inherit;
+
     line-height: 1.1;
     font-weight: 400;
     position: relative;

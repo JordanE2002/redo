@@ -1,0 +1,32 @@
+
+// Color Mixins
+@mixin laptop-color {
+    background-color: #67809f;
+    color: #67809f;
+}
+
+@mixin display-color {
+    background-color: #4183d7;
+    color: #4183d7;
+}
+@mixin stats-bars-color {
+    background-color: #2ecc71;
+    color: #2ecc71;
+}
+@mixin phone_in_talk-color {
+    background-color: #d64541;
+    color: #d64541;
+}
+@mixin embed-color {
+    background-color: #926fb1;
+    color: #926fb1;
+}
+@mixin security-color {
+    background-color: #f62459;
+    color: #f62459;
+}
+@mixin graduate-color {
+    background-color: #ce4125;
+    color: #ce4125;
+
+}

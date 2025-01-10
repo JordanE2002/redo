@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font: Poppins, sans-serif;
 }
 
 * {
@@ -1447,6 +1448,10 @@ footer {
   border-color: #6b6d7f;
 }
 
+body {
+  font-family: Poppins, sans-serif;
+}
+
 /* General Navigation Styling */
 .nav-dropdown-menu-container {
   background-color: #333645;
@@ -1529,15 +1534,11 @@ footer {
   letter-spacing: 0.4px;
   list-style: none;
   box-sizing: border-box;
-  font-family: Poppins, sans-serif;
   line-height: 1.1;
   font-size: 2rem;
-  margin: 0 0 15px;
   display: block;
   width: 100%;
   color: #fff;
-  margin-bottom: 10px;
-  margin-top: 15px;
   font-weight: 500;
 }
 

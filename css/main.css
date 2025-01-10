@@ -30,7 +30,6 @@ body {
   }
 }
 
-/* Header Row - Contains the primary header layout */
 .header-row {
   display: flex;
   flex-direction: row;
@@ -39,7 +38,7 @@ body {
   padding-bottom: 20px;
 }
 
-/* Logo and Image - Styles for the container and image of the logo */
+/* Logo/image - styles for the container and image of the logo */
 .header-logo-container {
   display: flex;
   align-items: center;
@@ -255,13 +254,11 @@ body {
   top: -2px;
 }
 
-/* Actions Container - Container for the action buttons in the header */
 .header-actions-container {
   display: flex;
   padding: 7px 0;
 }
 
-/* Responsive Styles - Hide/show elements based on screen width */
 /* For small screens, hide the contact and support buttons */
 @media (max-width: 920px) {
   .header-contact-button,
@@ -377,7 +374,6 @@ body {
   border-color: #0056b3;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .banner-background .banner p {
     text-align: center;
@@ -1423,7 +1419,7 @@ footer {
   border-color: #6b6d7f;
 }
 
-/* General Navigation Styling */
+/* Nav styles */
 .nav-dropdown-menu-container {
   background-color: #333645;
   margin-bottom: 0;
@@ -1438,12 +1434,12 @@ footer {
   width: 100%;
 }
 
-/* Main Dropdown Menu Item */
+/* Main dropdown Menu items*/
 .nav-dropdown-item {
   display: flex;
   flex-direction: column;
   padding: 19px 0;
-  color: #fff;
+  color: white;
   text-align: center;
   width: 100%;
   font-size: 1.2rem;
@@ -1452,7 +1448,7 @@ footer {
 
 .nav-dropdown-item:hover {
   cursor: pointer;
-  color: #fff;
+  color: white;
 }
 
 .nav-dropdown-item small {
@@ -1461,7 +1457,7 @@ footer {
   margin: 0;
 }
 
-/* Dropdown Menu Sub-container */
+/* the 2nd menu container */
 .sub-menu-container {
   display: none;
   z-index: 10;
@@ -1474,7 +1470,7 @@ footer {
   margin-top: 82px;
 }
 
-/* Sub-menu items */
+/* Sub items items */
 .sub-menu {
   display: flex;
   flex-wrap: wrap;
@@ -1513,12 +1509,12 @@ footer {
   font-weight: 500;
 }
 
-/* Hover Effect for Sub-menu Container */
+/* Hover for sub menu */
 .nav-dropdown-item:hover .sub-menu-container {
   display: block;
 }
 
-/* Background colors for each sub-menu on hover */
+/* Background for each item */
 .nav-dropdown-item-1:hover .sub-menu-container {
   background-color: #526781;
 }
@@ -1547,7 +1543,7 @@ footer {
   background-color: #b23920;
 }
 
-/* Icons for Dropdown */
+/* Icons */
 .icon-laptop {
   color: #67809f;
   font-size: 1.6rem;
@@ -1558,7 +1554,7 @@ footer {
 }
 
 .nav-dropdown-item-1:hover .icon-laptop {
-  color: #fff;
+  color: white;
 }
 
 .icon-display {
@@ -1571,7 +1567,7 @@ footer {
 }
 
 .nav-dropdown-item-2:hover .icon-display {
-  color: #fff;
+  color: white;
 }
 
 .icon-stats-bars {
@@ -1584,7 +1580,7 @@ footer {
 }
 
 .nav-dropdown-item-3:hover .icon-stats-bars {
-  color: #fff;
+  color: white;
 }
 
 .icon-phone_in_talk {
@@ -1597,7 +1593,7 @@ footer {
 }
 
 .nav-dropdown-item-4:hover .icon-phone_in_talk {
-  color: #fff;
+  color: white;
 }
 
 .icon-embed {
@@ -1610,7 +1606,7 @@ footer {
 }
 
 .nav-dropdown-item-5:hover .icon-embed {
-  color: #fff;
+  color: white;
 }
 
 .icon-security {
@@ -1623,7 +1619,7 @@ footer {
 }
 
 .nav-dropdown-item-6:hover .icon-security {
-  color: #fff;
+  color: white;
 }
 
 .icon-graduate {
@@ -1636,7 +1632,7 @@ footer {
 }
 
 .nav-dropdown-item-7:hover .icon-graduate {
-  color: #fff;
+  color: white;
 }
 
 /* Dropdown Triangle (Arrow) Styling */

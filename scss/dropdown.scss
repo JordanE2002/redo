@@ -1,6 +1,6 @@
 
 
-/* General Navigation Styling */
+/* Nav styles */
 .nav-dropdown-menu-container {
     background-color: #333645;
     margin-bottom: 0;
@@ -15,12 +15,12 @@
     width: 100%;
 }
 
-/* Main Dropdown Menu Item */
+/* Main dropdown Menu items*/
 .nav-dropdown-item {
     display: flex;
     flex-direction: column;
     padding: 19px 0;
-    color: #fff;
+    color: white;
     text-align: center;
     width: 100%;
     font-size: 1.2rem;
@@ -30,7 +30,7 @@
 
 .nav-dropdown-item:hover {
     cursor: pointer;
-    color: #fff;
+    color: white;
 }
 
 .nav-dropdown-item small {
@@ -39,7 +39,7 @@
     margin: 0;
 }
 
-/* Dropdown Menu Sub-container */
+/* the 2nd menu container */
 .sub-menu-container {
     display: none;
     z-index: 10;
@@ -52,7 +52,7 @@
     margin-top: 82px;
 }
 
-/* Sub-menu items */
+/* Sub items items */
 .sub-menu {
     display: flex;
     flex-wrap: wrap;
@@ -94,12 +94,12 @@
     font-weight: 500;
 }
 
-/* Hover Effect for Sub-menu Container */
+/* Hover for sub menu */
 .nav-dropdown-item:hover .sub-menu-container {
     display: block;
 }
 
-/* Background colors for each sub-menu on hover */
+/* Background for each item */
 .nav-dropdown-item-1:hover .sub-menu-container { background-color: #526781; }
 .nav-dropdown-item-2:hover .sub-menu-container { background-color: #4183d7; }
 .nav-dropdown-item-3:hover .sub-menu-container { background-color: #2ecc71; }
@@ -108,34 +108,34 @@
 .nav-dropdown-item-6:hover .sub-menu-container { background-color: #d11f4d; }
 .nav-dropdown-item-7:hover .sub-menu-container { background-color: #b23920; }
 
-/* Icons for Dropdown */
+/* Icons */
 .icon-laptop { color: #67809f; font-size: 1.6rem; }
 .nav-dropdown-item-1:hover { background-color: #67809f; }
-.nav-dropdown-item-1:hover .icon-laptop { color: #fff; }
+.nav-dropdown-item-1:hover .icon-laptop { color: white; }
 
 .icon-display { color: #4183d7; font-size: 1.6rem; }
 .nav-dropdown-item-2:hover { background-color: #4183d7; }
-.nav-dropdown-item-2:hover .icon-display { color: #fff; }
+.nav-dropdown-item-2:hover .icon-display { color: white; }
 
 .icon-stats-bars { color: #2ecc71; font-size: 1.6rem; }
 .nav-dropdown-item-3:hover { background-color: #2ecc71; }
-.nav-dropdown-item-3:hover .icon-stats-bars { color: #fff; }
+.nav-dropdown-item-3:hover .icon-stats-bars { color: white; }
 
 .icon-phone_in_talk { color: #d64541; font-size: 1.6rem; }
 .nav-dropdown-item-4:hover { background-color: #d64541; }
-.nav-dropdown-item-4:hover .icon-phone_in_talk { color: #fff; }
+.nav-dropdown-item-4:hover .icon-phone_in_talk { color: white; }
 
 .icon-embed { color: #926fb1; font-size: 1.6rem; }
 .nav-dropdown-item-5:hover { background-color: #926fb1; }
-.nav-dropdown-item-5:hover .icon-embed { color: #fff; }
+.nav-dropdown-item-5:hover .icon-embed { color: white; }
 
 .icon-security { color: #d11f4d; font-size: 1.6rem; }
 .nav-dropdown-item-6:hover { background-color: #d11f4d; }
-.nav-dropdown-item-6:hover .icon-security { color: #fff; }
+.nav-dropdown-item-6:hover .icon-security { color: white; }
 
 .icon-graduate { color: #b23920; font-size: 1.6rem; }
 .nav-dropdown-item-7:hover { background-color: #b23920; }
-.nav-dropdown-item-7:hover .icon-graduate { color: #fff; }
+.nav-dropdown-item-7:hover .icon-graduate { color: white; }
 
 /* Dropdown Triangle (Arrow) Styling */
 .dropdown-triangle {

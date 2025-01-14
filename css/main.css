@@ -302,6 +302,27 @@ body {
     display: inline;
   }
 }
+/* Slider Container */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Slide Wrapper */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+/* Individual Slide */
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Banner Background Style */
 .banner-background {
   position: relative;
   display: flex;
@@ -310,6 +331,7 @@ body {
   min-height: 550px;
   overflow: hidden;
 }
+
 .banner-background::before {
   content: "";
   position: absolute;
@@ -321,7 +343,9 @@ body {
   z-index: 1;
   pointer-events: none;
 }
-.banner-background .banner-image {
+
+/* Banner Image Style */
+.banner-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -330,7 +354,9 @@ body {
   object-fit: cover;
   z-index: 0;
 }
-.banner-background .banner {
+
+/* Banner Content Container */
+.banner {
   position: relative;
   z-index: 2;
   color: white;
@@ -340,7 +366,9 @@ body {
   justify-content: center;
   padding: 0 15px;
 }
-.banner-background .banner h1 {
+
+/* Banner Heading Style */
+.banner h1 {
   letter-spacing: 0.4px;
   margin: 0 0 1.25rem;
   color: white;
@@ -348,14 +376,18 @@ body {
   font-size: 4rem;
   line-height: 5rem;
 }
-.banner-background .banner p {
+
+/* Banner Paragraph Style */
+.banner p {
   margin-bottom: 0.375rem;
   font-size: 1.625rem;
   line-height: 1.75rem;
   font-weight: 600;
   text-align: center;
 }
-.banner-background .banner button {
+
+/* Button Style */
+.banner button {
   letter-spacing: 0.4px;
   box-sizing: border-box;
   text-transform: uppercase;
@@ -369,11 +401,19 @@ body {
   margin: 1.938rem 0 1.125rem;
   cursor: pointer;
 }
-.banner-background .banner button:hover {
+
+/* Button Hover Effect */
+.banner button:hover {
   background-color: #0056b3;
   border-color: #0056b3;
 }
 
+/* Arrow Icon Style */
+.icon-arrow-right {
+  margin-left: 5px;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .banner-background .banner p {
     text-align: center;
@@ -389,10 +429,6 @@ body {
     text-align: left;
   }
 }
-.icon-arrow-right {
-  margin-left: 5px;
-}
-
 .our-services h2 {
   font-size: 1.3rem;
   position: relative;

@@ -1524,6 +1524,7 @@ footer {
   font-size: 1rem;
   color: #666;
   line-height: 1.6;
+  text-align: left;
 }
 
 .cookie-buttons {

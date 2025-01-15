@@ -306,19 +306,20 @@ body {
 .slider {
   position: relative;
   width: 100%;
-  min-height: 5000%;
   overflow: hidden;
 }
 
 /* Slides Wrapper */
 .slides {
-  min-height: 5000%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
   width: 100%;
 }
 
 /* Individual Slide */
 .slide {
-  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Banner Background */
@@ -327,8 +328,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 550px;
   overflow: hidden;
-  height: 1px;
 }
 
 .banner-background::before {
@@ -454,6 +455,7 @@ body {
   .banner {
     text-align: left;
     align-items: flex-start;
+    height: 600px;
   }
   .banner p {
     text-align: left;

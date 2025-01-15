@@ -14,6 +14,15 @@
 
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
+
+<!-- Slick Slider CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+<!-- Slick Slider JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -226,37 +235,28 @@
 
     <div class="slider">
         <div class="slides">
-          <div class="slide banner-background">
-            <img src="images/home-gay8.webp" alt="Banner Background" class="banner-image">
-            <div class="banner container">
-              <h1>IT Support</h1>
-              <p>Fast and cost-effective IT support<br>services for your business.</p>
-              <div class="banner-btn-container">
-                <button>Find Out More <i class="icon-arrow-right"></i></button>
-              </div>
+            <div class=" banner-background">
+                <img src="images/home-gay8.webp" alt="Banner Background" class="banner-image">
+                <div class="banner container">
+                    <h1>IT Support</h1>
+                    <p>Fast and cost-effective IT support<br>services for your business.</p>
+                    <div class="banner-btn-container">
+                        <button>Find Out More <i class="icon-arrow-right"></i></button>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- Add more slides here -->
-          <div class="slide banner-background">
-            <img src="images/home-YLei.webp" alt="Banner Background" class="banner-image">
-            <div class="banner container">
-              <h1>IT Solutions</h1>
-              <p>Reliable and scalable IT solutions<br>for your enterprise.</p>
-              <div class="banner-btn-container">
-                <button>Learn More <i class="icon-arrow-right"></i></button>
-              </div>
+            <div class=" banner-background">
+                <img src="images/home-YLei.webp" alt="Banner Background" class="banner-image">
+                <div class="banner container">
+                    <h1>IT Solution</h1>
+                    <p>Reliable and scalable IT solutions<br>for your enterprise.</p>
+                    <div class="banner-btn-container">
+                        <button>Learn More <i class="icon-arrow-right"></i></button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      
-        <!-- Dots -->
-        <div class="dots-container">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <!-- Add more dots corresponding to the number of slides -->
-        </div>
-      </div>
-      
+    
   
 
 <!--Services-->
@@ -642,7 +642,18 @@
             </div>
         </div>
 
+<!-- Cookie Popup Section -->
 
+<div id="cookie-popup">
+    <div class="cookie-content">
+        <h2>Cookies Policy</h2>
+        <p>Our website uses cookies. This helps us provide you with a good experience on our website. To see what cookies we use and what they do, and to opt-in on non-essential cookies, click "change settings". For a detailed explanation, click on "Privacy Policy", otherwise click "Accept Cookies" to enter.</p>
+        <div class="cookie-buttons">
+            <button id="change-settings">Change Settings</button>
+            <button id="accept-cookies">Accept Cookies</button>
+        </div>
+    </div>
+</div>
 
        <!--Consent -->
         <button id="consent">Manage Consent</button>
@@ -651,7 +662,9 @@
     </footer>
 
 
-   
+    <script src="java/jquery-3.7.1.min.js"></script>
+    <script src="java/slick/slick.min.js"></script>
+    <script src="java/main.js"></script>
 
 </body>
 </html>

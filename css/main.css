@@ -306,20 +306,19 @@ body {
 .slider {
   position: relative;
   width: 100%;
+  min-height: 5000%;
   overflow: hidden;
 }
 
 /* Slides Wrapper */
 .slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+  min-height: 5000%;
   width: 100%;
 }
 
 /* Individual Slide */
 .slide {
-  min-width: 100%;
-  box-sizing: border-box;
+  width: 100%;
 }
 
 /* Banner Background */
@@ -328,8 +327,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 550px;
   overflow: hidden;
+  height: 1px;
 }
 
 .banner-background::before {

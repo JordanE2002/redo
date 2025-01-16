@@ -294,3 +294,6 @@ background-color: white;
 
  
   }
+  #header.sticky.show-header {
+    top: 0; /* Slide down into view */
+}

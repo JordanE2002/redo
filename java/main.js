@@ -64,22 +64,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const header = document.querySelector('header .header-background');
-    const headerHeight = header.offsetHeight;
-    let lastScrollTop = 0;
+    const header = document.querySelector('header'); // Targets the <header> tag
+    let lastScrollTop = 0; // Track the last scroll position
+    const threshold = 150; // Distance from the top to start sticky behavior
 
     window.addEventListener('scroll', function () {
-        const scrollTop = window.scrollY;
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (scrollTop > headerHeight) {
-            header.classList.add('scrolled');
+        if (currentScroll > threshold) {
+            if (currentScroll < lastScrollTop) {
+                // Scrolling up - Show header with animation
+                header.classList.add('sticky', 'show-header');
+            } else {
+                // Scrolling down - Hide header
+                header.classList.remove('show-header');
+                setTimeout(() => {
+                    if (currentScroll > threshold) { // Ensure header stays hidden if above threshold
+                        header.classList.remove('sticky');
+                    }
+                }, 1000); // Delay before removing the sticky class
+            }
         } else {
-            header.classList.remove('scrolled');
+            // Remove sticky and animation when within threshold
+            header.classList.remove('sticky', 'show-header');
         }
 
-        lastScrollTop = scrollTop;
+        // Update lastScrollTop to the current scroll position
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
 });
+
 
 
 

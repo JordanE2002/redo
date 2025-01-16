@@ -83,7 +83,7 @@
   padding: 15px;
 }
 
-.news-content h3 {
+.news-content h4 {
   letter-spacing: 0.4px;
   font-family: Poppins, sans-serif;
   font-size: 1rem;
@@ -96,11 +96,11 @@
   padding-right: 15px;
 }
 
-.news-card:nth-child(odd) .news-content h3 {
+.news-card:nth-child(odd) .news-content h4 {
   color: #db8c0d;
 }
 
-.news-card:nth-child(even) .news-content h3 {
+.news-card:nth-child(even) .news-content h4 {
   color: #926fb1;
 }
 

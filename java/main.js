@@ -1,39 +1,16 @@
-let slideIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-const dots = document.querySelectorAll('.dot');
 
-function showSlides(index) {
-  if (index >= totalSlides) {
-    slideIndex = 0;
-  } else if (index < 0) {
-    slideIndex = totalSlides - 1;
-  } else {
-    slideIndex = index;
-  }
-  
-  const offset = -slideIndex * 100;
-  document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
-
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[slideIndex].classList.add('active');
-}
-
-function currentSlide(index) {
-  showSlides(index);
-}
-
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => currentSlide(index));
+// Banner Carousel
+$(document).ready(function(){
+    $('.slides').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: false,
+        dots: true,
+        appendDots: $('.slides'),
+    });
 });
-
-setInterval(() => showSlides(slideIndex + 1), 4000); // Auto-slide every 4 seconds
-
-
-
-
-
-
 
 
 
@@ -82,4 +59,24 @@ document.addEventListener('DOMContentLoaded', () => {
   manageConsentButton.addEventListener('click', () => {
       showPopup();  // Show the cookie popup when the "Manage Consent" button is clicked
   });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('header .header-background');
+    const headerHeight = header.offsetHeight;
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.scrollY;
+
+        if (scrollTop > headerHeight) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        lastScrollTop = scrollTop;
+    });
 });

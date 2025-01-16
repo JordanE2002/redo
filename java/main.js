@@ -80,3 +80,26 @@ document.addEventListener('DOMContentLoaded', function () {
         lastScrollTop = scrollTop;
     });
 });
+
+
+
+// Sticky Header Functionality
+
+let lastScrollTop = 0;
+let header = document.querySelector('header'); // Directly targets the entire <header> tag
+
+window.addEventListener("scroll", function() {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (currentScroll < lastScrollTop) {
+    // Scrolling up
+    header.classList.add("sticky");
+  } else {
+    // Scrolling down
+    header.classList.remove("sticky");
+  }
+  
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+}, false);
+
+

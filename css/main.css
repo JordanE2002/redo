@@ -1482,7 +1482,7 @@ footer {
 
 #cookie-popup {
   position: fixed;
-  bottom: 20px;
+  bottom: 50px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -1508,6 +1508,8 @@ footer {
   margin: 0;
   line-height: 1.42857143;
   text-align: left;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
 
 .cookie-content p {
@@ -1519,6 +1521,8 @@ footer {
   color: #666;
   line-height: 1.6;
   text-align: left;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 30px;
 }
 
 .cookie-buttons {
@@ -1564,7 +1568,17 @@ footer {
     width: 100%; /* Buttons take full width on small screens */
   }
   #cookie-popup {
+    top: 50%; /* Vertically center on small screens */
+    bottom: auto; /* Remove the bottom positioning */
+    transform: translate(-50%, -50%);
     width: 84%;
+  }
+}
+@media (max-width: 769px) {
+  #cookie-popup {
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
   }
 }
 /* Nav styles */

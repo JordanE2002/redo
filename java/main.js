@@ -1,4 +1,7 @@
 
+
+
+
 // Banner Carousel
 $(document).ready(function(){
     $('.slides').slick({
@@ -17,6 +20,24 @@ $(document).ready(function(){
 
 // Wait until the entire document is loaded before executing the script
 document.addEventListener('DOMContentLoaded', () => {
+
+
+    
+// Select the hamburger button and the menu
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+// Add a click event listener to the hamburger button
+hamburger.addEventListener('click', () => {
+    // Toggle the 'active' class on the menu
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        menu.classList.add('active');
+    } else {
+        menu.classList.remove('active');
+        menu.classList.add('hidden');
+    }
+});
   
   // Get a reference to the cookie popup element
   const cookiePopup = document.getElementById('cookie-popup');
@@ -117,3 +138,56 @@ window.addEventListener("scroll", function() {
 }, false);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Select the hamburger button and right menu
+
+
+// const hamburgerButton = document.getElementsByClassName('header-hamburger-box');
+// const rightMenu = document.getElementsByClassName('right-menu');
+
+// // Add click event listener to toggle the menu
+// hamburgerButton.addEventListener('click', () => {
+//  rightMenu.classList.add('hidden');
+
+//     if (rightMenu.classList.contains('hidden')){
+
+//         openMenu();
+
+
+//     } else {
+
+
+//         closeMenu();
+//     }
+    
+// });
+
+
+// function openMenu() {
+//     rightMenu.classList.remove('hidden');
+//     rightMenu.classList.add('active');
+  
+
+// }
+
+
+// function closeMenu() {
+
+//     rightMenu.classList.remove('active');
+
+//     rightMenu.classList.add('hidden');
+
+// }

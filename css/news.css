@@ -76,7 +76,6 @@
   width: 100%;
   height: auto;
   border-bottom: 1px solid #ddd;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -128,8 +127,6 @@
   vertical-align: middle;
   background-image: none;
   border: 1px solid transparent;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
   height: auto;
   line-height: 35px;
@@ -226,6 +223,6 @@
 .news-image {
   position: relative;
   overflow: hidden;
-} 
+}
 
 /*# sourceMappingURL=news.css.map */

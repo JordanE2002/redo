@@ -22,23 +22,6 @@ $(document).ready(function(){
 document.addEventListener('DOMContentLoaded', () => {
 
 
-    
-// Select the hamburger button and the menu
-const hamburger = document.getElementById('hamburger');
-const menu = document.getElementById('menu');
-
-// Add a click event listener to the hamburger button
-hamburger.addEventListener('click', () => {
-    // Toggle the 'active' class on the menu
-    if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-        menu.classList.add('active');
-    } else {
-        menu.classList.remove('active');
-        menu.classList.add('hidden');
-    }
-});
-  
   // Get a reference to the cookie popup element
   const cookiePopup = document.getElementById('cookie-popup');
   
@@ -150,6 +133,23 @@ window.addEventListener("scroll", function() {
 
 
 
+    
+// Select the hamburger button and the menu
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+// Add a click event listener to the hamburger button
+hamburger.addEventListener('click', () => {
+    // Toggle the 'active' class on the menu
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        menu.classList.add('active');
+    } else {
+        menu.classList.remove('active');
+        menu.classList.add('hidden');
+    }
+});
+  
 
 
 // Select the hamburger button and right menu

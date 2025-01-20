@@ -84,8 +84,7 @@
 
 
 .icon-arrow-right1 {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
     line-height: 1.42857143;
     font-family: Poppins, sans-serif;
     letter-spacing: 0; /* Ensure no space between arrows */
@@ -100,7 +99,41 @@
 }
 
 
+
+
+
+    .sidebar-item {
+        display: flex;
+        flex-direction: column;
+        padding: 19px 0;
+        color: white;
+        text-align: center;
+        width: 100%;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+    
+
+
 @media (max-width: 769px) {
-.right-menu{}
+.icon-arrow-right1{
+
+
+    display: none;
+}
+
+
+.right-menu ul:nth-child(2) {
+    display: block;
+    width: 90%; 
+    margin: 0 auto; 
 
 }
+}
+
+
+
+
+
+
+

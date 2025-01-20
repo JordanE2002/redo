@@ -132,62 +132,27 @@ window.addEventListener("scroll", function() {
 
 
 
-
-    
-// Select the hamburger button and the menu
-const hamburger = document.getElementById('hamburger');
-const menu = document.getElementById('menu');
-
-// Add a click event listener to the hamburger button
-hamburger.addEventListener('click', () => {
-    // Toggle the 'active' class on the menu
-    if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-        menu.classList.add('active');
+// Toggle the menu when the hamburger icon is clicked
+document.getElementById('hamburger').addEventListener('click', function(event) {
+    var menu = document.getElementById('menu');
+    if (menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        menu.classList.add('hidden');
     } else {
-        menu.classList.remove('active');
+        menu.classList.remove('hidden');
+        menu.classList.add('open');
+    }
+    event.stopPropagation(); // Prevent the click from propagating to the document
+});
+
+// Close the menu when clicking anywhere outside of the menu or hamburger
+document.addEventListener('click', function(event) {
+    var menu = document.getElementById('menu');
+    var hamburger = document.getElementById('hamburger');
+
+    // Check if the click was outside the menu and hamburger
+    if (menu.classList.contains('open') && !menu.contains(event.target) && !hamburger.contains(event.target)) {
+        menu.classList.remove('open');
         menu.classList.add('hidden');
     }
 });
-  
-
-
-// Select the hamburger button and right menu
-
-
-// const hamburgerButton = document.getElementsByClassName('header-hamburger-box');
-// const rightMenu = document.getElementsByClassName('right-menu');
-
-// // Add click event listener to toggle the menu
-// hamburgerButton.addEventListener('click', () => {
-//  rightMenu.classList.add('hidden');
-
-//     if (rightMenu.classList.contains('hidden')){
-
-//         openMenu();
-
-
-//     } else {
-
-
-//         closeMenu();
-//     }
-    
-// });
-
-
-// function openMenu() {
-//     rightMenu.classList.remove('hidden');
-//     rightMenu.classList.add('active');
-  
-
-// }
-
-
-// function closeMenu() {
-
-//     rightMenu.classList.remove('active');
-
-//     rightMenu.classList.add('hidden');
-
-// }

@@ -73,6 +73,8 @@
   line-height: 5rem;
 }
 
+
+
 /* Banner Paragraph Style */
 .banner p {
   margin-bottom: 0.375rem;
@@ -81,6 +83,7 @@
   font-weight: 600;
   text-align: center; 
 }
+
 
 /* Button Style */
 .banner button {
@@ -99,10 +102,13 @@
 }
 
 /* Button Hover Effect */
-.banner button:hover {
+.banner button:hover:nth-child(1) {
   background-color: #0056b3; 
   border-color: #0056b3;
 }
+
+
+
 
 /* Arrow Icon Style */
 .icon-arrow-right {
@@ -141,8 +147,8 @@
 @media (max-width: 992px) {
   .banner h1 {
     font-size: 2.75rem;
-    line-height: 3.25rem; /* Reduced line height for less gap between lines */
-    margin: 0 0 1rem; /* Adjusted bottom margin for consistent spacing */
+    line-height: 3.25rem; 
+    margin: 0 0 1rem; 
     font-weight: 600;
     text-align: center;
     

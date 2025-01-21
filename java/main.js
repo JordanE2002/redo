@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('header'); // Targets the <header> tag
-    let lastScrollTop = 0; // Track the last scroll position
-    const threshold = 150; // Distance from the top to start sticky behavior
+    let lastScrollTop = 0; 
+    const threshold = 150; 
 
     window.addEventListener('scroll', function () {
         let currentScroll = window.pageYOffset || document.documentElement.scrollTop;

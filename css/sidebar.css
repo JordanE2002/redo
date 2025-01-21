@@ -147,19 +147,19 @@
 
 /* General body content */
 #body-content {
-  transition: transform 0.3s ease; /* Smooth push effect */
+  transition: transform 0.3s ease;
   position: relative;
-  z-index: 1; /* Ensure it layers correctly below the menu */
+  z-index: 1;
 }
 
 /* Push effect for body content */
 .body-pushed {
-  transform: translateX(-300px); /* Push left by menu width */
+  transform: translateX(-300px);
 }
 
 /* Hamburger active state */
 .hamburger-active {
-  transform: rotate(90deg); /* Example of a visual effect */
+  transform: rotate(90deg);
   transition: transform 0.3s ease;
 }
 

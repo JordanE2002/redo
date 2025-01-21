@@ -424,7 +424,7 @@ body {
 }
 
 /* Button Hover Effect */
-.banner button:hover {
+.banner button:hover:nth-child(1) {
   background-color: #0056b3;
   border-color: #0056b3;
 }
@@ -454,8 +454,8 @@ body {
 @media (max-width: 992px) {
   .banner h1 {
     font-size: 2.75rem;
-    line-height: 3.25rem; /* Reduced line height for less gap between lines */
-    margin: 0 0 1rem; /* Adjusted bottom margin for consistent spacing */
+    line-height: 3.25rem;
+    margin: 0 0 1rem;
     font-weight: 600;
     text-align: center;
   }
@@ -612,19 +612,19 @@ body {
 
 /* General body content */
 #body-content {
-  transition: transform 0.3s ease; /* Smooth push effect */
+  transition: transform 0.3s ease;
   position: relative;
-  z-index: 1; /* Ensure it layers correctly below the menu */
+  z-index: 1;
 }
 
 /* Push effect for body content */
 .body-pushed {
-  transform: translateX(-300px); /* Push left by menu width */
+  transform: translateX(-300px);
 }
 
 /* Hamburger active state */
 .hamburger-active {
-  transform: rotate(90deg); /* Example of a visual effect */
+  transform: rotate(90deg);
   transition: transform 0.3s ease;
 }
 

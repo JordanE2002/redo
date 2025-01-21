@@ -1,0 +1,204 @@
+/* Right Menu Styles */
+.right-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #333645;;
+    color: white;
+    transition: transform 0.3s ease; 
+    padding: 0; 
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000000000;
+    max-height: 100vh; 
+    overflow-y: auto; 
+}
+
+
+/* Menu list styles */
+.right-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+    width: 100%; 
+}
+
+.right-menu ul li {
+    display: block;
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.25); 
+    border-top: 1px solid hsla(0, 0%, 100%, 0.05); 
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    color: #fff;
+    text-decoration: none;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.right-menu ul li a {
+    display: block; 
+    color: white;
+    text-decoration: none;
+    width: 100%; 
+
+}
+
+
+.right-menu ul ol {
+  
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    padding: 20px;
+
+
+
+}
+
+.right-menu ul ol a {
+    display: block; 
+    color: white;
+    text-decoration: none;
+    width: 100%; 
+
+}
+
+
+/* Menu visibility transitions */
+.right-menu.open {
+    transform: translateX(-300px); 
+}
+
+.right-menu.hidden {
+    transform: translateX(0); 
+}
+
+
+.icon-arrow-right1 {
+
+    line-height: 1.42857143;
+    font-family: Poppins, sans-serif;
+    letter-spacing: 0; /* Ensure no space between arrows */
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .3rem;
+  margin-right: 10px;
+    display: inline; /* Ensure arrows are treated as inline elements */
+
+ 
+}
+
+
+
+
+
+    .sidebar-item {
+        display: flex;
+        flex-direction: column;
+        padding: 19px 0;
+        color: white;
+        text-align: center;
+        width: 100%;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+    
+    .right-menu ul:nth-child(1),  
+    .right-menu ul:nth-child(2),
+    .right-menu ul:nth-child(3),
+    .right-menu ul:nth-child(4),
+    .right-menu ul:nth-child(5),  
+    .right-menu ul:nth-child(6),
+    .right-menu ul:nth-child(7)  {
+        display: block;
+        width: 90%; 
+        margin: 0 auto; 
+        
+     font-size: 9rem;
+        text-align: center;
+        
+    
+    }
+
+@media (min-width: 769px) {
+
+
+.right-menu ul:nth-child(1),
+.right-menu ul:nth-child(2),
+.right-menu ul:nth-child(3),
+.right-menu ul:nth-child(4),
+.right-menu ul:nth-child(5),
+.right-menu ul:nth-child(6),
+.right-menu ul:nth-child(7)
+ {
+    display: none;
+    
+
+    
+
+}
+}
+
+@media (max-width: 769px) {
+    .right-menu ul:nth-child(8){
+
+        display: none;
+    }
+}
+
+
+
+
+
+.box {
+   
+   
+    letter-spacing: .4px;
+    list-style: none;
+    box-sizing: border-box;
+    background: transparent;
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.125rem;
+    padding: 19px 0 18px;
+    border-radius: 3px;
+    outline: 1px solid rgba(0,0,0,.25);
+    border: 1px solid hsla(0,0%,100%,.1);
+    margin: 20px auto 10px; 
+    width: 95%;
+
+}
+
+
+/* General body content */
+#body-content {
+    transition: transform 0.3s ease; /* Smooth push effect */
+    position: relative;
+    z-index: 1; /* Ensure it layers correctly below the menu */
+}
+
+
+
+/* Push effect for body content */
+.body-pushed {
+    transform: translateX(-300px); /* Push left by menu width */
+}
+
+/* Hamburger active state */
+.hamburger-active {
+    transform: rotate(90deg); /* Example of a visual effect */
+    transition: transform 0.3s ease;
+}

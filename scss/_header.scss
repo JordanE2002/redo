@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 /* Logo and image styles */
@@ -168,34 +168,28 @@
     background-color: #22242e;
     border-color: #191a22;
 }
-
-/* Hamburger box styles*/
+/* Default hamburger styles */
 .header-hamburger-box {
     width: 63px;
     height: 56px;
     background-color: #333645;
     border-radius: 3px;
-    padding: 5px 15px;
-    color: #fff;
-    font-size: 1.125rem;
-    line-height: 46px;
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
-/* Inside hamburger icon*/
 .header-hamburger-inner {
     width: 33px;
     height: 4px;
     background-color: #fff;
     position: absolute;
-    top: 50%;
-    margin-top: -1.5px;
-    transition: transform 0.22s cubic-bezier(.55, .055, .675, .19);
+    transition: background-color 0.15s ease, transform 0.22s cubic-bezier(.55, .055, .675, .19);
 }
 
-/* Hamburger menu lines*/
+/* Lines (before and after) for the hamburger */
 .header-hamburger-inner::before,
 .header-hamburger-inner::after {
     content: "";
@@ -203,7 +197,7 @@
     height: 4px;
     background-color: #fff;
     position: absolute;
-    transition: transform 0.15s ease;
+    transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
 .header-hamburger-inner::before {
@@ -213,6 +207,20 @@
 .header-hamburger-inner::after {
     bottom: -10px;
 }
+
+/* Transformations for the X shape */
+.hamburger-active .header-hamburger-inner {
+    background-color: transparent;
+}
+.hamburger-active .header-hamburger-inner::before {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger-active .header-hamburger-inner::after {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
 
 /* Large  search icon*/
 .header-icon-search-large {
@@ -282,4 +290,24 @@
         display: inline;
     }
 }
+
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+background-color: white;
+    z-index: 999999;
+
+ 
+  }
+  #header.sticky.show-header {
+    top: 0; 
+}
+
+
+
+
+
 

@@ -198,33 +198,28 @@ body {
   border-color: #191a22;
 }
 
-/* Hamburger box styles*/
+/* Default hamburger styles */
 .header-hamburger-box {
   width: 63px;
   height: 56px;
   background-color: #333645;
   border-radius: 3px;
-  padding: 5px 15px;
-  color: #fff;
-  font-size: 1.125rem;
-  line-height: 46px;
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
-/* Inside hamburger icon*/
 .header-hamburger-inner {
   width: 33px;
   height: 4px;
   background-color: #fff;
   position: absolute;
-  top: 50%;
-  margin-top: -1.5px;
-  transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: background-color 0.15s ease, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-/* Hamburger menu lines*/
+/* Lines (before and after) for the hamburger */
 .header-hamburger-inner::before,
 .header-hamburger-inner::after {
   content: "";
@@ -232,7 +227,7 @@ body {
   height: 4px;
   background-color: #fff;
   position: absolute;
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
 .header-hamburger-inner::before {
@@ -241,6 +236,19 @@ body {
 
 .header-hamburger-inner::after {
   bottom: -10px;
+}
+
+/* Transformations for the X shape */
+.hamburger-active .header-hamburger-inner {
+  background-color: transparent;
+}
+
+.hamburger-active .header-hamburger-inner::before {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger-active .header-hamburger-inner::after {
+  transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /* Large  search icon*/
@@ -599,6 +607,16 @@ body {
   border: 1px solid hsla(0, 0%, 100%, 0.1);
   margin: 20px auto 10px;
   width: 95%;
+}
+
+/* Ensure the body-content covers the whole website */
+#body-content {
+  transition: transform 0.3s ease;
+}
+
+/* When the sidebar is open, shift the whole content to the left */
+.pushed-left {
+  transform: translateX(-300px); /* Adjust this value to match the width of your sidebar */
 }
 
 .our-services h2 {
@@ -1728,6 +1746,17 @@ footer {
     transform: translate(-50%, -50%);
   }
 }
+#blocking-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999;
+  display: none; /* Hidden by default */
+}
+
 /* Nav styles */
 .nav-dropdown-menu-container {
   background-color: #333645;

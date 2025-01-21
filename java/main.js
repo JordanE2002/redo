@@ -16,55 +16,54 @@ $(document).ready(function(){
 });
 
 
-
-
-// Wait until the entire document is loaded before executing the script
 document.addEventListener('DOMContentLoaded', () => {
+    const cookiePopup = document.getElementById('cookie-popup');
+    const acceptCookiesButton = document.getElementById('accept-cookies');
+    const manageConsentButton = document.getElementById('consent');
+    const blockingOverlay = document.getElementById('blocking-overlay');
 
+    // Function to hide the popup and overlay
+    function hidePopup() {
+        cookiePopup.style.display = 'none';
+        blockingOverlay.style.display = 'none';
+        enablePageInteractions(); // Enable interactions after accepting
+    }
 
-  // Get a reference to the cookie popup element
-  const cookiePopup = document.getElementById('cookie-popup');
-  
-  // Get a reference to the "Accept Cookies" button
-  const acceptCookiesButton = document.getElementById('accept-cookies');
-  
-  // Get a reference to the "Change Settings" button
-  const changeSettingsButton = document.getElementById('change-settings');
-  
-  // Get a reference to the "Manage Consent" button
-  const manageConsentButton = document.getElementById('consent');
+    // Function to show the popup and overlay
+    function showPopup() {
+        cookiePopup.style.display = 'block';
+        blockingOverlay.style.display = 'block';
+    }
 
-  // Function to hide the cookie popup
-  function hidePopup() {
-      cookiePopup.style.display = 'none';  // Sets the popup's display style to 'none', hiding it
-  }
+    // Disable page interactions by adding overlay
+    function disablePageInteractions() {
+        blockingOverlay.style.display = 'block';
+    }
 
-  // Function to show the cookie popup
-  function showPopup() {
-      cookiePopup.style.display = 'block';  // Sets the popup's display style to 'block', making it visible
-  }
+    // Enable page interactions by hiding overlay
+    function enablePageInteractions() {
+        blockingOverlay.style.display = 'none';
+    }
 
-  // Check if the user has already accepted cookies using localStorage
-  if (localStorage.getItem('cookiesAccepted') === 'true') {
-      hidePopup();  // If cookies have been accepted, hide the popup immediately
-  } else {
-      showPopup();  // If cookies haven't been accepted, show the popup
-  }
+    // Check if cookies have already been accepted
+    if (localStorage.getItem('cookiesAccepted') === 'true') {
+        hidePopup();
+    } else {
+        showPopup();
+        disablePageInteractions(); // Prevent interaction until consent is given
+    }
 
-  // Add an event listener to the "Accept Cookies" button
-  // When the button is clicked, it stores the user's consent in localStorage and hides the popup
-  acceptCookiesButton.addEventListener('click', () => {
-      localStorage.setItem('cookiesAccepted', 'true');  // Save the user's consent in localStorage
-      hidePopup();  // Hide the popup after the user accepts cookies
-  });
+    // Event listener for accepting cookies
+    acceptCookiesButton.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        hidePopup();
+    });
 
-  // Add an event listener to the "Manage Consent" button
-  // When clicked, it makes the cookie popup appear again
-  manageConsentButton.addEventListener('click', () => {
-      showPopup();  // Show the cookie popup when the "Manage Consent" button is clicked
-  });
+    // Event listener for managing consent
+    manageConsentButton.addEventListener('click', () => {
+        showPopup();
+    });
 });
-
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -101,24 +100,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Sticky Header Functionality
-
-let lastScrollTop = 0;
-let header = document.querySelector('header'); // Directly targets the entire <header> tag
-
-window.addEventListener("scroll", function() {
-  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-  
-  if (currentScroll < lastScrollTop) {
-    // Scrolling up
-    header.classList.add("sticky");
-  } else {
-    // Scrolling down
-    header.classList.remove("sticky");
-  }
-  
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-}, false);
 
 
 
@@ -126,33 +107,37 @@ window.addEventListener("scroll", function() {
 
 
 
-
-
-
-
-
-
-// Toggle the menu when the hamburger icon is clicked
+// Toggle the menu and the hamburger icon when clicked
 document.getElementById('hamburger').addEventListener('click', function(event) {
     var menu = document.getElementById('menu');
+    var hamburger = document.getElementById('hamburger');
+    var bodyContent = document.getElementById('body-content'); // Assuming 'body-content' wraps the main content
+
     if (menu.classList.contains('open')) {
         menu.classList.remove('open');
         menu.classList.add('hidden');
+        hamburger.classList.remove('hamburger-active'); // Remove X transformation
+        bodyContent.classList.remove('pushed-left'); // Remove the push effect
     } else {
         menu.classList.remove('hidden');
         menu.classList.add('open');
+        hamburger.classList.add('hamburger-active'); // Add X transformation
+        bodyContent.classList.add('pushed-left'); // Add the push effect
     }
-    event.stopPropagation(); // Prevent the click from propagating to the document
+    event.stopPropagation(); // Prevent click propagation
 });
 
 // Close the menu when clicking anywhere outside of the menu or hamburger
 document.addEventListener('click', function(event) {
     var menu = document.getElementById('menu');
     var hamburger = document.getElementById('hamburger');
+    var bodyContent = document.getElementById('body-content'); // Assuming 'body-content' wraps the main content
 
     // Check if the click was outside the menu and hamburger
     if (menu.classList.contains('open') && !menu.contains(event.target) && !hamburger.contains(event.target)) {
         menu.classList.remove('open');
         menu.classList.add('hidden');
+        hamburger.classList.remove('hamburger-active'); // Reset the hamburger icon
+        bodyContent.classList.remove('pushed-left'); // Remove the push effect
     }
 });

@@ -181,3 +181,14 @@
     width: 95%;
 
 }
+
+
+/* Ensure the body-content covers the whole website */
+#body-content {
+    transition: transform 0.3s ease;
+}
+
+/* When the sidebar is open, shift the whole content to the left */
+.pushed-left {
+    transform: translateX(-300px); /* Adjust this value to match the width of your sidebar */
+}

@@ -186,7 +186,7 @@ body {
   max-width: 100%;
 }
 
-/* Hamburger styles */
+/* icon styles */
 .header-icon-menu-container {
   display: flex;
   align-self: center;
@@ -209,6 +209,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .header-hamburger-inner {
@@ -219,7 +220,7 @@ body {
   transition: background-color 0.15s ease, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-/* Lines (before and after) for the hamburger */
+/*Lines for the hamburger box */
 .header-hamburger-inner::before,
 .header-hamburger-inner::after {
   content: "";

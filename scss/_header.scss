@@ -156,7 +156,7 @@
     
 }
 
-/* Hamburger styles */
+/* icon styles */
 .header-icon-menu-container {
     display: flex;
     align-self: center;
@@ -179,6 +179,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    overflow: hidden; 
 }
 
 .header-hamburger-inner {
@@ -189,7 +190,7 @@
     transition: background-color 0.15s ease, transform 0.22s cubic-bezier(.55, .055, .675, .19);
 }
 
-/* Lines (before and after) for the hamburger */
+/*Lines for the hamburger box */
 .header-hamburger-inner::before,
 .header-hamburger-inner::after {
     content: "";
@@ -212,6 +213,7 @@
 .hamburger-active .header-hamburger-inner {
     background-color: transparent;
 }
+
 .hamburger-active .header-hamburger-inner::before {
     transform: rotate(45deg) translate(7px, 7px);
 }

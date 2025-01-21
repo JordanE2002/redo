@@ -85,14 +85,10 @@
   content: "←";
 }
 
-/* Dots */
-.slick-dotted.slick-slider {
-  margin-bottom: 30px;
-}
-
+/* Dots Container */
 .slick-dots {
   position: absolute;
-  bottom: -25px;
+  bottom: 12px;
   list-style: none;
   display: block;
   text-align: center;
@@ -100,6 +96,8 @@
   margin: 0;
   width: 100%;
 }
+
+/* Individual Dot */
 .slick-dots li {
   position: relative;
   display: inline-block;
@@ -109,6 +107,8 @@
   padding: 0;
   cursor: pointer;
 }
+
+/* Dot Button */
 .slick-dots li button {
   border: 0;
   background: transparent;
@@ -116,35 +116,57 @@
   height: 20px;
   width: 20px;
   outline: none;
-  line-height: 0px;
-  font-size: 0px;
+  line-height: 0;
+  font-size: 0;
   color: transparent;
-  padding: 5px;
+  padding: 0;
   cursor: pointer;
+  position: relative;
 }
-.slick-dots li button:hover, .slick-dots li button:focus {
-  outline: none;
-}
-.slick-dots li button:hover:before, .slick-dots li button:focus:before {
-  opacity: 1;
-}
-.slick-dots li button:before {
+
+/* Outer Circle - Only Visible for Active Dot */
+.slick-dots li button:after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  content: "•";
-  width: 20px;
-  height: 20px;
-  font-family: "slick";
-  font-size: 6px;
-  line-height: 20px;
-  text-align: center;
-  color: black;
-  opacity: 0.25;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  border: 2px solid rgba(255, 255, 255, 0); /* Hidden by default */
+  border-radius: 50%;
+  z-index: 1;
+  transition: border-color 0.3s ease;
 }
+
+/* Inner Circle - Fully Colored */
+.slick-dots li button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border: 2px solid transparent; /* Remove border */
+  border-radius: 50%;
+  background-color: #aaa; /* Default gray color for inactive dots */
+  z-index: 2;
+  opacity: 1; /* Fully opaque */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover and Focus States */
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  background-color: #ccc; /* Light gray for hover */
+}
+
+/* Active Dot */
 .slick-dots li.slick-active button:before {
-  color: black;
-  opacity: 0.75;
-}/*# sourceMappingURL=slick-theme.css.map */
+  background-color: #fff; /* White inner circle for active state */
+}
+
+.slick-dots li.slick-active button:after {
+  border-color: rgba(255, 255, 255, 1); /* Visible outer circle for active dot */
+}

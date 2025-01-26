@@ -665,14 +665,22 @@ body {
   width: 95%;
 }
 
-/* Ensure the body-content covers the whole website */
+/* General body content */
 #body-content {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Smooth push effect */
+  position: relative;
+  z-index: 1; /* Ensure it layers correctly below the menu */
 }
 
-/* When the sidebar is open, shift the whole content to the left */
-.pushed-left {
-  transform: translateX(-300px); /* Adjust this value to match the width of your sidebar */
+/* Push effect for body content */
+.body-pushed {
+  transform: translateX(-300px); /* Push left by menu width */
+}
+
+/* Hamburger active state */
+.hamburger-active {
+  transform: rotate(90deg); /* Example of a visual effect */
+  transition: transform 0.3s ease;
 }
 
 .our-services h2 {

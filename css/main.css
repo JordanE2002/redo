@@ -412,8 +412,6 @@ body {
   box-sizing: border-box;
   text-transform: uppercase;
   border-radius: 3px;
-  background-color: #4183d7;
-  border: 1px solid #4183d7;
   color: white;
   padding: 5px 20px;
   font-size: 1.25rem;
@@ -422,10 +420,68 @@ body {
   cursor: pointer;
 }
 
-/* Button Hover Effect */
-.banner button:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
+.banner-background:nth-child(2) .banner button {
+  background-color: #926fb1;
+  border: #926fb1;
+}
+
+.banner-background:nth-child(2) .banner button:hover {
+  background-color: #7b5a97;
+  border: #7b5a97;
+}
+
+.banner-background:nth-child(3) .banner button {
+  background-color: #f7b322;
+}
+
+.banner-background:nth-child(4) .banner button {
+  background-color: #4183d7;
+  border: 1px solid #4183d7;
+}
+
+.banner-background:nth-child(4) .banner button:hover {
+  background-color: #356fb5;
+  border: 1px solid #356fb5;
+}
+
+.banner-background:nth-child(5) .banner button {
+  background-color: #2ecc71;
+  border: 1px solid #2ecc71;
+}
+
+.banner-background:nth-child(5) .banner button:hover {
+  background-color: #27b863;
+  border: 1px solid #27b863;
+}
+
+.banner-background:nth-child(6) .banner button {
+  background-color: #d64541;
+  border: 1px solid #d64541;
+}
+
+.banner-background:nth-child(6) .banner button:hover {
+  background-color: #b53836;
+  border: 1px solid #b53836;
+}
+
+.banner-background:nth-child(7) .banner button {
+  background-color: #926fb1;
+  border: #926fb1;
+}
+
+.banner-background:nth-child(7) .banner button:hover {
+  background-color: #7b5a97;
+  border: #7b5a97;
+}
+
+.banner-background:nth-child(8) .banner button {
+  background-color: #ce4125;
+  border: #ce4125;
+}
+
+.banner-background:nth-child(8) .banner button:hover {
+  background-color: #b23920;
+  border: #b23920;
 }
 
 /* Arrow Icon Style */

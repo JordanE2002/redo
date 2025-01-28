@@ -64,32 +64,42 @@ document.addEventListener('DOMContentLoaded', () => {
         showPopup();
     });
 });
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('header'); // Targets the <header> tag
     let lastScrollTop = 0; // Track the last scroll position
     const threshold = 150; // Distance from the top to start sticky behavior
+    let showTimeout; // Variable to store the timeout for showing the header
 
     window.addEventListener('scroll', function () {
         let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
         if (currentScroll > threshold) {
             if (currentScroll < lastScrollTop) {
-                // Scrolling up - Show header with animation
-                header.classList.add('sticky', 'show-header');
+                // Scrolling up - Show header after a delay
+                if (showTimeout) {
+                    clearTimeout(showTimeout); // Clear any existing timeout if the user scrolls up again
+                }
+
+                // Set timeout to show header after a delay (2 seconds or any delay)
+                showTimeout = setTimeout(() => {
+                    header.classList.add('sticky', 'show-header');
+                }, 1000); // Delay before showing the header (1 second)
             } else {
-                // Scrolling down - Hide header
+                // Scrolling down - Hide header immediately
                 header.classList.remove('show-header');
-                setTimeout(() => {
-                    if (currentScroll > threshold) { // Ensure header stays hidden if above threshold
-                        header.classList.remove('sticky');
-                    }
-                }, 1000); // Delay before removing the sticky class
+                header.classList.remove('sticky');
+                // Clear any existing show timeout to ensure it doesn't show if scrolling down
+                if (showTimeout) {
+                    clearTimeout(showTimeout);
+                }
             }
         } else {
-            // Remove sticky and animation when within threshold
+            // Remove sticky and animation when within threshold (at the top of the page)
             header.classList.remove('sticky', 'show-header');
+            // Clear any existing show timeout when back to the top
+            if (showTimeout) {
+                clearTimeout(showTimeout);
+            }
         }
 
         // Update lastScrollTop to the current scroll position

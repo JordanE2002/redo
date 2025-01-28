@@ -4,7 +4,8 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* Logo and image styles */
@@ -17,7 +18,7 @@
     display: block;
     align-self: center;
     flex-shrink: 3;
-    max-width: 100%;
+    max-width: 93%;
     padding: 0;
     box-sizing: border-box;
 }
@@ -42,6 +43,8 @@
     display: inline-block;
 }
 
+
+
 /* Contact button */
 .header-contact-button {
     background-color: #999aa2; 
@@ -62,7 +65,8 @@
 
 /*Generic color*/
 .header-support-button:hover {
-    background-color: darkblue;
+    background-color: #356fb5;
+    border-color: #356fb5;
 }
 
 /* Form style*/
@@ -155,6 +159,7 @@
     max-width: 100%;
     
 }
+
 
 /* Hamburger styles */
 .header-icon-menu-container {
@@ -305,8 +310,6 @@ background-color: white;
   #header.sticky.show-header {
     top: 0; 
 }
-
-
 
 
 

@@ -126,9 +126,10 @@
   }
 }
 /* Hide additional sections on smaller screens */
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .right-menu ul:nth-child(8) {
     display: none;
+    width: 300px;
   }
 }
 /* Box styles within the menu */

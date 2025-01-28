@@ -1,20 +1,19 @@
 /* Right Menu Styles */
 .right-menu {
-    position: fixed;
+    position: fixed; /* Sidebar stays fixed relative to the viewport */
     top: 0;
-    right: -300px;
+    right: -300px; /* Initially hidden */
     width: 300px;
-    height: 100%;
-    background-color: #333645;;
+    height: 100%; /* Full height to follow scrolling */
+    background-color: #333645; /* Sidebar background color */
     color: white;
     transition: transform 0.3s ease; 
     padding: 0; 
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1000000000;
     max-height: 100vh; 
-    overflow-y: auto; 
+    overflow-y: auto; /* Add scrolling inside the sidebar */
 }
-
 
 /* Menu list styles */
 .right-menu ul {
@@ -43,12 +42,9 @@
     color: white;
     text-decoration: none;
     width: 100%; 
-
 }
 
-
 .right-menu ul ol {
-  
     list-style: none;
     text-transform: uppercase;
     font-size: 1rem;
@@ -59,9 +55,6 @@
     text-decoration: none;
     width: 100%;
     padding: 20px;
-
-
-
 }
 
 .right-menu ul ol a {
@@ -69,101 +62,80 @@
     color: white;
     text-decoration: none;
     width: 100%; 
-
 }
-
 
 /* Menu visibility transitions */
 .right-menu.open {
-    transform: translateX(-300px); 
+    transform: translateX(-300px); /* Slide in */
 }
 
 .right-menu.hidden {
-    transform: translateX(0); 
+    transform: translateX(0); /* Slide out */
 }
 
-
+/* Arrow icon inside the menu */
 .icon-arrow-right1 {
-
     line-height: 1.42857143;
     font-family: Poppins, sans-serif;
     letter-spacing: 0; /* Ensure no space between arrows */
     list-style: none;
     color: #fff;
     text-transform: uppercase;
-    font-size: .3rem;
-  margin-right: 10px;
+    font-size: 0.3rem;
+    margin-right: 10px;
     display: inline; /* Ensure arrows are treated as inline elements */
-
- 
 }
 
+/* Sidebar item styles */
+.sidebar-item {
+    display: flex;
+    flex-direction: column;
+    padding: 19px 0;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
 
-
-
-
-    .sidebar-item {
-        display: flex;
-        flex-direction: column;
-        padding: 19px 0;
-        color: white;
-        text-align: center;
-        width: 100%;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-    }
-    
-    .right-menu ul:nth-child(1),  
-    .right-menu ul:nth-child(2),
-    .right-menu ul:nth-child(3),
-    .right-menu ul:nth-child(4),
-    .right-menu ul:nth-child(5),  
-    .right-menu ul:nth-child(6),
-    .right-menu ul:nth-child(7)  {
-        display: block;
-        width: 90%; 
-        margin: 0 auto; 
-        
-     font-size: 9rem;
-        text-align: center;
-        
-    
-    }
-
-@media (min-width: 769px) {
-
-
-.right-menu ul:nth-child(1),
+/* Center alignment for specific list items */
+.right-menu ul:nth-child(1),  
 .right-menu ul:nth-child(2),
 .right-menu ul:nth-child(3),
 .right-menu ul:nth-child(4),
-.right-menu ul:nth-child(5),
+.right-menu ul:nth-child(5),  
 .right-menu ul:nth-child(6),
-.right-menu ul:nth-child(7)
- {
-    display: none;
-    
-
-    
-
-}
+.right-menu ul:nth-child(7) {
+    display: block;
+    width: 90%; 
+    margin: 0 auto; 
+    font-size: 9rem;
+    text-align: center;
 }
 
-@media (max-width: 769px) {
-    .right-menu ul:nth-child(8){
-
+/* Hide specific sections on larger screens */
+@media (min-width: 769px) {
+    .right-menu ul:nth-child(1),
+    .right-menu ul:nth-child(2),
+    .right-menu ul:nth-child(3),
+    .right-menu ul:nth-child(4),
+    .right-menu ul:nth-child(5),
+    .right-menu ul:nth-child(6),
+    .right-menu ul:nth-child(7) {
         display: none;
     }
 }
 
+/* Hide additional sections on smaller screens */
+@media (max-width: 769px) {
+    .right-menu ul:nth-child(8) {
+        display: none;
+    }
+}
 
-
-
-
+/* Box styles within the menu */
 .box {
-   
-   
-    letter-spacing: .4px;
+    letter-spacing: 0.4px;
     list-style: none;
     box-sizing: border-box;
     background: transparent;
@@ -175,13 +147,11 @@
     font-size: 1.125rem;
     padding: 19px 0 18px;
     border-radius: 3px;
-    outline: 1px solid rgba(0,0,0,.25);
-    border: 1px solid hsla(0,0%,100%,.1);
+    outline: 1px solid rgba(0, 0, 0, 0.25);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
     margin: 20px auto 10px; 
     width: 95%;
-
 }
-
 
 /* General body content */
 #body-content {
@@ -189,8 +159,6 @@
     position: relative;
     z-index: 1; /* Ensure it layers correctly below the menu */
 }
-
-
 
 /* Push effect for body content */
 .body-pushed {

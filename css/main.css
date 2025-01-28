@@ -520,19 +520,19 @@ body {
 }
 /* Right Menu Styles */
 .right-menu {
-  position: fixed;
+  position: fixed; /* Sidebar stays fixed relative to the viewport */
   top: 0;
-  right: -300px;
+  right: -300px; /* Initially hidden */
   width: 300px;
-  height: 100%;
-  background-color: #333645;
+  height: 100%; /* Full height to follow scrolling */
+  background-color: #333645; /* Sidebar background color */
   color: white;
   transition: transform 0.3s ease;
   padding: 0;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   z-index: 1000000000;
   max-height: 100vh;
-  overflow-y: auto;
+  overflow-y: auto; /* Add scrolling inside the sidebar */
 }
 
 /* Menu list styles */
@@ -586,13 +586,14 @@ body {
 
 /* Menu visibility transitions */
 .right-menu.open {
-  transform: translateX(-300px);
+  transform: translateX(-300px); /* Slide in */
 }
 
 .right-menu.hidden {
-  transform: translateX(0);
+  transform: translateX(0); /* Slide out */
 }
 
+/* Arrow icon inside the menu */
 .icon-arrow-right1 {
   line-height: 1.42857143;
   font-family: Poppins, sans-serif;
@@ -605,6 +606,7 @@ body {
   display: inline; /* Ensure arrows are treated as inline elements */
 }
 
+/* Sidebar item styles */
 .sidebar-item {
   display: flex;
   flex-direction: column;
@@ -616,6 +618,7 @@ body {
   text-transform: uppercase;
 }
 
+/* Center alignment for specific list items */
 .right-menu ul:nth-child(1),
 .right-menu ul:nth-child(2),
 .right-menu ul:nth-child(3),
@@ -630,6 +633,7 @@ body {
   text-align: center;
 }
 
+/* Hide specific sections on larger screens */
 @media (min-width: 769px) {
   .right-menu ul:nth-child(1),
   .right-menu ul:nth-child(2),
@@ -641,11 +645,13 @@ body {
     display: none;
   }
 }
+/* Hide additional sections on smaller screens */
 @media (max-width: 769px) {
   .right-menu ul:nth-child(8) {
     display: none;
   }
 }
+/* Box styles within the menu */
 .box {
   letter-spacing: 0.4px;
   list-style: none;

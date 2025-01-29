@@ -109,30 +109,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
 document.getElementById('hamburger').addEventListener('click', function (event) {
-    const menu = document.getElementById('menu');
     const bodyContent = document.getElementById('body-content');
     const hamburger = document.getElementById('hamburger');
-
-    // Toggle the body-pushed class to slide the content
+    const overlay = document.getElementById('dark-overlay'); // Get overlay element
     const isOpen = bodyContent.classList.toggle('body-pushed');
-    
+
     // Toggle the hamburger active state
     hamburger.classList.toggle('hamburger-active', isOpen);
+
+    // Toggle the overlay visibility when the menu opens/closes
+    overlay.classList.toggle('show', isOpen);
 
     // Update the aria-expanded attribute for accessibility
     hamburger.setAttribute('aria-expanded', isOpen);
 });
 
+// Close the menu and overlay when clicking outside the menu or pressing ESC
 document.addEventListener('click', function (event) {
     const menu = document.getElementById('menu');
     const bodyContent = document.getElementById('body-content');
     const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('dark-overlay'); // Get overlay element
 
-    // Close the menu if clicking outside
     if (
         bodyContent.classList.contains('body-pushed') &&
         !menu.contains(event.target) &&
@@ -140,18 +139,21 @@ document.addEventListener('click', function (event) {
     ) {
         bodyContent.classList.remove('body-pushed');
         hamburger.classList.remove('hamburger-active');
+        overlay.classList.remove('show'); // Hide overlay
         hamburger.setAttribute('aria-expanded', false);
     }
 });
 
-// Close the menu when pressing ESC
+// Close the menu and overlay when pressing ESC
 document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
         const bodyContent = document.getElementById('body-content');
         const hamburger = document.getElementById('hamburger');
+        const overlay = document.getElementById('dark-overlay'); // Get overlay element
 
         bodyContent.classList.remove('body-pushed');
         hamburger.classList.remove('hamburger-active');
+        overlay.classList.remove('show'); // Hide overlay
         hamburger.setAttribute('aria-expanded', false);
     }
 });

@@ -178,14 +178,14 @@
     z-index: 9999;
     display: none; /* Hidden by default */
 }
-
 .cookie-content h2::after,
 .cookie-content p::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 133%;
-    right: 0; /* Ensures it stretches fully */
-    height: 1px; /* Border thickness */
-    background-color: #ccc; /* Border color */
+    left: 50%;  /* Start from the center */
+    width: 107%; /* Full width relative to its parent */
+    height: 1px; /* Line thickness */
+    background-color: #ccc; /* Line color */
+    transform: translateX(-50%); /* Center it properly */
 }

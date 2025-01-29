@@ -98,12 +98,13 @@ footer {
 .footer-menu a {
    letter-spacing: .4px;
    list-style: none;
-   font-size: .8125rem;
+   font-size: .8325rem;
    line-height: 1.375rem;
    box-sizing: border-box;
    background: transparent;
    text-decoration: none;
    color: #fff;
+   
 }
 
 .footer-menu a:hover {
@@ -159,7 +160,7 @@ footer {
    }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1224px) {
    .footer-row {
        flex-wrap: nowrap;
    }
@@ -175,6 +176,9 @@ footer {
 }
 
 
+@media (min-width: 1023px) {
+   
+}
 
 /* Footer Bottom */
 .footer-bottom {

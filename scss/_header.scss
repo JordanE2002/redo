@@ -283,7 +283,7 @@
 /* For larger screens, hide the small search form */
 @media (min-width: 768px) {
     .header-form-container,
-    .header-form {
+    .header-form, .header-phone-container, .icon-phone_in_talk {
         display: none;
     }
 }

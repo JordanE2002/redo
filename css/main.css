@@ -302,7 +302,7 @@ body {
 /* For larger screens, hide the small search form */
 @media (min-width: 768px) {
   .header-form-container,
-  .header-form {
+  .header-form, .header-phone-container, .icon-phone_in_talk {
     display: none;
   }
 }
@@ -1721,7 +1721,7 @@ footer {
 .footer-menu a {
   letter-spacing: 0.4px;
   list-style: none;
-  font-size: 0.8125rem;
+  font-size: 0.8325rem;
   line-height: 1.375rem;
   box-sizing: border-box;
   background: transparent;
@@ -1775,7 +1775,7 @@ footer {
     flex: 20%;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1224px) {
   .footer-row {
     flex-wrap: nowrap;
   }

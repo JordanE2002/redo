@@ -2,8 +2,8 @@
 .right-menu {
   position: fixed; /* Sidebar stays fixed relative to the viewport */
   top: 0;
-  right: -300px; /* Initially hidden */
-  width: 300px;
+  right: -250px; /* Initially hidden, reduced width */
+  width: 250px; /* Reduced width for mobile */
   height: 100%; /* Full height to follow scrolling */
   background-color: #333645; /* Sidebar background color */
   color: white;
@@ -66,7 +66,7 @@
 
 /* Menu visibility transitions */
 .right-menu.open {
-  transform: translateX(-300px); /* Slide in */
+  transform: translateX(-250px); /* Slide in */
 }
 
 .right-menu.hidden {
@@ -129,7 +129,7 @@
 @media (max-width: 767px) {
   .right-menu ul:nth-child(8) {
     display: none;
-    width: 300px;
+    width: 250px; /* Adjusted width for mobile */
   }
 }
 /* Box styles within the menu */
@@ -143,13 +143,13 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 1.125rem;
-  padding: 19px 0 18px;
+  font-size: 1.05rem; /* Slightly smaller font size */
+  padding: 17px 0 16px; /* Slightly reduced padding */
   border-radius: 3px;
   outline: 1px solid rgba(0, 0, 0, 0.25);
   border: 1px solid hsla(0, 0%, 100%, 0.1);
   margin: 20px auto 10px;
-  width: 95%;
+  width: 90%; /* Slightly smaller width */
 }
 
 /* General body content */
@@ -161,7 +161,7 @@
 
 /* Push effect for body content */
 .body-pushed {
-  transform: translateX(-300px); /* Push left by menu width */
+  transform: translateX(-250px); /* Push left by the new menu width (250px) */
 }
 
 /* Hamburger active state */

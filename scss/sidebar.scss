@@ -2,16 +2,16 @@
 .right-menu {
     position: fixed; /* Sidebar stays fixed relative to the viewport */
     top: 0;
-    right: -300px; /* Initially hidden */
-    width: 300px;
+    right: -250px; /* Initially hidden, reduced width */
+    width: 250px; /* Reduced width for mobile */
     height: 100%; /* Full height to follow scrolling */
     background-color: #333645; /* Sidebar background color */
     color: white;
-    transition: transform 0.3s ease; 
-    padding: 0; 
+    transition: transform 0.3s ease;
+    padding: 0;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1000000000;
-    max-height: 100vh; 
+    max-height: 100vh;
     overflow-y: auto; /* Add scrolling inside the sidebar */
 }
 
@@ -19,15 +19,15 @@
 .right-menu ul {
     list-style: none;
     padding: 0;
-    margin: 0; 
-    width: 100%; 
+    margin: 0;
+    width: 100%;
 }
 
 .right-menu ul li {
     display: block;
-    width: 100%; 
-    background-color: rgba(0, 0, 0, 0.25); 
-    border-top: 1px solid hsla(0, 0%, 100%, 0.05); 
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-top: 1px solid hsla(0, 0%, 100%, 0.05);
     padding: 15px 20px;
     text-transform: uppercase;
     font-size: 0.875rem;
@@ -38,10 +38,10 @@
 }
 
 .right-menu ul li a {
-    display: block; 
+    display: block;
     color: white;
     text-decoration: none;
-    width: 100%; 
+    width: 100%;
 }
 
 .right-menu ul ol {
@@ -58,15 +58,15 @@
 }
 
 .right-menu ul ol a {
-    display: block; 
+    display: block;
     color: white;
     text-decoration: none;
-    width: 100%; 
+    width: 100%;
 }
 
 /* Menu visibility transitions */
 .right-menu.open {
-    transform: translateX(-300px); /* Slide in */
+    transform: translateX(-250px); /* Slide in */
 }
 
 .right-menu.hidden {
@@ -99,16 +99,16 @@
 }
 
 /* Center alignment for specific list items */
-.right-menu ul:nth-child(1),  
+.right-menu ul:nth-child(1),
 .right-menu ul:nth-child(2),
 .right-menu ul:nth-child(3),
 .right-menu ul:nth-child(4),
-.right-menu ul:nth-child(5),  
+.right-menu ul:nth-child(5),
 .right-menu ul:nth-child(6),
 .right-menu ul:nth-child(7) {
     display: block;
-    width: 90%; 
-    margin: 0 auto; 
+    width: 90%;
+    margin: 0 auto;
     font-size: 9rem;
     text-align: center;
 }
@@ -130,7 +130,7 @@
 @media (max-width: 767px) {
     .right-menu ul:nth-child(8) {
         display: none;
-        width: 300px;
+        width: 250px; /* Adjusted width for mobile */
     }
 }
 
@@ -145,13 +145,13 @@
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 1.125rem;
-    padding: 19px 0 18px;
+    font-size: 1.05rem; /* Slightly smaller font size */
+    padding: 17px 0 16px; /* Slightly reduced padding */
     border-radius: 3px;
     outline: 1px solid rgba(0, 0, 0, 0.25);
     border: 1px solid hsla(0, 0%, 100%, 0.1);
-    margin: 20px auto 10px; 
-    width: 95%;
+    margin: 20px auto 10px;
+    width: 90%; /* Slightly smaller width */
 }
 
 /* General body content */
@@ -163,7 +163,7 @@
 
 /* Push effect for body content */
 .body-pushed {
-    transform: translateX(-300px); /* Push left by menu width */
+    transform: translateX(-250px); /* Push left by the new menu width (250px) */
 }
 
 /* Hamburger active state */
@@ -171,5 +171,3 @@
     transform: rotate(90deg); /* Example of a visual effect */
     transition: transform 0.3s ease;
 }
-
-

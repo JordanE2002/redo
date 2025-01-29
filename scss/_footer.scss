@@ -123,19 +123,30 @@ footer {
 
 /* Media Queries */
 
-/* Adjust the grid layout for social media icons for screens 376px or smaller */
 @media (max-width: 376px) {
    .social-media-icons {
        display: grid;
-       grid-template-columns: repeat(2, 1fr);
-       gap: 10px; /* Ensure consistent spacing between rows and columns */
+       grid-template-columns: repeat(2, 1fr); /* Two columns */
+       gap: 2px; /* Reduce the gap between the grid items */
+       width: 60%; /* Set the width of the grid */
    }
 
    .social-media-icons .icon {
-       width: 85%; /* Make icons fill the grid cell */
-       margin: 0; /* Remove individual margins to rely on grid gap */
+       width: 100%; /* Make icons take up the full available space */
+       margin: 0; /* Remove individual margins */
+       padding: 12px 22px; /* Adjust the icon padding for better spacing */
+   }
+
+   /* Adjustments for left and right columns */
+   .social-media-icons .icon:nth-child(odd) {
+       margin-right: 5px; /* Smaller gap between the left-side icons */
+   }
+
+   .social-media-icons .icon:nth-child(even) {
+       margin-left: 5px; /* Smaller gap between the right-side icons */
    }
 }
+
 @media (min-width: 768px) {
    .footer-menu {
        flex: 50%; 

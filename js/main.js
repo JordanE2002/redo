@@ -112,18 +112,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
 document.getElementById('hamburger').addEventListener('click', function (event) {
     const menu = document.getElementById('menu');
     const bodyContent = document.getElementById('body-content');
     const hamburger = document.getElementById('hamburger');
 
-    // Toggle the push effect
+    // Toggle the body-pushed class to slide the content
     const isOpen = bodyContent.classList.toggle('body-pushed');
+    
+    // Toggle the hamburger active state
     hamburger.classList.toggle('hamburger-active', isOpen);
 
-    // Update accessibility attributes
+    // Update the aria-expanded attribute for accessibility
     hamburger.setAttribute('aria-expanded', isOpen);
 });
 
@@ -144,7 +144,7 @@ document.addEventListener('click', function (event) {
     }
 });
 
-// Close menu on pressing ESC
+// Close the menu when pressing ESC
 document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
         const bodyContent = document.getElementById('body-content');

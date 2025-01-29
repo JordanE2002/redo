@@ -51,10 +51,8 @@
 }
 
 .cookie-content h2 {
-
-
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     letter-spacing: .4px;
     box-sizing: border-box;
     font-family: inherit;
@@ -63,14 +61,20 @@
     font-size: 1.625rem;
     margin: 0;
     line-height: 1.42857143;
-
     text-align: left;
+    position: relative; /* Required for pseudo-element positioning */
+    padding-bottom: 10px;
+}
 
-
-
-
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px; 
+.cookie-content h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 1px; /* Border thickness */
+    background-color: #ccc; /* Border color */
+    transform: translateX(-50vw); /* Center the line */
 }
 
 .cookie-content p {
@@ -80,12 +84,23 @@
     margin-bottom: 25px;
     font-size: 1rem;
     color: #666;
-    line-height: 1.6;
+    line-height: 1.875rem;
     text-align: left;
-
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 30px; 
+    position: relative; /* Required for pseudo-element positioning */
+    padding-bottom: 30px;
 }
+
+.cookie-content p::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 1px; /* Border thickness */
+    background-color: #ccc; /* Border color */
+    transform: translateX(-50vw); /* Center the line */
+}
+
 
 .cookie-buttons {
     display: flex;
@@ -164,3 +179,13 @@
     display: none; /* Hidden by default */
 }
 
+.cookie-content h2::after,
+.cookie-content p::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 133%;
+    right: 0; /* Ensures it stretches fully */
+    height: 1px; /* Border thickness */
+    background-color: #ccc; /* Border color */
+}

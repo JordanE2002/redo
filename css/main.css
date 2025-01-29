@@ -116,7 +116,6 @@ body {
   outline: none;
   position: relative;
   margin-top: 11px;
-  padding-right: 40px;
   color: #888;
   opacity: 1;
   display: inline-block;
@@ -179,12 +178,30 @@ body {
   cursor: pointer;
 }
 
-/* Phone icon styles */
-.header-phone-icon {
+/*Container for the phone icon */
+.header-phone-container {
+  display: flex;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  letter-spacing: 0.4px;
+  color: #333645;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 32px;
+  margin-left: 15px;
+}
+
+/* The phone icon inside the container remains unchanged */
+.header-phone-container .icon-phone_in_talk {
   font-size: 32px;
   color: #333645;
   align-self: center;
-  margin-left: 15px;
+  margin-left: 40px;
   max-width: 100%;
 }
 
@@ -324,6 +341,13 @@ body {
   top: 0;
 }
 
+/* Adjust logo size on phone screens */
+@media (max-width: 765px) {
+  .header-image {
+    max-width: 130%; /* Increase the maximum width for the logo */
+    height: auto; /* Ensure the aspect ratio is maintained */
+  }
+}
 /* Slider Container */
 .slider {
   position: relative;
@@ -743,6 +767,12 @@ body {
   line-height: 1.1;
   color: #333645;
   font-weight: 400;
+  margin-top: -13px;
+  margin-bottom: 15px;
+  letter-spacing: 0.4px;
+  font-family: Poppins, sans-serif;
+  line-height: 1.1;
+  margin: 0 0 28px;
 }
 
 .service-list {
@@ -1298,6 +1328,7 @@ body {
 }
 
 .news-button {
+  font-family: Poppins, sans-serif;
   letter-spacing: 0.4px;
   box-sizing: border-box;
   background: transparent;
@@ -1306,18 +1337,22 @@ body {
   margin-bottom: 0;
   text-align: center;
   vertical-align: middle;
+  cursor: pointer;
   background-image: none;
   border: 1px solid transparent;
   user-select: none;
   height: auto;
   line-height: 35px;
-  padding: 5px 15px;
+  padding: 5px 20px;
   text-transform: uppercase;
   font-size: 1.063rem;
   border-radius: 3px;
   white-space: normal;
   color: #fff;
+  background-color: #2ecc71;
+  border-color: #2ecc71;
   font-weight: 400;
+  margin-left: 4%;
 }
 
 .news-card:nth-child(odd) .news-button {
@@ -1350,6 +1385,7 @@ body {
   color: #555;
   margin: 0;
   line-height: 1.4;
+  padding-left: 16px;
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
@@ -1634,19 +1670,19 @@ footer {
 }
 
 .social-media-icons .icon:hover:nth-child(1) {
-  background: blue;
+  background: #3b5998;
 }
 
 .social-media-icons .icon:hover:nth-child(2) {
-  background: green;
+  background: #0077b5;
 }
 
 .social-media-icons .icon:hover:nth-child(3) {
-  background: orange;
+  background: #00aced;
 }
 
 .social-media-icons .icon:hover:nth-child(4) {
-  background: pink;
+  background: #d93175;
 }
 
 /* Footer Menu */
@@ -1726,6 +1762,36 @@ footer {
     margin-bottom: 0; /* Remove margin for better alignment */
   }
 }
+/* Footer Bottom */
+.footer-bottom {
+  background-color: #212330;
+  color: #fff;
+  padding: 0px 0;
+  font-size: 0.875rem;
+}
+
+.footer-bottom p {
+  background-color: #212330;
+  color: #fff;
+  padding: 0px 0;
+  font-size: 0.875rem;
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
 /*Was not sure where to put contsent info, so i left it here */
 /* Styling for button */
 #consent {
@@ -1782,8 +1848,19 @@ footer {
   margin: 0;
   line-height: 1.42857143;
   text-align: left;
-  border-bottom: 1px solid #ccc;
+  position: relative; /* Required for pseudo-element positioning */
   padding-bottom: 10px;
+}
+
+.cookie-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 1px; /* Border thickness */
+  background-color: #ccc; /* Border color */
+  transform: translateX(-50vw); /* Center the line */
 }
 
 .cookie-content p {
@@ -1793,10 +1870,21 @@ footer {
   margin-bottom: 25px;
   font-size: 1rem;
   color: #666;
-  line-height: 1.6;
+  line-height: 1.875rem;
   text-align: left;
-  border-bottom: 1px solid #ccc;
+  position: relative; /* Required for pseudo-element positioning */
   padding-bottom: 30px;
+}
+
+.cookie-content p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 1px; /* Border thickness */
+  background-color: #ccc; /* Border color */
+  transform: translateX(-50vw); /* Center the line */
 }
 
 .cookie-buttons {
@@ -1864,6 +1952,17 @@ footer {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   z-index: 9999;
   display: none; /* Hidden by default */
+}
+
+.cookie-content h2::after,
+.cookie-content p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 133%;
+  right: 0; /* Ensures it stretches fully */
+  height: 1px; /* Border thickness */
+  background-color: #ccc; /* Border color */
 }
 
 /* Nav styles */

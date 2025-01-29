@@ -87,7 +87,7 @@
     outline: none;
     position: relative;
     margin-top: 11px;
-    padding-right: 40px;
+  
     color: #888;
     opacity: 1;
     display: inline-block;
@@ -150,16 +150,34 @@
     cursor: pointer;
 }
 
-/* Phone icon styles */
-.header-phone-icon {
+/*Container for the phone icon */
+.header-phone-container {
+    display: flex;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    letter-spacing: .4px;
+    color: #333645;
+    box-sizing: border-box;
+  
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 32px;
+    margin-left: 15px;
+
+}
+
+/* The phone icon inside the container remains unchanged */
+.header-phone-container .icon-phone_in_talk {
     font-size: 32px;
     color: #333645;
     align-self: center;
-    margin-left: 15px;
+    margin-left: 40px;
     max-width: 100%;
-    
 }
-
 
 /* Hamburger styles */
 .header-icon-menu-container {
@@ -314,3 +332,10 @@ background-color: white;
 
 
 
+/* Adjust logo size on phone screens */
+@media (max-width: 765px) {
+    .header-image {
+        max-width: 130%; /* Increase the maximum width for the logo */
+        height: auto; /* Ensure the aspect ratio is maintained */
+    }
+}

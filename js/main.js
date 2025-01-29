@@ -156,3 +156,31 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
+$(document).ready(function () {
+    $('.partners').slick({
+        slidesToShow: 4,          // Show 4 logos at a time
+        slidesToScroll: 1,        // Scroll one logo at a time
+        autoplay: true,           // Enable auto-scroll
+        autoplaySpeed: 2000,      // Speed of auto-scroll (2 seconds)
+        infinite: true,           // Infinite looping
+        arrows: false,            // Hide navigation arrows
+        dots: false,              // Hide pagination dots
+        variableWidth: true,      // Prevent resizing and use original image width
+        responsive: [             // Responsive settings
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2, // Show 2 logos on tablet
+                    variableWidth: true,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1, // Show 1 logo on mobile
+                    variableWidth: true,
+                },
+            },
+        ],
+    });
+});

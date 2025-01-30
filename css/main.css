@@ -302,7 +302,7 @@ body {
 /* For larger screens, hide the small search form */
 @media (min-width: 768px) {
   .header-form-container,
-  .header-form, .header-phone-container, .icon-phone_in_talk {
+  .header-form, .header-phone-container {
     display: none;
   }
 }
@@ -330,7 +330,7 @@ body {
   }
 }
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   background-color: white;
@@ -547,7 +547,6 @@ body {
 /* Right Menu Styles */
 .right-menu {
   position: fixed; /* Sidebar stays fixed relative to the viewport */
-  top: 0;
   right: -250px; /* Initially hidden, reduced width */
   width: 250px; /* Reduced width for mobile */
   height: 100%; /* Full height to follow scrolling */
@@ -559,6 +558,16 @@ body {
   z-index: 1000000000;
   max-height: 100vh;
   overflow-y: auto; /* Add scrolling inside the sidebar */
+  top: 0;
+}
+
+/* Menu visibility transitions */
+.right-menu.open {
+  transform: translateX(-250px); /* Slide in */
+}
+
+.right-menu.hidden {
+  transform: translateX(0); /* Slide out */
 }
 
 /* Menu list styles */
@@ -608,15 +617,6 @@ body {
   color: white;
   text-decoration: none;
   width: 100%;
-}
-
-/* Menu visibility transitions */
-.right-menu.open {
-  transform: translateX(-250px); /* Slide in */
-}
-
-.right-menu.hidden {
-  transform: translateX(0); /* Slide out */
 }
 
 /* Arrow icon inside the menu */
@@ -1675,7 +1675,6 @@ footer {
   background: transparent;
   color: #fff;
   border-color: #333645;
-  text-align: center;
   text-decoration: none;
   font-size: 26px;
   line-height: 26px;
@@ -1684,6 +1683,7 @@ footer {
   padding: 12px 22px 16px;
   margin-right: 10px;
   margin-bottom: 10px;
+  justify-content: center;
 }
 
 .social-media-icons .icon:hover:nth-child(1) {

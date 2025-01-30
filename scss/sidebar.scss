@@ -1,7 +1,6 @@
 /* Right Menu Styles */
 .right-menu {
     position: fixed; /* Sidebar stays fixed relative to the viewport */
-    top: 0;
     right: -250px; /* Initially hidden, reduced width */
     width: 250px; /* Reduced width for mobile */
     height: 100%; /* Full height to follow scrolling */
@@ -13,6 +12,16 @@
     z-index: 1000000000;
     max-height: 100vh;
     overflow-y: auto; /* Add scrolling inside the sidebar */
+    top: 0;
+}
+
+/* Menu visibility transitions */
+.right-menu.open {
+    transform: translateX(-250px); /* Slide in */
+}
+
+.right-menu.hidden {
+    transform: translateX(0); /* Slide out */
 }
 
 /* Menu list styles */
@@ -62,15 +71,6 @@
     color: white;
     text-decoration: none;
     width: 100%;
-}
-
-/* Menu visibility transitions */
-.right-menu.open {
-    transform: translateX(-250px); /* Slide in */
-}
-
-.right-menu.hidden {
-    transform: translateX(0); /* Slide out */
 }
 
 /* Arrow icon inside the menu */
@@ -171,10 +171,6 @@
     transform: rotate(90deg); /* Example of a visual effect */
     transition: transform 0.3s ease;
 }
-
-
-
-
 
 /* Dark Overlay Styles */
 .overlay {

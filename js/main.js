@@ -64,8 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
         showPopup();
     });
 });
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('header'); // Targets the <header> tag
+    const rightMenu = document.querySelector('.right-menu'); // The right menu element
     let lastScrollTop = 0; // Track the last scroll position
     const threshold = 150; // Distance from the top to start sticky behavior
     let showTimeout; // Variable to store the timeout for showing the header
@@ -73,7 +77,10 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
         let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (currentScroll > threshold) {
+        // Check if right menu is open (you may want to adjust based on your logic for showing/hiding the menu)
+        const isRightMenuOpen = rightMenu.classList.contains('open');
+
+        if (currentScroll > threshold && !isRightMenuOpen) {
             if (currentScroll < lastScrollTop) {
                 // Scrolling up - Show header after a delay
                 if (showTimeout) {
@@ -109,6 +116,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+// Function to handle the right menu scroll-follow behavior
+document.addEventListener('scroll', function() {
+    const rightMenu = document.querySelector('.right-menu');
+    const scrollPosition = window.scrollY;  // Get current scroll position
+    const offset = 20;  // Offset value to set the desired distance from the top
+
+    // Update the 'top' property of the right menu dynamically based on scroll
+    rightMenu.style.top = `${scrollPosition + offset}px`;
+});
+
+// Toggle Hamburger Menu (open/close behavior)
 document.getElementById('hamburger').addEventListener('click', function (event) {
     const bodyContent = document.getElementById('body-content');
     const hamburger = document.getElementById('hamburger');
@@ -158,6 +177,22 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function () {
     $('.partners').slick({
         slidesToShow: 4,          // Show 4 logos at a time
@@ -186,3 +221,4 @@ $(document).ready(function () {
         ],
     });
 });
+

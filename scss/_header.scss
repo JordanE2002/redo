@@ -283,7 +283,7 @@
 /* For larger screens, hide the small search form */
 @media (min-width: 768px) {
     .header-form-container,
-    .header-form, .header-phone-container, .icon-phone_in_talk {
+    .header-form, .header-phone-container{
         display: none;
     }
 }
@@ -317,7 +317,7 @@
 
 
 .sticky {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
 background-color: white;
@@ -339,3 +339,7 @@ background-color: white;
         height: auto; /* Ensure the aspect ratio is maintained */
     }
 }
+
+
+
+

@@ -30,16 +30,16 @@ body {
   }
 }
 
+/* Global layout for header */
 .header-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0; /* Simplified padding */
 }
 
-/* Logo and image styles */
+/* Logo and Image Styles */
 .header-logo-container {
   display: flex;
   align-items: center;
@@ -54,7 +54,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Button styles */
+/* Header Action Buttons */
 .header-contact-button,
 .header-support-button {
   font-size: 1.125rem;
@@ -74,37 +74,36 @@ body {
   display: inline-block;
 }
 
-/* Contact button */
+/* Contact Button */
 .header-contact-button {
   background-color: #999aa2;
   border-color: #999aa2;
   margin-left: 20px;
 }
 
-/* Support button */
+/* Support Button */
 .header-support-button {
   background-color: #4183d7;
   border-color: #4183d7;
 }
 
-/* Button hover */
+/* Button Hover Effects */
 .header-contact-button:hover {
   background-color: #7e808a;
 }
 
-/*Generic color*/
 .header-support-button:hover {
   background-color: #356fb5;
   border-color: #356fb5;
 }
 
-/* Form style*/
+/* Search Form Styles */
 .header-form-container {
   position: relative;
   padding-bottom: 20px;
 }
 
-/* Small form */
+/* Small Search Form */
 .header-form {
   width: 100%;
   height: 47px;
@@ -114,14 +113,12 @@ body {
   border-radius: 2px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   outline: none;
-  position: relative;
   margin-top: 11px;
   color: #888;
-  opacity: 1;
   display: inline-block;
 }
 
-/* Small search icon */
+/* Small Search Icon */
 .header-icon-search-small {
   position: absolute;
   right: 5px;
@@ -132,14 +129,13 @@ body {
   margin-top: 20px;
 }
 
-/* Large form*/
+/* Large Form Styles */
 .header-large-form-container {
   display: flex;
   align-self: center;
   margin-left: 20px;
 }
 
-/* Input form */
 .header-form-large {
   width: 100%;
   height: 56px;
@@ -152,17 +148,16 @@ body {
   margin: 0;
 }
 
-/* Large input fiels */
+/* Focus effect for large form */
 .header-form-large:focus {
   border-color: #5bc0de;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
-/* Large form icon buttons*/
+/* Large Form Icon Button */
 .header-large-form-icon-container {
   display: flex;
   align-items: center;
-  align-self: center;
   background-color: #999aa2;
   height: 56px;
   font-size: 1.063rem;
@@ -172,44 +167,32 @@ body {
   border-radius: 0 3px 3px 0;
 }
 
-/* Large form hover*/
 .header-large-form-icon-container:hover {
   background-color: #7e808a;
   cursor: pointer;
 }
 
-/*Container for the phone icon */
+/* Phone Icon Container */
 .header-phone-container {
   display: flex;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  letter-spacing: 0.4px;
   color: #333645;
-  box-sizing: border-box;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  font-size: 32px;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
-/* The phone icon inside the container remains unchanged */
+/* Phone Icon */
 .header-phone-container .icon-phone_in_talk {
   font-size: 32px;
   color: #333645;
   align-self: center;
-  margin-left: 40px;
-  max-width: 100%;
+  margin-left: 60%;
 }
 
-/* Hamburger styles */
+/* Hamburger Icon */
 .header-icon-menu-container {
   display: flex;
   align-self: center;
   margin-left: 20px;
+  right: 80%;
 }
 
 .header-icon-menu-container:hover {
@@ -217,7 +200,7 @@ body {
   border-color: #191a22;
 }
 
-/* Default hamburger styles */
+/* Hamburger Box */
 .header-hamburger-box {
   width: 63px;
   height: 56px;
@@ -238,7 +221,6 @@ body {
   transition: background-color 0.15s ease, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-/* Lines (before and after) for the hamburger */
 .header-hamburger-inner::before,
 .header-hamburger-inner::after {
   content: "";
@@ -257,7 +239,7 @@ body {
   bottom: -10px;
 }
 
-/* Transformations for the X shape */
+/* Hamburger active state */
 .hamburger-active .header-hamburger-inner {
   background-color: transparent;
 }
@@ -270,7 +252,7 @@ body {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Large  search icon*/
+/* Large Search Icon */
 .header-icon-search-large {
   font-size: 23px;
   font-weight: 400;
@@ -281,32 +263,34 @@ body {
   top: -2px;
 }
 
+/* Header Actions Container */
 .header-actions-container {
   display: flex;
   padding: 7px 0;
 }
 
-/* For small screens, hide the contact and support buttons */
+/* Media Queries for Responsiveness */
+/* Hide contact and support buttons for small screens */
 @media (max-width: 920px) {
   .header-contact-button,
   .header-support-button {
     display: none;
   }
 }
-/* For medium screens, hide the phone icon */
+/* Hide phone icon for medium screens */
 @media (min-width: 766px) {
   .header-phone-icon {
     display: none;
   }
 }
-/* For larger screens, hide the small search form */
+/* Hide small search form for larger screens */
 @media (min-width: 768px) {
   .header-form-container,
   .header-form, .header-phone-container {
     display: none;
   }
 }
-/* For extra small screens, hide the large form, search icon, and icon container */
+/* Hide large form for very small screens */
 @media (max-width: 765px) {
   .header-row {
     padding-bottom: 0;
@@ -317,18 +301,13 @@ body {
     display: none;
   }
 }
-/* For screens wider than 1024px, hide the large form */
-@media (min-width: 1024px) {
-  .header-form-large {
-    display: none;
-  }
-}
-/* For very large screens, display the large form */
+/* Display large form for larger screens */
 @media (min-width: 1280px) {
   .header-form-large {
     display: inline;
   }
 }
+/* Sticky header */
 .sticky {
   position: sticky;
   top: 0;
@@ -341,11 +320,12 @@ body {
   top: 0;
 }
 
-/* Adjust logo size on phone screens */
+/* Logo adjustment for small screens */
 @media (max-width: 765px) {
   .header-image {
-    max-width: 130%; /* Increase the maximum width for the logo */
-    height: auto; /* Ensure the aspect ratio is maintained */
+    max-width: 115%;
+    display: block;
+    height: auto;
   }
 }
 /* Slider Container */

@@ -97,10 +97,14 @@
 .header-icon-search-small {
     position: absolute;
     right: 5px;
-    font-size: 30px;
-    line-height: 47px;
+    font-size: 20px;
+    line-height: 1;
     color: #333645;
     background: none;
+bottom: 20%;
+    
+
+ 
    
 }
 
@@ -345,3 +349,27 @@ background-color: white;
         border: none;
     }
 }
+
+.header-form-small{
+background-color:transparent;
+border: none;
+font-size: 14px;
+margin: 0;
+line-height: 1.42857143;
+
+
+
+}
+
+
+.header-form-small:focus{
+    outline: none; /* Removes the default outline */
+    border-color: none;
+    box-shadow: none; /* Removes any glow effect */
+}
+.header-form {
+
+    padding-top: 10px; /* This gives room for the search icon */
+}
+
+

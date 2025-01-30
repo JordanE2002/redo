@@ -129,7 +129,6 @@ body {
   line-height: 47px;
   color: #333645;
   background: none;
-  margin-top: 20px;
 }
 
 /* Large form*/
@@ -346,6 +345,11 @@ body {
   .header-image {
     max-width: 130%; /* Increase the maximum width for the logo */
     height: auto; /* Ensure the aspect ratio is maintained */
+  }
+}
+@media (max-width: 765px) {
+  .header-icon-search-small {
+    border: none;
   }
 }
 /* Slider Container */

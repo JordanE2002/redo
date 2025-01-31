@@ -47,25 +47,24 @@
 }
 
 /* Hover banner styles */
-/* Hover banner styles */
 .pictures-section .case-study .hover-banner {
     position: absolute;
     bottom: 120%; 
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    background-color: #333645;  /* Set background color */
+    background-color: #333645;  
     padding: 10px 20px;
     white-space: nowrap; 
     border-radius: 4px;
     transition: opacity 0.3s ease, transform 0.3s ease;
 
-    /* Removed color and text-align properties here to avoid conflicts */
+  
 }
 
 /* Styling for h3 inside hover-banner */
 .pictures-section .case-study .hover-banner h3 {
-    text-align: center;  /* Centering the text */
+    text-align: center;  
     -webkit-tap-highlight-color: transparent;
     user-select: auto;
     box-sizing: border-box;
@@ -74,7 +73,7 @@
     font-weight: 400;
     position: relative;
     font-size: 1.125rem;
-    color: #fff;  /* Set text color */
+    color: #fff;  
     padding-bottom: 17px;
     margin: 0;
 }

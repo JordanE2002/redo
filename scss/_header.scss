@@ -172,7 +172,35 @@ bottom: 20%;
     font-size: 32px;
     margin-left: 15px;
 
+    
 }
+
+.header-form {
+
+    padding-top: 10px; 
+}
+
+/*Mobole form */
+
+.header-form-small{
+    background-color:transparent;
+    border: none;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.42857143;
+    
+    
+    }
+
+
+.header-form-small:focus{
+    outline: none; 
+    border-color: none;
+    box-shadow: none; 
+}
+
+
+
 
 /* The phone icon inside the container remains unchanged */
 .header-phone-container .icon-phone_in_talk {
@@ -284,6 +312,22 @@ bottom: 20%;
     }
 }
 
+
+/* Adjust logo size on phone screens snd search bar */
+@media (max-width: 765px) {
+    .header-image {
+        max-width: 130%; 
+        height: auto; 
+    }
+
+    .header-icon-search-small {
+        border: none;
+    }
+}
+
+
+
+
 /* For larger screens, hide the small search form */
 @media (min-width: 768px) {
     .header-form-container,
@@ -334,42 +378,5 @@ background-color: white;
 }
 
 
-
-
-/* Adjust logo size on phone screens */
-@media (max-width: 765px) {
-    .header-image {
-        max-width: 130%; /* Increase the maximum width for the logo */
-        height: auto; /* Ensure the aspect ratio is maintained */
-    }
-}
-
-@media (max-width: 765px) {
-    .header-icon-search-small {
-        border: none;
-    }
-}
-
-.header-form-small{
-background-color:transparent;
-border: none;
-font-size: 14px;
-margin: 0;
-line-height: 1.42857143;
-
-
-
-}
-
-
-.header-form-small:focus{
-    outline: none; 
-    border-color: none;
-    box-shadow: none; 
-}
-.header-form {
-
-    padding-top: 10px; /* This gives room for the search icon */
-}
 
 

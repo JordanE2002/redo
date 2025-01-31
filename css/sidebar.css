@@ -113,6 +113,60 @@
   text-align: center;
 }
 
+/* Box styles within the menu */
+.box {
+  letter-spacing: 0.4px;
+  list-style: none;
+  box-sizing: border-box;
+  background: transparent;
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.05rem;
+  padding: 17px 0 16px;
+  border-radius: 3px;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  margin: 20px auto 10px;
+  width: 90%;
+}
+
+/* General body content */
+#body-content {
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Push effect for body content */
+.body-pushed {
+  transform: translateX(-250px);
+}
+
+/* Hamburger active state */
+.hamburger-active {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+/* Dark overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999999999;
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
 /* Hide specific sections on larger screens */
 @media (min-width: 769px) {
   .right-menu ul:nth-child(1),
@@ -129,62 +183,8 @@
 @media (max-width: 767px) {
   .right-menu ul:nth-child(8) {
     display: none;
-    width: 250px; /* Adjusted width for mobile */
+    width: 250px;
   }
-}
-/* Box styles within the menu */
-.box {
-  letter-spacing: 0.4px;
-  list-style: none;
-  box-sizing: border-box;
-  background: transparent;
-  display: block;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 1.05rem; /* Slightly smaller font size */
-  padding: 17px 0 16px; /* Slightly reduced padding */
-  border-radius: 3px;
-  outline: 1px solid rgba(0, 0, 0, 0.25);
-  border: 1px solid hsla(0, 0%, 100%, 0.1);
-  margin: 20px auto 10px;
-  width: 90%; /* Slightly smaller width */
-}
-
-/* General body content */
-#body-content {
-  transition: transform 0.3s ease; /* Smooth push effect */
-  position: relative;
-  z-index: 1; /* Ensure it layers correctly below the menu */
-}
-
-/* Push effect for body content */
-.body-pushed {
-  transform: translateX(-250px); /* Push left by the new menu width (250px) */
-}
-
-/* Hamburger active state */
-.hamburger-active {
-  transform: rotate(90deg); /* Example of a visual effect */
-  transition: transform 0.3s ease;
-}
-
-/* Dark Overlay Styles */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Dark background with transparency */
-  z-index: 999999999; /* Ensure it's behind the sidebar */
-  display: none; /* Initially hidden */
-}
-
-/* When the menu is open, show the overlay */
-.overlay.show {
-  display: block;
 }
 
 /*# sourceMappingURL=sidebar.css.map */

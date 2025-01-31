@@ -78,7 +78,7 @@
   color: #666;
   line-height: 1.875rem;
   text-align: left;
-  position: relative; /* Required for pseudo-element positioning */
+  position: relative;
   padding-bottom: 30px;
 }
 
@@ -87,10 +87,10 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100vw; /* Full width of the viewport */
-  height: 1px; /* Border thickness */
-  background-color: #ccc; /* Border color */
-  transform: translateX(-50vw); /* Center the line */
+  width: 100vw;
+  height: 1px;
+  background-color: #ccc;
+  transform: translateX(-50vw);
 }
 
 .cookie-buttons {
@@ -126,6 +126,31 @@
   background-color: #8947a3;
 }
 
+/*the block overlay */
+#blocking-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999;
+  display: none;
+}
+
+/*The grey line issues fixed*/
+.cookie-content h2::after,
+.cookie-content p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 107%;
+  height: 1px;
+  background-color: #ccc;
+  transform: translateX(-50%);
+}
+
 /* Media query for smaller screens */
 @media (max-width: 480px) {
   .cookie-buttons {
@@ -133,11 +158,11 @@
     gap: 10px;
   }
   .cookie-buttons button {
-    width: 100%; /* Buttons take full width on small screens */
+    width: 100%;
   }
   #cookie-popup {
-    top: 50%; /* Vertically center on small screens */
-    bottom: auto; /* Remove the bottom positioning */
+    top: 50%;
+    bottom: auto;
     transform: translate(-50%, -50%);
     width: 84%;
   }
@@ -148,28 +173,6 @@
     bottom: auto;
     transform: translate(-50%, -50%);
   }
-}
-#blocking-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  z-index: 9999;
-  display: none; /* Hidden by default */
-}
-
-.cookie-content h2::after,
-.cookie-content p::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%; /* Start from the center */
-  width: 107%; /* Full width relative to its parent */
-  height: 1px; /* Line thickness */
-  background-color: #ccc; /* Line color */
-  transform: translateX(-50%); /* Center it properly */
 }
 
 /*# sourceMappingURL=consent.css.map */

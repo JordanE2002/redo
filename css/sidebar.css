@@ -188,14 +188,14 @@
 }
 @media (min-width: 1024px) {
   .right-menu {
-    right: -333px; /* Initially hidden */
-    width: 333px; /* Wider for desktop */
+    right: -250px; /* Initially hidden */
+    width: 250px; /* Wider for desktop */
   }
   .right-menu.open {
     transform: translateX(-333px); /* Pushes open for desktop */
   }
   .body-pushed {
-    transform: translateX(-333px); /* Push content accordingly */
+    transform: translateX(-250px); /* Push content accordingly */
   }
 }
 

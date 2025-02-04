@@ -1,17 +1,18 @@
+/* Right Menu Styles */
 .right-menu {
-    position: fixed; /* Keep it fixed */
-    right: -250px; /* Initially hidden (for mobile) */
-    width: 250px; /* Sidebar width */
-    height: 100%; /* Full height */
-    background-color: #333645;
+    position: fixed; /* Sidebar stays fixed relative to the viewport */
+    right: -250px; /* Initially hidden, reduced width */
+    width: 250px; /* Reduced width for mobile */
+    height: 100%; /* Full height to follow scrolling */
+    background-color: #333645; /* Sidebar background color */
     color: white;
     transition: transform 0.3s ease;
     padding: 0;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1000000000;
     max-height: 100vh;
-    overflow-y: auto; /* Allow scrolling inside the sidebar */
-    top: 0; /* Start at the very top of the viewport */
+    overflow-y: auto; /* Add scrolling inside the sidebar */
+    top: 0;
 }
 
 /* Menu visibility transitions */
@@ -148,9 +149,9 @@
 
 /* Hamburger active state */
 .hamburger-active {
-    transform: none; /* Remove rotation */
+    transform: rotate(90deg); 
+    transition: transform 0.3s ease;
 }
-
 
 /* Dark overlay */
 .overlay {
@@ -188,6 +189,21 @@
     .right-menu ul:nth-child(8) {
         display: none;
         width: 250px; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .right-menu {
+        right: -333px; /* Initially hidden */
+        width: 333px; /* Wider for desktop */
+    }
+
+    .right-menu.open {
+        transform: translateX(-333px); /* Pushes open for desktop */
+    }
+
+    .body-pushed {
+        transform: translateX(-333px); /* Push content accordingly */
     }
 }
 

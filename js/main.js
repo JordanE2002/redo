@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Set timeout to show header after a delay (2 seconds or any delay)
                 showTimeout = setTimeout(() => {
                     header.classList.add('sticky', 'show-header');
-                }, 1000); // Delay before showing the header (1 second)
+                }, 500); // Delay before showing the header (1 second)
             } else {
                 // Scrolling down - Hide header immediately
                 header.classList.remove('show-header');
@@ -117,14 +117,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Function to handle the right menu scroll-follow behavior
 document.addEventListener('scroll', function() {
     const rightMenu = document.querySelector('.right-menu');
     const scrollPosition = window.scrollY;  // Get current scroll position
-    const offset = 20;  // Offset value to set the desired distance from the top
 
-    // Update the 'top' property of the right menu dynamically based on scroll
-    rightMenu.style.top = `${scrollPosition + offset}px`;
+    // Update the 'top' property of the right menu dynamically to scroll down with the page
+    rightMenu.style.top = `${scrollPosition}px`;
 });
 
 // Toggle Hamburger Menu (open/close behavior)
@@ -195,27 +193,30 @@ document.addEventListener('keydown', function (event) {
 
 $(document).ready(function () {
     $('.partners').slick({
-        slidesToShow: 4,          // Show 4 logos at a time
-        slidesToScroll: 1,        // Scroll one logo at a time
-        autoplay: true,           // Enable auto-scroll
-        autoplaySpeed: 2000,      // Speed of auto-scroll (2 seconds)
-        infinite: true,           // Infinite looping
-        arrows: false,            // Hide navigation arrows
-        dots: false,              // Hide pagination dots
-        variableWidth: true,      // Prevent resizing and use original image width
-        responsive: [             // Responsive settings
+        slidesToShow: 4,          
+        slidesToScroll: 1,        
+        autoplay: true,           
+        autoplaySpeed: 2000,      
+        infinite: true,           
+        arrows: false,            
+        dots: false,              
+        variableWidth: true,      // Keeps images closer together
+        centerMode: true,         // Keeps items centered to reduce excessive gaps
+        speed: 500,               // Faster transitions
+        cssEase: 'linear',        // Smooth sliding effect
+        responsive: [
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2, // Show 2 logos on tablet
-                    variableWidth: true,
+                    slidesToShow: 2,
+                    variableWidth: true, 
                 },
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1, // Show 1 logo on mobile
-                    variableWidth: true,
+                    slidesToShow: 1, 
+                    variableWidth: true, 
                 },
             },
         ],

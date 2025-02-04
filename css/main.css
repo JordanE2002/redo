@@ -234,6 +234,7 @@ body {
 .header-icon-menu-container:hover {
   background-color: #22242e;
   border-color: #191a22;
+  border-radius: 3px;
 }
 
 /* Default hamburger styles */
@@ -326,6 +327,11 @@ body {
   }
   .header-icon-search-small {
     border: none;
+  }
+}
+@media (max-width: 1024px) {
+  .header-large-form-icon-container {
+    border-radius: 3px;
   }
 }
 /* For larger screens, hide the small search form */
@@ -567,21 +573,20 @@ body {
     height: 600px;
   }
 }
-/* Right Menu Styles */
 .right-menu {
-  position: fixed; /* Sidebar stays fixed relative to the viewport */
-  right: -250px; /* Initially hidden, reduced width */
-  width: 250px; /* Reduced width for mobile */
-  height: 100%; /* Full height to follow scrolling */
-  background-color: #333645; /* Sidebar background color */
+  position: fixed; /* Keep it fixed */
+  right: -250px; /* Initially hidden (for mobile) */
+  width: 250px; /* Sidebar width */
+  height: 100%; /* Full height */
+  background-color: #333645;
   color: white;
   transition: transform 0.3s ease;
   padding: 0;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   z-index: 1000000000;
   max-height: 100vh;
-  overflow-y: auto; /* Add scrolling inside the sidebar */
-  top: 0;
+  overflow-y: auto; /* Allow scrolling inside the sidebar */
+  top: 0; /* Start at the very top of the viewport */
 }
 
 /* Menu visibility transitions */
@@ -716,8 +721,7 @@ body {
 
 /* Hamburger active state */
 .hamburger-active {
-  transform: rotate(90deg);
-  transition: transform 0.3s ease;
+  transform: none; /* Remove rotation */
 }
 
 /* Dark overlay */
@@ -1834,6 +1838,35 @@ footer {
   text-decoration: underline;
 }
 
+@media (min-width: 1023px) {
+  /* Footer Bottom */
+  .footer-bottom {
+    background-color: #212330;
+    color: #fff;
+    padding: 0px 0;
+    font-size: 0.875rem;
+    margin-top: 20px;
+  }
+  .footer-bottom p {
+    background-color: #212330;
+    color: #fff;
+    margin: 0;
+    padding: 8px 0;
+    font-size: 0.875rem;
+  }
+  .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+}
 /*Was not sure where to put contsent info, so i left it here */
 /* Styling for button */
 #consent {

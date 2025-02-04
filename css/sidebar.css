@@ -1,18 +1,17 @@
-/* Right Menu Styles */
 .right-menu {
-  position: fixed; /* Sidebar stays fixed relative to the viewport */
-  right: -250px; /* Initially hidden, reduced width */
-  width: 250px; /* Reduced width for mobile */
-  height: 100%; /* Full height to follow scrolling */
-  background-color: #333645; /* Sidebar background color */
+  position: fixed; /* Keep it fixed */
+  right: -250px; /* Initially hidden (for mobile) */
+  width: 250px; /* Sidebar width */
+  height: 100%; /* Full height */
+  background-color: #333645;
   color: white;
   transition: transform 0.3s ease;
   padding: 0;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   z-index: 1000000000;
   max-height: 100vh;
-  overflow-y: auto; /* Add scrolling inside the sidebar */
-  top: 0;
+  overflow-y: auto; /* Allow scrolling inside the sidebar */
+  top: 0; /* Start at the very top of the viewport */
 }
 
 /* Menu visibility transitions */
@@ -147,8 +146,7 @@
 
 /* Hamburger active state */
 .hamburger-active {
-  transform: rotate(90deg);
-  transition: transform 0.3s ease;
+  transform: none; /* Remove rotation */
 }
 
 /* Dark overlay */

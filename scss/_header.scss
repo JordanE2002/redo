@@ -222,6 +222,8 @@ bottom: 20%;
 .header-icon-menu-container:hover {
     background-color: #22242e;
     border-color: #191a22;
+    border-radius: 3px;
+
 }
 /* Default hamburger styles */
 .header-hamburger-box {
@@ -325,7 +327,11 @@ bottom: 20%;
     }
 }
 
-
+@media (max-width: 1024px) {
+    .header-large-form-icon-container {
+border-radius: 3px;
+    }
+    }
 
 
 /* For larger screens, hide the small search form */
@@ -352,6 +358,7 @@ bottom: 20%;
 @media (min-width: 1024px) {
     .header-form-large {
         display: none;
+ 
     }
 }
 

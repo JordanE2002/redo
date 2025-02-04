@@ -208,3 +208,40 @@ footer {
 .footer-bottom a:hover {
    text-decoration: underline;
 }
+
+
+@media (min-width: 1023px) {
+   /* Footer Bottom */
+.footer-bottom {
+   background-color: #212330;
+   color: #fff;
+   padding: 0px 0;
+   font-size: 0.875rem;
+   margin-top: 20px;
+
+}
+
+
+.footer-bottom p {
+   background-color: #212330;
+   color: #fff;
+   margin: 0;
+   padding: 8px 0;
+   font-size: 0.875rem;
+}
+
+.footer-bottom .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.footer-bottom a {
+   color: #fff;
+   text-decoration: none;
+}
+
+.footer-bottom a:hover {
+   text-decoration: underline;
+}
+}

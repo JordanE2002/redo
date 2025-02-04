@@ -149,7 +149,7 @@
 
 /* Hamburger active state */
 .hamburger-active {
-    transform: rotate(90deg); 
+ 
     transition: transform 0.3s ease;
 }
 
@@ -200,7 +200,7 @@
     }
 
     .right-menu.open {
-        transform: translateX(-333px); /* Pushes open for desktop */
+        transform: translateX(-250px); /* Pushes open for desktop */
     }
 
     .body-pushed {

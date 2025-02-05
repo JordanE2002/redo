@@ -703,12 +703,17 @@ html .slider, .slides, .slide {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.05rem;
-  padding: 17px 0 16px;
+  padding: 0;
   margin: 20px auto 10px;
   border-radius: 3px;
   outline: 1px solid rgba(0, 0, 0, 0.25);
   border: 1px solid hsla(0, 0%, 100%, 0.1);
-  width: 90%;
+  width: 100%;
+}
+
+/* Adjust the padding for the Contact box (the first box) only */
+.right-menu ul:first-child .box:nth-of-type(1) {
+  padding: 17px 0; /* Apply the padding only to the first box */
 }
 
 /* General body content */
@@ -748,22 +753,22 @@ html .slider, .slides, .slide {
   .right-menu ul:nth-child(4),
   .right-menu ul:nth-child(5),
   .right-menu ul:nth-child(6),
-  .right-menu ul:nth-child(7) {
+  .right-menu ul:nth-child(7),
+  .right-menu ul:nth-child(8) {
     display: none; /* Hide on larger screens */
   }
 }
 /* Mobile Layout */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .right-menu ul:nth-child(8) {
     display: none;
   }
 }
 /* On larger screens like desktop */
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .right-menu {
-    right: -333px; /* Initially hidden for desktop */
-    width: 333px;
-    overflow: hidden;
+    right: -250px; /* Initially hidden for desktop */
+    width: 250px;
   }
   .right-menu.open {
     transform: translateX(-333px); /* Open state for desktop */

@@ -204,6 +204,7 @@ $(document).ready(function () {
         centerMode: true,         // Keeps items centered to reduce excessive gaps
         speed: 500,               // Faster transitions
         cssEase: 'linear',        // Smooth sliding effect
+        
         responsive: [
             {
                 breakpoint: 768,

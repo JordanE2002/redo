@@ -1152,13 +1152,14 @@ body {
 }
 
 /* Partners Section */
-.partners {
+.partners .partners {
   display: flex;
   flex-direction: row;
   padding-top: 50px;
   padding-bottom: 50px;
-  overflow-x: hidden;
+  overflow: visible; /* Allow hover banners to overflow */
   gap: 50px;
+  position: relative; /* Ensures child elements' absolute positioning is relative to this */
 }
 
 .partners img {

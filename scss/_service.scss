@@ -5,6 +5,9 @@
     margin: 0 0 11px;
     color: #333645;
     font-weight: 400;
+
+
+    
 }
 
 
@@ -267,32 +270,20 @@
 
 
 
-/* Top Section Styles */
-
-.our-services-bottom h1 {
-    
-    letter-spacing: 0.4px;
-    line-height: 1.1;
-    font-size: 2.25rem;
-    font-weight: 600;
-    box-sizing: border-box;
-    font-family: Poppins, sans-serif;
-    color: #333645;
-    text-decoration: none;
-
+.our-services-bottom {
+    text-align: center; /* Ensure it's centered */
+ 
+    margin-top: 20px; /* Add spacing from the previous section */
+ 
 }
 
 /* Simple underline effect for h1 on hover */
 .our-services-bottom h1 {
-    letter-spacing: .4px;
-    text-align: center;
-    font-family: inherit;
+    font-size: 1.625rem; /* Adjust font size for better fit */
     line-height: 1.1;
-    font-size: 1.625rem;
-    box-sizing: border-box;
-    background: transparent;
-    text-decoration: none;
-    font-weight: 600;
+    margin-bottom: 10px; /* Ensure even spacing */
+    letter-spacing: .4px;
+    display: inline-block; /* Keep inline for proper alignment */
     color: #333645;
 }
 
@@ -315,6 +306,9 @@
     color: #333645;
     text-decoration: none; 
 }
+
+
+
 
 
 

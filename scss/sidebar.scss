@@ -57,7 +57,6 @@
     list-style: none;
     text-transform: uppercase;
     font-size: 1rem;
-    box-sizing: border-box;
     font-family: Poppins, sans-serif;
     display: block;
     color: white;
@@ -77,20 +76,19 @@
 .icon-arrow-right1 {
     line-height: 1.42857143;
     font-family: Poppins, sans-serif;
-    letter-spacing: 0; /* Ensure no space between arrows */
+    letter-spacing: 0;
     list-style: none;
     color: #fff;
-    text-transform: uppercase;
     font-size: 0.3rem;
     margin-right: 10px;
-    display: inline; /* Ensure arrows are treated as inline elements */
+    display: inline;
 }
 
 /* Sidebar item styles */
 .sidebar-item {
     display: flex;
     flex-direction: column;
-    padding: 19px 0;
+    padding: 19px 0 17px;
     color: white;
     text-align: center;
     width: 100%;
@@ -113,44 +111,36 @@
     text-align: center;
 }
 
-
-
 /* Box styles within the menu */
 .box {
     letter-spacing: 0.4px;
     list-style: none;
-    box-sizing: border-box;
     background: transparent;
     display: block;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 1.05rem; 
-    padding: 17px 0 16px; 
+    font-size: 1.05rem;
+    padding: 17px 0 16px;
+    margin: 20px auto 10px;
     border-radius: 3px;
     outline: 1px solid rgba(0, 0, 0, 0.25);
     border: 1px solid hsla(0, 0%, 100%, 0.1);
-    margin: 20px auto 10px;
-    width: 90%; 
+
+    width: 90%;
 }
 
 /* General body content */
 #body-content {
     transition: transform 0.3s ease;
     position: relative;
-    z-index: 1; 
+    z-index: 1;
 }
 
 /* Push effect for body content */
 .body-pushed {
-    transform: translateX(-250px); 
-}
-
-/* Hamburger active state */
-.hamburger-active {
- 
-    transition: transform 0.3s ease;
+    transform: translateX(-250px);
 }
 
 /* Dark overlay */
@@ -160,16 +150,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); 
-    z-index: 999999999; 
-    display: none; 
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999999999;
+    display: none;
 }
-
 
 .overlay.show {
     display: block;
 }
 
+/* Media Queries */
 
 /* Hide specific sections on larger screens */
 @media (min-width: 769px) {
@@ -180,31 +170,30 @@
     .right-menu ul:nth-child(5),
     .right-menu ul:nth-child(6),
     .right-menu ul:nth-child(7) {
-        display: none;
+        display: none; /* Hide on larger screens */
     }
 }
 
-/* Hide additional sections on smaller screens */
+/* Mobile Layout */
 @media (max-width: 767px) {
     .right-menu ul:nth-child(8) {
         display: none;
-        width: 250px; 
     }
 }
 
+/* On larger screens like desktop */
 @media (min-width: 1024px) {
     .right-menu {
-        right: -250px; /* Initially hidden */
-        width: 250px; /* Wider for desktop */
-        
+        right: -333px; /* Initially hidden for desktop */
+        width: 333px;
+        overflow: hidden;
     }
 
     .right-menu.open {
-        transform: translateX(-250px); /* Pushes open for desktop */
+        transform: translateX(-333px); /* Open state for desktop */
     }
 
     .body-pushed {
-        transform: translateX(-250px); /* Push content accordingly */
+        transform: translateX(-333px); /* Adjust body content */
     }
 }
-

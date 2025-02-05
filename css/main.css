@@ -632,7 +632,6 @@ body {
   list-style: none;
   text-transform: uppercase;
   font-size: 1rem;
-  box-sizing: border-box;
   font-family: Poppins, sans-serif;
   display: block;
   color: white;
@@ -652,20 +651,19 @@ body {
 .icon-arrow-right1 {
   line-height: 1.42857143;
   font-family: Poppins, sans-serif;
-  letter-spacing: 0; /* Ensure no space between arrows */
+  letter-spacing: 0;
   list-style: none;
   color: #fff;
-  text-transform: uppercase;
   font-size: 0.3rem;
   margin-right: 10px;
-  display: inline; /* Ensure arrows are treated as inline elements */
+  display: inline;
 }
 
 /* Sidebar item styles */
 .sidebar-item {
   display: flex;
   flex-direction: column;
-  padding: 19px 0;
+  padding: 19px 0 17px;
   color: white;
   text-align: center;
   width: 100%;
@@ -692,7 +690,6 @@ body {
 .box {
   letter-spacing: 0.4px;
   list-style: none;
-  box-sizing: border-box;
   background: transparent;
   display: block;
   color: #fff;
@@ -701,10 +698,10 @@ body {
   text-decoration: none;
   font-size: 1.05rem;
   padding: 17px 0 16px;
+  margin: 20px auto 10px;
   border-radius: 3px;
   outline: 1px solid rgba(0, 0, 0, 0.25);
   border: 1px solid hsla(0, 0%, 100%, 0.1);
-  margin: 20px auto 10px;
   width: 90%;
 }
 
@@ -718,11 +715,6 @@ body {
 /* Push effect for body content */
 .body-pushed {
   transform: translateX(-250px);
-}
-
-/* Hamburger active state */
-.hamburger-active {
-  transition: transform 0.3s ease;
 }
 
 /* Dark overlay */
@@ -741,6 +733,7 @@ body {
   display: block;
 }
 
+/* Media Queries */
 /* Hide specific sections on larger screens */
 @media (min-width: 769px) {
   .right-menu ul:nth-child(1),
@@ -750,26 +743,27 @@ body {
   .right-menu ul:nth-child(5),
   .right-menu ul:nth-child(6),
   .right-menu ul:nth-child(7) {
-    display: none;
+    display: none; /* Hide on larger screens */
   }
 }
-/* Hide additional sections on smaller screens */
+/* Mobile Layout */
 @media (max-width: 767px) {
   .right-menu ul:nth-child(8) {
     display: none;
-    width: 250px;
   }
 }
+/* On larger screens like desktop */
 @media (min-width: 1024px) {
   .right-menu {
-    right: -250px; /* Initially hidden */
-    width: 250px; /* Wider for desktop */
+    right: -333px; /* Initially hidden for desktop */
+    width: 333px;
+    overflow: hidden;
   }
   .right-menu.open {
-    transform: translateX(-250px); /* Pushes open for desktop */
+    transform: translateX(-333px); /* Open state for desktop */
   }
   .body-pushed {
-    transform: translateX(-250px); /* Push content accordingly */
+    transform: translateX(-333px); /* Adjust body content */
   }
 }
 .our-services h2 {
@@ -1123,29 +1117,18 @@ body {
   margin-top: 20px;
 }
 
-/* Top Section Styles */
-.our-services-bottom h1 {
-  letter-spacing: 0.4px;
-  line-height: 1.1;
-  font-size: 2.25rem;
-  font-weight: 600;
-  box-sizing: border-box;
-  font-family: Poppins, sans-serif;
-  color: #333645;
-  text-decoration: none;
+.our-services-bottom {
+  text-align: center; /* Ensure it's centered */
+  margin-top: 20px; /* Add spacing from the previous section */
 }
 
 /* Simple underline effect for h1 on hover */
 .our-services-bottom h1 {
-  letter-spacing: 0.4px;
-  text-align: center;
-  font-family: inherit;
+  font-size: 1.625rem; /* Adjust font size for better fit */
   line-height: 1.1;
-  font-size: 1.625rem;
-  box-sizing: border-box;
-  background: transparent;
-  text-decoration: none;
-  font-weight: 600;
+  margin-bottom: 10px; /* Ensure even spacing */
+  letter-spacing: 0.4px;
+  display: inline-block; /* Keep inline for proper alignment */
   color: #333645;
 }
 

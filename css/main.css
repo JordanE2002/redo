@@ -383,6 +383,12 @@ body {
   overflow: hidden;
 }
 
+/* Partners Section */
+html .slider, .slides, .slide {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 /* Slide Wrapper */
 .slides {
   display: flex;
@@ -1151,15 +1157,25 @@ body {
   text-decoration: none;
 }
 
+/* General styles for body */
+html body {
+  overflow-x: hidden !important;
+  max-width: 100%;
+}
+
 /* Partners Section */
-.partners .partners {
+.partners {
   display: flex;
   flex-direction: row;
   padding-top: 50px;
   padding-bottom: 50px;
-  overflow: visible; /* Allow hover banners to overflow */
+  overflow-x: hidden; /* Allow hover banners to overflow */
   gap: 50px;
   position: relative; /* Ensures child elements' absolute positioning is relative to this */
+}
+
+.slick-list {
+  overflow: visible !important;
 }
 
 .partners img {
@@ -1180,6 +1196,7 @@ body {
   display: inline-block;
   padding-top: 20px;
   margin-top: 20px;
+  overflow-x: visible;
 }
 
 .case-study h3 {
@@ -1201,7 +1218,7 @@ body {
 /* Hover banner styles */
 .pictures-section .case-study .hover-banner {
   position: absolute;
-  bottom: 120%;
+  bottom: 150%; /* Moved higher */
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -1239,7 +1256,7 @@ body {
   border-top: 8px solid #333645;
 }
 
-/* Show Banner */
+/* Show Banner on hover */
 .pictures-section .case-study:hover .hover-banner {
   opacity: 1;
   transform: translate(-50%, -10px); /* Slight lift */

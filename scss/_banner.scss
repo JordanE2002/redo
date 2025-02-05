@@ -4,6 +4,12 @@
   width: 100%;
   overflow: hidden;
 }
+/* Partners Section */
+html .slider, .slides, .slide {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 
 /* Slide Wrapper */
 .slides {

@@ -1,18 +1,26 @@
+/* General styles for body */
+html body {
+    overflow-x: hidden !important;
+    max-width: 100%;
+}
+
 /* Partners Section */
 .partners {
-    .partners {
-        display: flex;
-        flex-direction: row;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        overflow: visible; /* Allow hover banners to overflow */
-        gap: 50px;
-        position: relative; /* Ensures child elements' absolute positioning is relative to this */
-    }
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow-x: hidden; /* Allow hover banners to overflow */
+    gap: 50px;
+    position: relative; /* Ensures child elements' absolute positioning is relative to this */
+}
+
+.slick-list {
+    overflow: visible !important;
 }
 
 .partners img {
-    width: auto; 
+    width: auto;
     max-height: 70px;
     flex-shrink: 0;
     filter: grayscale(100%);
@@ -29,10 +37,10 @@
     display: inline-block;
     padding-top: 20px;
     margin-top: 20px;
-    
+    overflow-x: visible;
 }
 
-.case-study h3{
+.case-study h3 {
     letter-spacing: .4px;
     text-align: center;
     -webkit-tap-highlight-color: transparent;
@@ -46,57 +54,50 @@
     color: #fff;
     padding-bottom: 17px;
     margin: 0;
-
 }
 
 /* Hover banner styles */
 .pictures-section .case-study .hover-banner {
     position: absolute;
-    bottom: 120%; 
+    bottom: 150%; /* Moved higher */
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    background-color: #333645;  
+    background-color: #333645;
     padding: 10px 20px;
-    white-space: nowrap; 
+    white-space: nowrap;
     border-radius: 4px;
     transition: opacity 0.3s ease, transform 0.3s ease;
-
-  
 }
 
 /* Styling for h3 inside hover-banner */
 .pictures-section .case-study .hover-banner h3 {
-    text-align: center;  
+    text-align: center;
     -webkit-tap-highlight-color: transparent;
     user-select: auto;
     box-sizing: border-box;
-
     line-height: 1.1;
     font-weight: 400;
     position: relative;
     font-size: 1.125rem;
-    color: #fff;  
+    color: #fff;
     padding-bottom: 17px;
     margin: 0;
 }
-
-
 
 /* Arrow */
 .pictures-section .case-study .hover-banner::after {
     content: "";
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-top: 8px solid #333645;
-    
 }
 
-/* Show Banner */
+/* Show Banner on hover */
 .pictures-section .case-study:hover .hover-banner {
     opacity: 1;
     transform: translate(-50%, -10px); /* Slight lift */

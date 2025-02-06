@@ -1,8 +1,8 @@
 /* Right Menu Styles */
 .right-menu {
     position: fixed; /* Sidebar stays fixed relative to the viewport */
-    right: -250px; /* Initially hidden, reduced width */
-    width: 250px; /* Reduced width for mobile */
+    right: -333px; /* Initially hidden, reduced width */
+    width: 333px; /* Reduced width for mobile */
     height: 100%; /* Full height to follow scrolling */
     background-color: #333645; /* Sidebar background color */
     color: white;
@@ -11,13 +11,13 @@
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1000000000;
     max-height: 100vh;
-    overflow-y: auto; /* Add scrolling inside the sidebar */
+  
     top: 0;
 }
 
 /* Menu visibility transitions */
 .right-menu.open {
-    transform: translateX(-250px); /* Slide in */
+    transform: translateX(-333px); /* Slide in */
 }
 
 .right-menu.hidden {
@@ -36,7 +36,8 @@
     display: block;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.25);
-    border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+
+    border-top:1px solid hsla(0, 0%, 20%, 1);
     padding: 15px 20px;
     text-transform: uppercase;
     font-size: 0.875rem;
@@ -44,6 +45,12 @@
     text-decoration: none;
     box-sizing: border-box;
     position: relative;
+}
+
+@media (max-width: 1023px) {
+    .right-menu ul li{
+    border-top:  1px solid rgba(0,0,0,.45);
+}
 }
 
 .right-menu ul li a {
@@ -147,7 +154,7 @@
 
 /* Push effect for body content */
 .body-pushed {
-    transform: translateX(-250px);
+    transform: translateX(-333px);
 }
 
 /* Dark overlay */
@@ -184,14 +191,14 @@
 
 /* Mobile Layout */
 @media (max-width: 768px) {
-    .right-menu ul:nth-child(8) {
+    .right-menu ul:nth-child(9) {
         display: none;
     }
    
 }
 
 /* On larger screens like desktop */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     .right-menu {
         right: -250px; /* Initially hidden for desktop */
         width: 250px;
@@ -199,10 +206,10 @@
     }
 
     .right-menu.open {
-        transform: translateX(-333px); /* Open state for desktop */
+        transform: translateX(-250px); /* Open state for desktop */
     }
 
     .body-pushed {
-        transform: translateX(-333px); /* Adjust body content */
+        transform: translateX(-250px); /* Adjust body content */
     }
 }

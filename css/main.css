@@ -584,7 +584,7 @@ html .slider, .slides, .slide {
   position: fixed; /* Sidebar stays fixed relative to the viewport */
   right: -333px; /* Initially hidden, reduced width */
   width: 333px; /* Reduced width for mobile */
-  height: 100%; /* Full height to follow scrolling */
+  height: 100vh; /* Full height to follow scrolling */
   background-color: #333645; /* Sidebar background color */
   color: white;
   transition: transform 0.3s ease;
@@ -592,6 +592,7 @@ html .slider, .slides, .slide {
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   z-index: 1000000000;
   max-height: 100vh;
+  overflow-y: auto;
   top: 0;
 }
 
@@ -766,19 +767,6 @@ html .slider, .slides, .slide {
 @media (max-width: 768px) {
   .right-menu ul:nth-child(9) {
     display: none;
-  }
-}
-/* On larger screens like desktop */
-@media (max-width: 1023px) {
-  .right-menu {
-    right: -250px; /* Initially hidden for desktop */
-    width: 250px;
-  }
-  .right-menu.open {
-    transform: translateX(-250px); /* Open state for desktop */
-  }
-  .body-pushed {
-    transform: translateX(-250px); /* Adjust body content */
   }
 }
 .our-services h2 {

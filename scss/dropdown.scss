@@ -101,12 +101,12 @@
 
 /* Background for each item */
 .nav-dropdown-item-1:hover .sub-menu-container { background-color: #526781; }
-.nav-dropdown-item-2:hover .sub-menu-container { background-color: #4183d7; }
-.nav-dropdown-item-3:hover .sub-menu-container { background-color: #2ecc71; }
-.nav-dropdown-item-4:hover .sub-menu-container { background-color: #d64541; }
-.nav-dropdown-item-5:hover .sub-menu-container { background-color: #926fb1; }
-.nav-dropdown-item-6:hover .sub-menu-container { background-color: #d11f4d; }
-.nav-dropdown-item-7:hover .sub-menu-container { background-color: #b23920; }
+.nav-dropdown-item-2:hover .sub-menu-container { background-color: #286abd; }
+.nav-dropdown-item-3:hover .sub-menu-container { background-color: #25a25a; }
+.nav-dropdown-item-4:hover .sub-menu-container { background-color: #bc2c28; }
+.nav-dropdown-item-5:hover .sub-menu-container { background-color: #79539a; }
+.nav-dropdown-item-6:hover .sub-menu-container { background-color: #de093f; }
+.nav-dropdown-item-7:hover .sub-menu-container { background-color: #a3331d; }
 
 /* Icons */
 .icon-laptop { color: #67809f; font-size: 1.6rem; }
@@ -129,15 +129,16 @@
 .nav-dropdown-item-5:hover { background-color: #926fb1; }
 .nav-dropdown-item-5:hover .icon-embed { color: white; }
 
-.icon-security { color: #d11f4d; font-size: 1.6rem; }
-.nav-dropdown-item-6:hover { background-color: #d11f4d; }
+.icon-security { color: #f62459; font-size: 1.6rem; }
+.nav-dropdown-item-6:hover { background-color: #f62459; }
 .nav-dropdown-item-6:hover .icon-security { color: white; }
 
-.icon-graduate { color: #b23920; font-size: 1.6rem; }
-.nav-dropdown-item-7:hover { background-color: #b23920; }
+.icon-graduate { color: #ce4125; font-size: 1.6rem; }
+.nav-dropdown-item-7:hover { background-color: #ce4125; }
 .nav-dropdown-item-7:hover .icon-graduate { color: white; }
 
-/* Dropdown Triangle (Arrow) Styling */
+
+
 .dropdown-triangle {
     position: relative;
     z-index: 20;
@@ -145,12 +146,50 @@
     height: 0;
     border-style: solid;
     border-width: 40px 83px 0 83px;
-    border-color: #FF4532 transparent transparent transparent;
+
     left: 0;
-    top: -32px;
-    margin-top: 12px;
+    top: 0px;
+    margin-top: 15px;
     display: none;
     align-self: center;
+}
+
+
+
+/* Triangle color for each dropdown item */
+.nav-dropdown-item-1 .dropdown-triangle {
+    border-color: #67809f transparent transparent transparent;
+}
+
+.nav-dropdown-item-2 .dropdown-triangle {
+    border-color: #4183d7 transparent transparent transparent;
+}
+
+.nav-dropdown-item-3 .dropdown-triangle {
+    border-color: #2ecc71 transparent transparent transparent;
+}
+
+.nav-dropdown-item-4 .dropdown-triangle {
+    border-color: #d64541 transparent transparent transparent;
+}
+
+.nav-dropdown-item-5 .dropdown-triangle {
+    border-color: #926fb1 transparent transparent transparent;
+}
+
+.nav-dropdown-item-6 .dropdown-triangle {
+    border-color: #f62459 transparent transparent transparent;
+}
+
+.nav-dropdown-item-7 .dropdown-triangle {
+    border-color: #ce4125 transparent transparent transparent;
+}
+
+
+
+/* Show triangle when hovering over the dropdown item */
+.nav-dropdown-item:hover .dropdown-triangle {
+    display: block;
 }
 
 @media (max-width: 992px) {

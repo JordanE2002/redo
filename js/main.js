@@ -16,6 +16,9 @@ $(document).ready(function(){
 });
 
 
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const cookiePopup = document.getElementById('cookie-popup');
     const acceptCookiesButton = document.getElementById('accept-cookies');
@@ -67,6 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('header'); // Targets the <header> tag
     const rightMenu = document.querySelector('.right-menu'); // The right menu element
@@ -87,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     clearTimeout(showTimeout); // Clear any existing timeout if the user scrolls up again
                 }
 
-                // Set timeout to show header after a delay (2 seconds or any delay)
+                // Set timeout to show header after a delay (1 seconds or any delay)
                 showTimeout = setTimeout(() => {
                     header.classList.add('sticky', 'show-header');
                 }, 500); // Delay before showing the header (1 second)

@@ -769,6 +769,18 @@ html .slider, .slides, .slide {
     display: none;
   }
 }
+@media (max-width: 1023px) {
+  .right-menu {
+    right: -250px; /* Initially hidden for desktop */
+    width: 250px;
+  }
+  .right-menu.open {
+    transform: translateX(-250px); /* Open state for desktop */
+  }
+  .body-pushed {
+    transform: translateX(-250px); /* Adjust body content */
+  }
+}
 .our-services h2 {
   font-size: 1.3rem;
   position: relative;

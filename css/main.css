@@ -776,26 +776,26 @@ html .slider, .slides, .slide {
     transform: translateX(-250px); /* Adjust body content */
   }
 }
-@media (min-width: 1023px) {
-  .right-menu ul li:first-of-type {
-    list-style: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-family: Poppins, sans-serif;
-    display: block;
-    color: white;
-    text-decoration: none;
-    width: 100%;
-    padding: 20px;
-    background-color: #333645;
-  }
-  .right-menu ul li:first-of-type a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    width: 100%;
-  }
+.right-menu ul li:nth-child(1) {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-family: Poppins, sans-serif;
+  display: block;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  padding: 20px;
+  background-color: #333645;
 }
+
+.right-menu ul li:nth-child(1) a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+}
+
 .our-services h2 {
   font-size: 1.3rem;
   position: relative;

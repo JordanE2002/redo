@@ -582,27 +582,26 @@ html .slider, .slides, .slide {
 /* Right Menu Styles */
 .right-menu {
   position: fixed; /* Sidebar stays fixed relative to the viewport */
-  right: -333px; /* Initially hidden, reduced width */
-  width: 333px; /* Reduced width for mobile */
-  height: 100vh; /* Full height to follow scrolling */
-  background-color: #333645; /* Sidebar background color */
+  right: -333px;
+  width: 333px;
+  height: 100vh;
+  background-color: #333645;
   color: white;
-  transition: transform 0.3s ease;
+  transition: right 0.3s ease, width 0.3s ease;
   padding: 0;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   z-index: 1000000000;
-  max-height: 100vh;
   overflow-y: auto;
   top: 0;
 }
 
 /* Menu visibility transitions */
 .right-menu.open {
-  transform: translateX(-333px); /* Slide in */
+  right: 0;
 }
 
 .right-menu.hidden {
-  transform: translateX(0); /* Slide out */
+  transform: translateX(0);
 }
 
 /* Menu list styles */
@@ -639,7 +638,7 @@ html .slider, .slides, .slide {
   width: 100%;
 }
 
-.right-menu ul ol {
+.right-menu ol {
   list-style: none;
   text-transform: uppercase;
   font-size: 1rem;
@@ -648,10 +647,10 @@ html .slider, .slides, .slide {
   color: white;
   text-decoration: none;
   width: 100%;
-  padding: 20px;
+  padding: 0 20px;
 }
 
-.right-menu ul ol a {
+.right-menu ol a {
   display: block;
   color: white;
   text-decoration: none;
@@ -690,7 +689,14 @@ html .slider, .slides, .slide {
 .right-menu ul:nth-child(5),
 .right-menu ul:nth-child(6),
 .right-menu ul:nth-child(7),
-.right-menu ul:nth-child(8) {
+.right-menu ul:nth-child(8),
+.right-menu ul:nth-child(9),
+.right-menu ul:nth-child(10),
+.right-menu ul:nth-child(11),
+.right-menu ul:nth-child(12),
+.right-menu ul:nth-child(13),
+.right-menu ul:nth-child(14),
+.right-menu ul:nth-child(15) {
   display: block;
   width: 90%;
   margin: 0 auto;
@@ -698,6 +704,14 @@ html .slider, .slides, .slide {
   text-align: center;
 }
 
+@media (max-width: 769px) {
+  .right-menu ul:nth-child(17),
+  .right-menu ul:nth-child(18),
+  .right-menu ul:nth-child(19) .right-menu ul:nth-child(20),
+  .right-menu ol:nth-child(16) {
+    display: none;
+  }
+}
 /* Box styles within the menu */
 .box {
   letter-spacing: 0.4px;
@@ -709,17 +723,17 @@ html .slider, .slides, .slide {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.05rem;
-  padding: 0;
   margin: 20px auto 10px;
   border-radius: 3px;
   outline: 1px solid rgba(0, 0, 0, 0.25);
   border: 1px solid hsla(0, 0%, 100%, 0.1);
-  width: 100%;
+  padding: 0px 0px;
+  width: 90%;
 }
 
-/* Adjust the padding for the Contact box (the first box) only */
-.right-menu ul:first-child .box:nth-of-type(1) {
-  padding: 17px 0; /* Apply the padding only to the first box */
+/* Contact box */
+.box:nth-of-type(1) {
+  padding: 19px 2px;
 }
 
 /* General body content */
@@ -751,7 +765,6 @@ html .slider, .slides, .slide {
 }
 
 /* Media Queries */
-/* Hide specific sections on larger screens */
 @media (min-width: 769px) {
   .right-menu ul:nth-child(1),
   .right-menu ul:nth-child(2),
@@ -760,42 +773,34 @@ html .slider, .slides, .slide {
   .right-menu ul:nth-child(5),
   .right-menu ul:nth-child(6),
   .right-menu ul:nth-child(7),
-  .right-menu ul:nth-child(8) {
-    display: none; /* Hide on larger screens */
+  .right-menu ul:nth-child(8),
+  .right-menu ul:nth-child(9),
+  .right-menu ul:nth-child(10),
+  .right-menu ul:nth-child(11),
+  .right-menu ul:nth-child(12),
+  .right-menu ul:nth-child(13),
+  .right-menu ul:nth-child(14),
+  .right-menu ul:nth-child(15) {
+    display: none;
   }
 }
 @media (max-width: 1023px) {
   .right-menu {
-    right: -250px; /* Initially hidden for desktop */
+    right: -250px;
     width: 250px;
   }
   .right-menu.open {
-    transform: translateX(-250px); /* Open state for desktop */
+    transform: translateX(-250px);
   }
   .body-pushed {
-    transform: translateX(-250px); /* Adjust body content */
+    transform: translateX(-250px);
   }
 }
-.right-menu ul li:nth-child(1) {
-  list-style: none;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-family: Poppins, sans-serif;
-  display: block;
-  color: white;
-  text-decoration: none;
-  width: 100%;
-  padding: 20px;
-  background-color: #333645;
+@media (min-width: 1023px) {
+  .box {
+    display: none;
+  }
 }
-
-.right-menu ul li:nth-child(1) a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  width: 100%;
-}
-
 .our-services h2 {
   font-size: 1.3rem;
   position: relative;
@@ -1312,7 +1317,7 @@ html body {
   font-weight: 600;
   color: #333645;
   text-align: right;
-  position: relative; /* To position the underline */
+  position: relative;
   cursor: pointer;
 }
 
@@ -1323,8 +1328,8 @@ html body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px; /* Adjust the underline thickness */
-  background-color: #333645; /* Underline color */
+  height: 2px;
+  background-color: #333645;
 }
 
 /* New styles for heading alignment */
@@ -1456,7 +1461,7 @@ html body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 85%; /* Adjust the width of the line */
+  width: 85%;
   border-top: 1px solid #ccc;
 }
 
@@ -1555,7 +1560,6 @@ html body {
   text-decoration: underline;
 }
 
-/* Hide View All link on larger screens */
 @media (min-width: 768px) {
   .view-all-container {
     display: none;
@@ -2179,10 +2183,10 @@ footer {
   width: 100%;
   color: #fff;
   font-weight: 500;
-  text-align: left; /* Keep it left-aligned */
-  margin-top: 0; /* No extra space above */
-  padding-top: 20px; /* Adjust top padding as needed */
-  margin-left: 0px; /* Add left padding to give some space from the edge */
+  text-align: left;
+  margin-top: 0;
+  padding-top: 20px;
+  margin-left: 0px;
 }
 
 /* Hover for sub menu */

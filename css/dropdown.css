@@ -86,10 +86,10 @@
   width: 100%;
   color: #fff;
   font-weight: 500;
-  text-align: left; /* Keep it left-aligned */
-  margin-top: 0; /* No extra space above */
-  padding-top: 20px; /* Adjust top padding as needed */
-  margin-left: 0px; /* Add left padding to give some space from the edge */
+  text-align: left;
+  margin-top: 0;
+  padding-top: 20px;
+  margin-left: 0px;
 }
 
 /* Hover for sub menu */

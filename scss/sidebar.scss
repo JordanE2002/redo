@@ -1,16 +1,16 @@
 /* Right Menu Styles */
 .right-menu {
     position: fixed; /* Sidebar stays fixed relative to the viewport */
-    right: -333px; /* Initially hidden, reduced width */
-    width: 333px; /* Reduced width for mobile */
-    height: 100vh; /* Full height to follow scrolling */
-    background-color: #333645; /* Sidebar background color */
+    right: -333px; 
+    width: 333px; 
+    height: 100vh; 
+    background-color: #333645;
     color: white;
-    transition: transform 0.3s ease;
+    transition: right 0.3s ease, width 0.3s ease; 
     padding: 0;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1000000000;
-    max-height: 100vh;
+
     overflow-y: auto;
   
     top: 0;
@@ -18,11 +18,11 @@
 
 /* Menu visibility transitions */
 .right-menu.open {
-    transform: translateX(-333px); /* Slide in */
+    right: 0;
 }
 
 .right-menu.hidden {
-    transform: translateX(0); /* Slide out */
+    transform: translateX(0); 
 }
 
 /* Menu list styles */
@@ -61,7 +61,7 @@
     width: 100%;
 }
 
-.right-menu ul ol {
+.right-menu  ol {
     list-style: none;
     text-transform: uppercase;
     font-size: 1rem;
@@ -70,10 +70,10 @@
     color: white;
     text-decoration: none;
     width: 100%;
-    padding: 20px;
+    padding: 0 20px;
 }
 
-.right-menu ul ol a {
+.right-menu  ol a {
     display: block;
     color: white;
     text-decoration: none;
@@ -112,7 +112,16 @@
 .right-menu ul:nth-child(5),
 .right-menu ul:nth-child(6),
 .right-menu ul:nth-child(7),
-.right-menu ul:nth-child(8)
+.right-menu ul:nth-child(8),
+.right-menu ul:nth-child(9),
+.right-menu ul:nth-child(10),
+.right-menu ul:nth-child(11),
+.right-menu ul:nth-child(12),
+.right-menu ul:nth-child(13),
+.right-menu ul:nth-child(14),
+.right-menu ul:nth-child(15)
+
+
  {
     display: block;
     width: 90%;
@@ -121,8 +130,20 @@
     text-align: center;
 }
 
+@media (max-width: 769px) {
+    .right-menu ul:nth-child(17),
+    .right-menu ul:nth-child(18),
+.right-menu ul:nth-child(19)
+.right-menu ul:nth-child(20),
+
+.right-menu ol:nth-child(16){
+        display: none;
+    }
+}
+
+
 /* Box styles within the menu */
-.box {
+.box  {
     letter-spacing: 0.4px;
     list-style: none;
     background: transparent;
@@ -132,19 +153,18 @@
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.05rem;
-    padding:  0 ;
     margin: 20px auto 10px;
     border-radius: 3px;
     outline: 1px solid rgba(0, 0, 0, 0.25);
     border: 1px solid hsla(0, 0%, 100%, 0.1);
-
-    width: 100%;
+    padding: 0px 0px;
+    width: 90%;
 }
 
 
-/* Adjust the padding for the Contact box (the first box) only */
-.right-menu ul:first-child .box:nth-of-type(1) {
-    padding: 17px 0;  /* Apply the padding only to the first box */
+/* Contact box */
+.box:nth-of-type(1){
+    padding: 19px 2px; 
 }
 
 
@@ -178,7 +198,7 @@
 
 /* Media Queries */
 
-/* Hide specific sections on larger screens */
+
 @media (min-width: 769px) {
     .right-menu ul:nth-child(1),
     .right-menu ul:nth-child(2),
@@ -187,8 +207,16 @@
     .right-menu ul:nth-child(5),
     .right-menu ul:nth-child(6),
     .right-menu ul:nth-child(7),
-    .right-menu ul:nth-child(8) {
-        display: none; /* Hide on larger screens */
+    .right-menu ul:nth-child(8),
+    .right-menu ul:nth-child(9),
+    .right-menu ul:nth-child(10),
+    .right-menu ul:nth-child(11),
+    .right-menu ul:nth-child(12),
+    .right-menu ul:nth-child(13),
+    .right-menu ul:nth-child(14),
+    .right-menu ul:nth-child(15) {
+   
+        display: none; 
     }
 }
 
@@ -196,35 +224,25 @@
 
 @media (max-width: 1023px) {
     .right-menu {
-        right: -250px; /* Initially hidden for desktop */
+        right: -250px; 
         width: 250px;
     }
 
     .right-menu.open {
-        transform: translateX(-250px); /* Open state for desktop */
+        transform: translateX(-250px); 
     }
 
     .body-pushed {
-        transform: translateX(-250px); /* Adjust body content */
+        transform: translateX(-250px); 
     }
 }
 
-.right-menu ul li:nth-child(1) {
-    list-style: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-family: Poppins, sans-serif;
-    display: block;
-    color: white;
-    text-decoration: none;
-    width: 100%;
-    padding: 20px;
-    background-color: #333645;
-}
 
-.right-menu ul li:nth-child(1) a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    width: 100%;
-}
+
+
+@media (min-width: 1023px) {
+    .box{
+
+display: none;
+    }
+    }

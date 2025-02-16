@@ -1237,7 +1237,6 @@ html, body {
 #global-hover-banner {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
   opacity: 0;
   background-color: #333645;
   padding: 8px 15px; /* Reduced height */
@@ -1273,7 +1272,6 @@ html, body {
 /* Show Hover Banner when hovering over any case study */
 .pictures-section .case-study:hover ~ #global-hover-banner {
   opacity: 1;
-  transform: translateX(-50%) translateY(-5px); /* Slight lift */
 }
 
 /* Ensure parent element of #global-hover-banner is relatively positioned */

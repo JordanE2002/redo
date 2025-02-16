@@ -183,77 +183,75 @@ document.addEventListener('keydown', function (event) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const caseStudies = document.querySelectorAll('.case-study');
     const hoverBanner = document.getElementById('global-hover-banner');
     const hoverText = document.getElementById('hover-text');
+    const hoverDescription = document.getElementById('hover-description');
 
-    caseStudies.forEach(caseStudy => {
-        caseStudy.addEventListener('mouseenter', function() {
-            // Get the data-hover attribute of the hovered case study
+    function applyHoverEffect(caseStudy) {
+        caseStudy.addEventListener('mouseenter', function () {
             const hoverContent = caseStudy.getAttribute('data-hover');
-            hoverText.textContent = hoverContent;
+            const description = caseStudy.getAttribute('data-description');
 
-            // Get the position of the case study
-            const caseStudyRect = caseStudy.getBoundingClientRect();
+            if (hoverContent && description) {
+                hoverText.textContent = hoverContent;
+                hoverDescription.textContent = description;
 
-            // Position the hover banner dynamically near the case study
-            hoverBanner.style.opacity = '1';
-            hoverBanner.style.left = `${caseStudyRect.left + window.scrollX + (caseStudyRect.width / 2) - (hoverBanner.offsetWidth / 2)}px`; // Center it relative to case study
-            hoverBanner.style.top = `${caseStudyRect.top + window.scrollY - hoverBanner.offsetHeight - 20}px`; // Increase the value to move it higher
-
-            hoverBanner.style.transform = 'translateY(0)'; // Make sure it's not offset by transforms
+                const caseStudyRect = caseStudy.getBoundingClientRect();
+                hoverBanner.style.opacity = '1';
+                hoverBanner.style.left = `${caseStudyRect.left + window.scrollX + (caseStudyRect.width / 2) - (hoverBanner.offsetWidth / 2)}px`;
+                hoverBanner.style.top = `${caseStudyRect.top + window.scrollY - hoverBanner.offsetHeight - 20}px`;
+                hoverBanner.style.transform = 'translateY(0)';
+            }
         });
 
-        caseStudy.addEventListener('mouseleave', function() {
-            // Hide the hover banner when mouse leaves
+        caseStudy.addEventListener('mouseleave', function () {
             hoverBanner.style.opacity = '0';
         });
+    }
+
+    // Apply hover effect to all case studies, including Slick duplicates
+    function applyHoverToAllSlides() {
+        const caseStudies = document.querySelectorAll('.case-study, .slick-cloned');
+        caseStudies.forEach(applyHoverEffect);
+    }
+
+    applyHoverToAllSlides(); // Apply initially
+
+    // Reapply hover effect after Slick initializes
+    $('.partners').on('init reInit afterChange', function () {
+        applyHoverToAllSlides();
     });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
+// Initialize Slick
 $(document).ready(function () {
     $('.partners').slick({
-        slidesToShow: 4,          
-        slidesToScroll: 1,        
-        autoplay: true,           
-        autoplaySpeed: 2000,      
-        infinite: true,           
-        arrows: false,            
-        dots: false,              
-        variableWidth: true,      // Keeps images closer together
-        centerMode: true,         // Keeps items centered to reduce excessive gaps
-        speed: 500,               // Faster transitions
-        cssEase: 'linear',        // Smooth sliding effect
-        
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        infinite: true,
+        arrows: false,
+        dots: false,
+        variableWidth: true,
+        centerMode: false,
+        speed: 500,
+        cssEase: 'linear',
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
-                    variableWidth: true, 
+                    variableWidth: true,
                 },
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1, 
-                    variableWidth: true, 
+                    slidesToShow: 1,
+                    variableWidth: true,
                 },
             },
         ],
     });
 });
-
-

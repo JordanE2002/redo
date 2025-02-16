@@ -1,5 +1,5 @@
 /* General styles for body */
-html body {
+html, body {
     overflow-x: hidden !important;
     max-width: 100%;
 }
@@ -10,11 +10,11 @@ html body {
     flex-direction: row;
     padding-top: 50px;
     padding-bottom: 50px;
-    overflow-x: hidden; /* Allow hover banners to overflow */
     gap: 50px;
     position: relative; /* Ensures child elements' absolute positioning is relative to this */
 }
 
+/* Ensure the slick-list allows hover banner visibility */
 .slick-list {
     overflow: visible !important;
 }
@@ -25,6 +25,7 @@ html body {
     flex-shrink: 0;
     filter: grayscale(100%);
     padding: 0 20px;
+    transition: filter 0.3s ease;
 }
 
 .partners img:hover {
@@ -37,68 +38,58 @@ html body {
     display: inline-block;
     padding-top: 20px;
     margin-top: 20px;
-    overflow-x: visible;
 }
 
-.case-study h3 {
-    letter-spacing: .4px;
-    text-align: center;
-    -webkit-tap-highlight-color: transparent;
-    user-select: auto;
-    box-sizing: border-box;
-    font-family: inherit;
-    line-height: 1.1;
-    font-weight: 400;
-    position: relative;
-    font-size: 1.125rem;
-    color: #fff;
-    padding-bottom: 17px;
-    margin: 0;
+/* Hidden images inside case study */
+.hidden-image {
+    display: block;
 }
 
-/* Hover banner styles */
-.pictures-section .case-study .hover-banner {
+/* Independent Hover Banner (NOT affected by slick slider overflow) */
+#global-hover-banner {
     position: absolute;
-    bottom: 150%; /* Moved higher */
     left: 50%;
     transform: translateX(-50%);
+
     opacity: 0;
     background-color: #333645;
-    padding: 10px 20px;
+    padding: 8px 15px; /* Reduced height */
     white-space: nowrap;
     border-radius: 4px;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    pointer-events: none;
 }
 
-/* Styling for h3 inside hover-banner */
-.pictures-section .case-study .hover-banner h3 {
+/* Styling for hover banner text */
+#global-hover-banner h3 {
     text-align: center;
-    -webkit-tap-highlight-color: transparent;
-    user-select: auto;
-    box-sizing: border-box;
-    line-height: 1.1;
     font-weight: 400;
-    position: relative;
-    font-size: 1.125rem;
+    font-size: 1rem; /* Slightly smaller font */
     color: #fff;
-    padding-bottom: 17px;
     margin: 0;
+    padding-bottom: 5px; /* Reduced padding */
 }
 
-/* Arrow */
-.pictures-section .case-study .hover-banner::after {
+/* Hover Banner Arrow */
+#global-hover-banner::after {
     content: "";
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 8px solid #333645;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333645;
 }
 
-/* Show Banner on hover */
-.pictures-section .case-study:hover .hover-banner {
+/* Show Hover Banner when hovering over any case study */
+.pictures-section .case-study:hover ~ #global-hover-banner {
     opacity: 1;
-    transform: translate(-50%, -10px); /* Slight lift */
+    transform: translateX(-50%) translateY(-5px); /* Slight lift */
+}
+
+/* Ensure parent element of #global-hover-banner is relatively positioned */
+.pictures-section {
+    position: relative;
 }

@@ -1,3 +1,5 @@
+@import 'mixin';
+
 .our-services h2 {
     font-size: 1.3rem;
     position: relative;
@@ -56,14 +58,14 @@
     line-height: 1.1;
     color: #333645;
     font-weight: 400;
-    margin-top: -13px;
+    margin-top: 13px;
     margin-bottom: 15px;
 
   
     letter-spacing: .4px;
     font-family: Poppins,sans-serif;
     line-height: 1.1;
-    margin: 0 0 28px;
+  
 
 }
 
@@ -122,6 +124,7 @@
 .service:hover {
     transform: translateY(-10px);
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+
 }
 
 .service:hover h2 {
@@ -132,59 +135,59 @@
     color: white;
 }
 
+.service:hover span {
+    background-color: white !important;
+}
+
 /* Hover Effects for each service box*/
-.software:hover span {
-    background-color: white;
-    color: #67809f;
+.software:hover span, .software-color  {
+
+    @include  icon-laptop-color;
 }
 
-.IT-support:hover span {
-    background-color: white;
-    color: #4183d7;
+.IT-support:hover span, .IT-support-color  {
+
+    @include  icon-display-color;
 }
 
-.digital-marketing:hover span {
-    background-color: white;
-    color: #2ecc71;
+.digital-marketing:hover span, .digital-marketing-color {
+
+    @include  icon-stats-bars-color;
 }
 
-.telecoms-service:hover span {
-    background-color: white;
-    color: #d64541;
+.telecoms-service:hover span, .telecoms-service-color  {
+    @include icon-phone_in_talk-color;
+
 }
 
-.web-design:hover span {
-    background-color: white;
-    color: #926fb1;
+.web-design:hover span, .web-design-color  {
+    @include  icon-embed-color;
 }
 
-.cyber-security:hover span {
-    background-color: white;
-    color: #f62459;
+.cyber-security:hover span, .cyber-security-color {
+  @include icon-security-color;
 }
 
-.developer-training:hover span {
-    background-color: white;
-    color: #ce4125;
+.developer-training:hover span, .developer-training-color  {
+    @include  icon-graduate-color;
 }
 
 /* Service Color Classes */
-.software-color { background-color: #67809f; }
-.IT-support-color { background-color: #4183d7; }
-.digital-marketing-color { background-color: #2ecc71; }
-.telecoms-service-color { background-color: #d64541; }
-.web-design-color { background-color: #926fb1; }
-.cyber-security-color { background-color: #f62459; }
-.developer-training-color { background-color: #ce4125; }
+
+
+
+
+
+
 
 /* Individual Hover Backgrounds */
-.software:hover { background-color: #5a718a; }
-.IT-support:hover { background-color: #356fb5; }
-.digital-marketing:hover { background-color: #27b863; }
-.telecoms-service:hover { background-color: #b53836; }
-.web-design:hover { background-color: #7b5a97; }
-.cyber-security:hover { background-color: #d11f4d; }
-.developer-training:hover { background-color: #b23920; }
+.software:hover {  @include  secondary-icon-laptop-color; }
+.IT-support:hover { @include  secondary-icon-display-color; }
+.digital-marketing:hover { @include  secondary-icon-stats-bars-color; }
+.telecoms-service:hover { @include  secondary-icon-phone_in_talk-color; }
+.web-design:hover { @include  secondary-icon-embed-color; }
+.cyber-security:hover { @include  secondary-icon-security-color; }
+.developer-training:hover { @include  secondary-icon-graduate-color;}
 
 /* Service Button Styles */
 .service-button {
@@ -281,10 +284,14 @@
 .our-services-bottom h1 {
     font-size: 1.625rem; /* Adjust font size for better fit */
     line-height: 1.1;
-    margin-bottom: 10px; /* Ensure even spacing */
     letter-spacing: .4px;
     display: inline-block; /* Keep inline for proper alignment */
     color: #333645;
+
+
+    margin-top: 13px;
+    margin-bottom: 15px;
+    
 }
 
 .our-services-bottom h1:hover {

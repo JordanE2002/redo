@@ -870,12 +870,11 @@ html .slider, .slides, .slide {
   line-height: 1.1;
   color: #333645;
   font-weight: 400;
-  margin-top: -13px;
+  margin-top: 13px;
   margin-bottom: 15px;
   letter-spacing: 0.4px;
   font-family: Poppins, sans-serif;
   line-height: 1.1;
-  margin: 0 0 28px;
 }
 
 .service-list {
@@ -940,71 +939,47 @@ html .slider, .slides, .slide {
   color: white;
 }
 
+.service:hover span {
+  background-color: white !important;
+}
+
 /* Hover Effects for each service box*/
-.software:hover span {
-  background-color: white;
+.software:hover span, .software-color {
   color: #67809f;
-}
-
-.IT-support:hover span {
-  background-color: white;
-  color: #4183d7;
-}
-
-.digital-marketing:hover span {
-  background-color: white;
-  color: #2ecc71;
-}
-
-.telecoms-service:hover span {
-  background-color: white;
-  color: #d64541;
-}
-
-.web-design:hover span {
-  background-color: white;
-  color: #926fb1;
-}
-
-.cyber-security:hover span {
-  background-color: white;
-  color: #f62459;
-}
-
-.developer-training:hover span {
-  background-color: white;
-  color: #ce4125;
-}
-
-/* Service Color Classes */
-.software-color {
   background-color: #67809f;
 }
 
-.IT-support-color {
+.IT-support:hover span, .IT-support-color {
+  color: #4183d7;
   background-color: #4183d7;
 }
 
-.digital-marketing-color {
+.digital-marketing:hover span, .digital-marketing-color {
+  color: #2ecc71;
   background-color: #2ecc71;
 }
 
-.telecoms-service-color {
+.telecoms-service:hover span, .telecoms-service-color {
+  color: #d64541;
   background-color: #d64541;
 }
 
-.web-design-color {
+.web-design:hover span, .web-design-color {
+  color: #926fb1;
   background-color: #926fb1;
 }
 
-.cyber-security-color {
+.cyber-security:hover span, .cyber-security-color {
+  color: #f62459;
   background-color: #f62459;
 }
 
-.developer-training-color {
+.developer-training:hover span, .developer-training-color {
+  color: #ce4125;
   background-color: #ce4125;
 }
 
+/* Service Color Classes */
 /* Individual Hover Backgrounds */
 .software:hover {
   background-color: #5a718a;
@@ -1179,10 +1154,11 @@ html .slider, .slides, .slide {
 .our-services-bottom h1 {
   font-size: 1.625rem; /* Adjust font size for better fit */
   line-height: 1.1;
-  margin-bottom: 10px; /* Ensure even spacing */
   letter-spacing: 0.4px;
   display: inline-block; /* Keep inline for proper alignment */
   color: #333645;
+  margin-top: 13px;
+  margin-bottom: 15px;
 }
 
 .our-services-bottom h1:hover {

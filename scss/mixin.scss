@@ -1,32 +1,85 @@
 
+
 // Color Mixins
-@mixin laptop-color {
-    background-color: #67809f;
+@mixin icon-laptop-color {
+
     color: #67809f;
+    background-color: #67809f;
 }
 
-@mixin display-color {
-    background-color: #4183d7;
+@mixin icon-display-color {
+
     color: #4183d7;
+    background-color: #4183d7;
 }
-@mixin stats-bars-color {
-    background-color: #2ecc71;
+
+@mixin icon-stats-bars-color {
+ 
     color: #2ecc71;
+    background-color: #2ecc71;
 }
-@mixin phone_in_talk-color {
-    background-color: #d64541;
+
+@mixin icon-phone_in_talk-color {
+
     color: #d64541;
+    background-color: #d64541;
 }
-@mixin embed-color {
-    background-color: #926fb1;
+
+@mixin icon-embed-color {
     color: #926fb1;
+    background-color: #926fb1;
 }
-@mixin security-color {
-    background-color: #f62459;
+
+@mixin icon-security-color {
+
     color: #f62459;
+    background-color: #f62459
 }
-@mixin graduate-color {
-    background-color: #ce4125;
+
+@mixin icon-graduate-color {
     color: #ce4125;
+    background-color: #ce4125;
 
 }
+
+
+
+
+
+
+// Color Mixins
+@mixin secondary-icon-laptop-color {
+
+    background-color: #5a718a;
+}
+
+@mixin secondary-icon-display-color {
+
+    background-color: #356fb5;
+}
+
+@mixin secondary-icon-stats-bars-color {
+ 
+    background-color: #27b863;
+}
+
+@mixin secondary-icon-phone_in_talk-color {
+
+    background-color: #b53836;
+}
+
+@mixin secondary-icon-embed-color {
+    background-color: #7b5a97;
+}
+
+@mixin secondary-icon-security-color {
+
+    background-color: #d11f4d;
+}
+
+@mixin secondary-icon-graduate-color {
+    background-color: #b23920; 
+
+}
+
+

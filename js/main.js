@@ -179,54 +179,38 @@ document.addEventListener('keydown', function (event) {
         overlay.classList.remove('show'); // Hide overlay
         hamburger.setAttribute('aria-expanded', false);
     }
-});
-document.addEventListener('DOMContentLoaded', function () {
+});document.addEventListener('DOMContentLoaded', function () {
     const hoverBanner = document.getElementById('global-hover-banner');
     const hoverText = document.getElementById('hover-text');
     const hoverDescription = document.getElementById('hover-description');
 
+    function showHover(caseStudy) {
+        hoverText.textContent = caseStudy.getAttribute('data-hover') || '';
+        hoverDescription.textContent = caseStudy.getAttribute('data-description') || '';
+
+        const rect = caseStudy.getBoundingClientRect();
+        hoverBanner.style.opacity = '1';
+        hoverBanner.style.left = `${rect.left + window.scrollX + rect.width / 2 - hoverBanner.offsetWidth / 2}px`;
+        hoverBanner.style.top = `${rect.top + window.scrollY - hoverBanner.offsetHeight - 20}px`;
+    }
+
+    function hideHover() {
+        hoverBanner.style.opacity = '0';
+    }
+
     function applyHoverEffect(caseStudy) {
-        caseStudy.addEventListener('mouseenter', function () {
-            const hoverContent = caseStudy.getAttribute('data-hover');
-            const description = caseStudy.getAttribute('data-description');
-
-            if (hoverContent) {
-                hoverText.textContent = hoverContent;
-            } else {
-                hoverText.textContent = ''; // Clear text if hoverContent is not available
-            }
-
-            if (description) {
-                hoverDescription.textContent = description;
-            } else {
-                hoverDescription.textContent = ''; // Clear description if not available
-            }
-
-            const caseStudyRect = caseStudy.getBoundingClientRect();
-            hoverBanner.style.opacity = '1';
-            hoverBanner.style.left = `${caseStudyRect.left + window.scrollX + (caseStudyRect.width / 2) - (hoverBanner.offsetWidth / 2)}px`;
-            hoverBanner.style.top = `${caseStudyRect.top + window.scrollY - hoverBanner.offsetHeight - 20}px`;
-            hoverBanner.style.transform = 'translateY(0)';
-        });
-
-        caseStudy.addEventListener('mouseleave', function () {
-            hoverBanner.style.opacity = '0';
-        });
+        caseStudy.addEventListener('mouseenter', () => showHover(caseStudy));
+        caseStudy.addEventListener('mouseleave', hideHover);
     }
 
-    // Apply hover effect to all case studies, including Slick duplicates
-    function applyHoverToAllSlides() {
-        const caseStudies = document.querySelectorAll('.case-study, .slick-cloned');
-        caseStudies.forEach(applyHoverEffect);
+    function applyHoverToAll() {
+        document.querySelectorAll('.case-study, .slick-cloned').forEach(applyHoverEffect);
     }
 
-    applyHoverToAllSlides(); // Apply initially
-
-    // Reapply hover effect after Slick initializes
-    $('.partners').on('init reInit afterChange', function () {
-        applyHoverToAllSlides();
-    });
+    applyHoverToAll();
+    $('.partners').on('init reInit afterChange', applyHoverToAll);
 });
+
 
 
 // Initialize Slick

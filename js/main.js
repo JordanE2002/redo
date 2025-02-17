@@ -180,8 +180,6 @@ document.addEventListener('keydown', function (event) {
         hamburger.setAttribute('aria-expanded', false);
     }
 });
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const hoverBanner = document.getElementById('global-hover-banner');
     const hoverText = document.getElementById('hover-text');
@@ -192,16 +190,23 @@ document.addEventListener('DOMContentLoaded', function () {
             const hoverContent = caseStudy.getAttribute('data-hover');
             const description = caseStudy.getAttribute('data-description');
 
-            if (hoverContent && description) {
+            if (hoverContent) {
                 hoverText.textContent = hoverContent;
-                hoverDescription.textContent = description;
-
-                const caseStudyRect = caseStudy.getBoundingClientRect();
-                hoverBanner.style.opacity = '1';
-                hoverBanner.style.left = `${caseStudyRect.left + window.scrollX + (caseStudyRect.width / 2) - (hoverBanner.offsetWidth / 2)}px`;
-                hoverBanner.style.top = `${caseStudyRect.top + window.scrollY - hoverBanner.offsetHeight - 20}px`;
-                hoverBanner.style.transform = 'translateY(0)';
+            } else {
+                hoverText.textContent = ''; // Clear text if hoverContent is not available
             }
+
+            if (description) {
+                hoverDescription.textContent = description;
+            } else {
+                hoverDescription.textContent = ''; // Clear description if not available
+            }
+
+            const caseStudyRect = caseStudy.getBoundingClientRect();
+            hoverBanner.style.opacity = '1';
+            hoverBanner.style.left = `${caseStudyRect.left + window.scrollX + (caseStudyRect.width / 2) - (hoverBanner.offsetWidth / 2)}px`;
+            hoverBanner.style.top = `${caseStudyRect.top + window.scrollY - hoverBanner.offsetHeight - 20}px`;
+            hoverBanner.style.transform = 'translateY(0)';
         });
 
         caseStudy.addEventListener('mouseleave', function () {
@@ -222,6 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
         applyHoverToAllSlides();
     });
 });
+
 
 // Initialize Slick
 $(document).ready(function () {

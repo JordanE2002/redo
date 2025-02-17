@@ -328,9 +328,16 @@ bottom: 20%;
 
 @media (max-width: 1024px) {
     .header-large-form-icon-container {
-border-radius: 3px;
+border-radius: 0 3px 3px 0;
     }
     }
+
+
+    @media (min-width: 1023px) {
+        .header-large-form-icon-container {
+    border-radius: 3px;
+        }
+        }
 
 
 /* For larger screens, hide the small search form */

@@ -985,27 +985,27 @@ html .slider, .slides, .slide {
   background-color: #5a718a;
 }
 
-.IT-support:hover {
+.IT-support:hover, .IT-support .service-button {
   background-color: #356fb5;
 }
 
-.digital-marketing:hover {
+.digital-marketing:hover, .digital-marketing .service-button {
   background-color: #27b863;
 }
 
-.telecoms-service:hover {
+.telecoms-service:hover, .telecoms-service .service-button {
   background-color: #b53836;
 }
 
-.web-design:hover {
+.web-design:hover, .web-design .service-button {
   background-color: #7b5a97;
 }
 
-.cyber-security:hover {
+.cyber-security:hover, .cyber-security .service-button {
   background-color: #d11f4d;
 }
 
-.developer-training:hover {
+.developer-training:hover, .developer-training .service-button {
   background-color: #b23920;
 }
 
@@ -1024,77 +1024,45 @@ html .slider, .slides, .slide {
   border-radius: 3px;
   font-weight: 400;
   transition: all 0.3s ease-in-out;
+  color: white;
 }
 
 /* Default Button Colors for Each Service */
 .software .service-button {
   background-color: #f7b322;
-  color: white;
 }
 
-.IT-support .service-button {
-  background-color: #356fb5;
-  color: white;
-}
-
-.digital-marketing .service-button {
-  background-color: #27b863;
-  color: white;
-}
-
-.telecoms-service .service-button {
-  background-color: #b53836;
-  color: white;
-}
-
-.web-design .service-button {
-  background-color: #7b5a97;
-  color: white;
-}
-
-.cyber-security .service-button {
-  background-color: #d11f4d;
-  color: white;
-}
-
-.developer-training .service-button {
-  background-color: #b23920;
-  color: white;
+/* Common hover effect for all service buttons */
+.service:hover .service-button {
+  background-color: white !important;
 }
 
 /* Hover Effects for Buttons Inside Each Service */
 .software:hover .service-button {
-  background-color: white;
-  color: #67809f;
+  color: #5a718a;
 }
 
 .IT-support:hover .service-button {
-  background-color: white;
   color: #356fb5;
 }
 
 .digital-marketing:hover .service-button {
-  background-color: white;
   color: #27b863;
 }
 
 .telecoms-service:hover .service-button {
-  background-color: white;
   color: #b53836;
 }
 
 .web-design:hover .service-button {
-  background-color: white;
   color: #7b5a97;
 }
 
 .cyber-security:hover .service-button {
-  background-color: white;
   color: #d11f4d;
 }
 
 .developer-training:hover .service-button {
-  background-color: white;
   color: #b23920;
 }
 

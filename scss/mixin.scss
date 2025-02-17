@@ -47,15 +47,16 @@
 
 
 
-// Color Mixins
 @mixin secondary-icon-laptop-color {
 
     background-color: #5a718a;
+    
 }
 
 @mixin secondary-icon-display-color {
 
     background-color: #356fb5;
+    
 }
 
 @mixin secondary-icon-stats-bars-color {
@@ -79,6 +80,45 @@
 
 @mixin secondary-icon-graduate-color {
     background-color: #b23920; 
+
+}
+
+
+
+//for service button
+@mixin service-button-laptop-color {
+
+    color: #5a718a;
+    
+}
+
+@mixin  service-button-display-color {
+
+    color: #356fb5;
+    
+}
+
+@mixin  service-button-stats-bars-color {
+ 
+    color: #27b863;
+}
+
+@mixin  service-button-phone_in_talk-color {
+
+    color: #b53836;
+}
+
+@mixin  service-button-embed-color {
+    color: #7b5a97;
+}
+
+@mixin  service-button-security-color {
+
+    color: #d11f4d;
+}
+
+@mixin  service-button-graduate-color {
+    color: #b23920; 
 
 }
 

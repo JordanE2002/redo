@@ -85,7 +85,20 @@ html, body {
     margin: 0;
 }
 
-
+/* Hover Banner Arrow */
+#global-hover-banner::after {
+    content: "";
+    position: absolute;
+    bottom: -30px; /* Moves the arrow further below the banner */
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #333645; /* Matches banner color */
+    width: 0;
+    height: 0;
+    display: block;
+}
 
 
 /* Styling for hover banner description */

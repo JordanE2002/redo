@@ -1,3 +1,6 @@
+@import 'mixin';
+
+
 /* Slider Container */
 .slider {
   position: relative;
@@ -105,74 +108,65 @@ html .slider, .slides, .slide {
 
 
 .banner-background:nth-child(2) .banner button {
-  background-color: #926fb1; 
-  border: #926fb1;
+ @include first-banner-color;
 }
 
+
 .banner-background:nth-child(2) .banner button:hover {
-  background-color: #7b5a97; 
-  border: #7b5a97;
+  @include first-hover-banner-color;
 }
 
 
 .banner-background:nth-child(3) .banner button {
-  background-color:  #f7b322; 
+  @include second-banner-color;
+} 
 
-}
+
 
 .banner-background:nth-child(4) .banner button {
-  background-color:  #4183d7;
-  border: 1px solid  #4183d7;
+  @include third-banner-color;
 }
 
 .banner-background:nth-child(4) .banner button:hover {
-  background-color: #356fb5;
-  border: 1px solid #356fb5;
+  @include third-hover-banner-color;
 
 }
 
 .banner-background:nth-child(5) .banner button {
-  background-color: #2ecc71; 
-  border: 1px solid  #2ecc71;
+  @include forth-banner-color;
 }
 
 .banner-background:nth-child(5) .banner button:hover {
-  background-color: #27b863;
-  border: 1px solid #27b863;
+  @include forth-hover-banner-color;
 
 }
 
 .banner-background:nth-child(6) .banner button {
-  background-color: #d64541; 
-  border: 1px solid  #d64541;
+  @include fifth-banner-color;
+
 }
 
 .banner-background:nth-child(6) .banner button:hover {
-  background-color: #b53836;
-  border: 1px solid #b53836;
+  @include fifth-hover-banner-color;
 
 }
 
 .banner-background:nth-child(7) .banner button {
-  background-color: #926fb1; 
-  border: #926fb1;
+  @include sixth-banner-color;
 }
 
 .banner-background:nth-child(7) .banner button:hover {
-  background-color: #7b5a97; 
-  border: #7b5a97;
+  @include sixth-hover-banner-color;
 }
 
 
 
 .banner-background:nth-child(8) .banner button {
-  background-color: #ce4125; 
-  border: #ce4125;
+  @include seventh-banner-color;
 }
 
 .banner-background:nth-child(8) .banner button:hover {
-  background-color: #b23920; 
-  border: #b23920;
+  @include seventh-hover-banner-color;
 }
 
 

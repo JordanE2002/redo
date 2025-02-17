@@ -123,3 +123,115 @@
 }
 
 
+
+
+
+
+
+
+
+//for banner colors button
+@mixin first-banner-color {
+
+    background-color: #926fb1; 
+    border: 1px solid #926fb1;
+    
+}
+@mixin first-hover-banner-color {
+
+    background-color: #7b5a97; 
+    border: 1px solid #7b5a97;
+    
+}
+
+
+
+
+
+@mixin second-banner-color {
+
+    background-color:  #f7b322; 
+    
+}
+
+
+
+
+@mixin third-banner-color {
+
+     background-color:  #4183d7;
+  border: 1px solid  #4183d7;
+    
+}
+
+@mixin third-hover-banner-color {
+
+    background-color:  #356fb5;
+ border: 1px solid  #356fb5;
+   
+}
+
+
+
+@mixin forth-banner-color {
+
+    background-color: #2ecc71; 
+    border: 1px solid  #2ecc71;
+   
+}
+
+
+@mixin forth-hover-banner-color {
+
+    background-color: #27b863;
+    border: 1px solid #27b863;
+     
+  }
+
+
+
+
+  @mixin fifth-banner-color {
+
+
+    background-color: #d64541; 
+  border: 1px solid  #d64541;
+}
+
+
+@mixin fifth-hover-banner-color {
+
+    background-color: #b53836;
+    border: 1px solid #b53836;
+  }
+
+
+  @mixin sixth-banner-color {
+
+
+    background-color: #926fb1; 
+  border:1px solid #926fb1;
+}
+
+
+@mixin sixth-hover-banner-color {
+
+    background-color: #7b5a97; 
+  border: 1px solid #7b5a97;
+  }
+
+  @mixin seventh-banner-color {
+
+
+    background-color: #f62459; 
+    border: 1px solid #f62459;
+}
+
+
+@mixin seventh-hover-banner-color {
+
+    background-color: #e80a42; 
+    border: 1px solid #e80a42;
+  }
+
+

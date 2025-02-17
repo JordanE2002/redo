@@ -488,12 +488,12 @@ html .slider, .slides, .slide {
 
 .banner-background:nth-child(2) .banner button {
   background-color: #926fb1;
-  border: #926fb1;
+  border: 1px solid #926fb1;
 }
 
 .banner-background:nth-child(2) .banner button:hover {
   background-color: #7b5a97;
-  border: #7b5a97;
+  border: 1px solid #7b5a97;
 }
 
 .banner-background:nth-child(3) .banner button {
@@ -532,22 +532,22 @@ html .slider, .slides, .slide {
 
 .banner-background:nth-child(7) .banner button {
   background-color: #926fb1;
-  border: #926fb1;
+  border: 1px solid #926fb1;
 }
 
 .banner-background:nth-child(7) .banner button:hover {
   background-color: #7b5a97;
-  border: #7b5a97;
+  border: 1px solid #7b5a97;
 }
 
 .banner-background:nth-child(8) .banner button {
-  background-color: #ce4125;
-  border: #ce4125;
+  background-color: #f62459;
+  border: 1px solid #f62459;
 }
 
 .banner-background:nth-child(8) .banner button:hover {
-  background-color: #b23920;
-  border: #b23920;
+  background-color: #e80a42;
+  border: 1px solid #e80a42;
 }
 
 /* Arrow Icon Style */

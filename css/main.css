@@ -2110,18 +2110,15 @@ footer {
 .nav-dropdown-menu-container {
   background-color: #333645;
   margin-bottom: 0;
-  z-index: 10000000000000000000000000000000000000000;
 }
 
 .nav-dropdown-row {
   display: flex;
   justify-content: space-between;
-  z-index: 10000000000000000000000000000000000000000;
 }
 
 .nav-main {
   width: 100%;
-  z-index: 10000000000000000000000000000000000000000;
 }
 
 /* Main dropdown Menu items*/
@@ -2134,26 +2131,23 @@ footer {
   width: 100%;
   font-size: 1.2rem;
   text-transform: uppercase;
-  z-index: 10000000000000000000000000000000000000000;
 }
 
 .nav-dropdown-item:hover {
   cursor: pointer;
   color: white;
-  z-index: 10000000000000000000000000000000000000000000000000000000000;
 }
 
 .nav-dropdown-item small {
   font-size: 10px;
   text-transform: uppercase;
   margin: 0;
-  z-index: 100000000000000000000000000000000000000000000000000000000000000000000000000000;
 }
 
 /* the 2nd menu container */
 .sub-menu-container {
   display: none;
-  z-index: 1000000000000000000000000000000000000000;
+  z-index: 10;
   position: absolute;
   padding: 0;
   min-width: 100%;
@@ -2323,7 +2317,7 @@ footer {
 
 .dropdown-triangle {
   position: relative;
-  z-index: 10000000000000000000000000000000000000000000000000000;
+  z-index: 20;
   width: 0;
   height: 0;
   border-style: solid;
@@ -2366,6 +2360,7 @@ footer {
 
 /* Show triangle when hovering over the dropdown item */
 .nav-dropdown-item:hover .dropdown-triangle {
+  display: block;
   position: sticky;
 }
 

@@ -4,16 +4,15 @@
 .nav-dropdown-menu-container {
     background-color: #333645;
     margin-bottom: 0;
-    z-index: 10000000000000000000000000000000000000000;
 }
 
 .nav-dropdown-row {
     display: flex;
-    justify-content: space-between;z-index: 10000000000000000000000000000000000000000;
+    justify-content: space-between;
 }
 
 .nav-main {
-    width: 100%;z-index: 10000000000000000000000000000000000000000;
+    width: 100%;
 }
 
 /* Main dropdown Menu items*/
@@ -26,27 +25,24 @@
     width: 100%;
     font-size: 1.2rem;
     text-transform: uppercase;
-    z-index: 10000000000000000000000000000000000000000;
 }
 
 
 .nav-dropdown-item:hover {
     cursor: pointer;
     color: white;
-    z-index: 10000000000000000000000000000000000000000000000000000000000;
 }
 
 .nav-dropdown-item small {
     font-size: 10px;
     text-transform: uppercase;
     margin: 0;
-    z-index: 100000000000000000000000000000000000000000000000000000000000000000000000000000;
 }
 
 /* the 2nd menu container */
 .sub-menu-container {
     display: none;
-    z-index: 1000000000000000000000000000000000000000;
+    z-index: 10;
     position: absolute;
     padding: 0;
     min-width: 100%;
@@ -135,16 +131,16 @@
 
 
 .icon-embed { @include nav-embed-color;  }
-.nav-dropdown-item-5:hover { @include icon-embed-color }
+.nav-dropdown-item-5:hover { @include icon-embed-color}
 
 
-.icon-security { @include nav-security-color;}
+.icon-security { @include nav-security-color }
 .nav-dropdown-item-6:hover { @include icon-security-color }
 
 
-.icon-graduate { @include nav-graduate-color }
-.nav-dropdown-item-7:hover { @include icon-graduate-color }
- 
+.icon-graduate { @include nav-graduate-color}
+.nav-dropdown-item-7:hover { @include icon-graduate-color}
+
 
 .nav-dropdown-item-1:hover .icon-laptop, 
 .nav-dropdown-item-2:hover .icon-display, 
@@ -162,7 +158,7 @@
 
 .dropdown-triangle {
     position: relative;
-    z-index: 10000000000000000000000000000000000000000000000000000;
+    z-index: 20;
     width: 0;
     height: 0;
     border-style: solid;
@@ -211,7 +207,7 @@
 
 /* Show triangle when hovering over the dropdown item */
 .nav-dropdown-item:hover .dropdown-triangle {
-
+    display: block;
     position: sticky;
 }
 

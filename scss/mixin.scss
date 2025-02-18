@@ -1,6 +1,20 @@
 
 
 // Color Mixins
+
+
+@mixin basic-white {
+color: white;
+}
+
+
+
+
+
+
+
+
+
 @mixin icon-laptop-color {
 
     color: #67809f;
@@ -82,6 +96,8 @@
     background-color: #b23920; 
 
 }
+
+
 
 
 
@@ -235,3 +251,85 @@
   }
 
 
+//navbar triangle 
+@mixin triangle-laptop-color {
+
+    border-color: #67809f transparent transparent transparent;
+}
+
+@mixin triangle-display-color {
+
+    border-color: #4183d7 transparent transparent transparent;
+}
+
+@mixin triangle-stats-bars-color {
+    border-color: #2ecc71 transparent transparent transparent;
+}
+
+@mixin triangle-phone_in_talk-color {
+    border-color: #d64541 transparent transparent transparent;
+}
+
+@mixin triangle-embed-color {
+    border-color: #926fb1 transparent transparent transparent;
+}
+
+@mixin triangle-security-color {
+
+    border-color: #f62459 transparent transparent transparent;
+}
+
+@mixin triangle-graduate-color {
+    border-color: #ce4125 transparent transparent transparent;
+}
+
+
+
+
+
+//navbar icons 
+@mixin nav-laptop-color {
+    color: #67809f; font-size: 1.6rem;
+
+}
+
+@mixin nav-display-color {
+    color: #4183d7; font-size: 1.6rem;
+
+}
+
+
+
+
+@mixin nav-stats-bar-color {
+    color: #2ecc71; font-size: 1.6rem;
+
+
+}
+
+@mixin nav-phone_in_talk-color {
+    color: #d64541; font-size: 1.6rem;
+
+
+}
+
+
+
+@mixin nav-embed-color {
+    color: #926fb1; font-size: 1.6rem; 
+
+
+}
+
+
+@mixin nav-security-color {
+    color: #f62459; font-size: 1.6rem;
+
+
+}
+
+@mixin nav-graduate-color {
+    color: #ce4125; font-size: 1.6rem;
+
+
+}

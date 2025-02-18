@@ -103,42 +103,56 @@
 }
 
 /* Background for each item */
-.nav-dropdown-item-1:hover .sub-menu-container { background-color: #526781; }
-.nav-dropdown-item-2:hover .sub-menu-container { background-color: #286abd; }
-.nav-dropdown-item-3:hover .sub-menu-container { background-color: #25a25a; }
-.nav-dropdown-item-4:hover .sub-menu-container { background-color: #bc2c28; }
-.nav-dropdown-item-5:hover .sub-menu-container { background-color: #79539a; }
-.nav-dropdown-item-6:hover .sub-menu-container { background-color: #de093f; }
-.nav-dropdown-item-7:hover .sub-menu-container { background-color: #a3331d; }
+.nav-dropdown-item-1:hover .sub-menu-container { @include secondary-icon-laptop-color; }
+.nav-dropdown-item-2:hover .sub-menu-container { @include secondary-icon-display-color; }
+.nav-dropdown-item-3:hover .sub-menu-container { @include secondary-icon-stats-bars-color; }
+.nav-dropdown-item-4:hover .sub-menu-container {  @include secondary-icon-phone_in_talk-color }
+.nav-dropdown-item-5:hover .sub-menu-container { @include secondary-icon-embed-color; }
+.nav-dropdown-item-6:hover .sub-menu-container { @include secondary-icon-security-color; }
+.nav-dropdown-item-7:hover .sub-menu-container { @include secondary-icon-graduate-color; }
 
 /* Icons */
-.icon-laptop { color: #67809f; font-size: 1.6rem; }
-.nav-dropdown-item-1:hover { background-color: #67809f; }
-.nav-dropdown-item-1:hover .icon-laptop { color: white; }
 
-.icon-display { color: #4183d7; font-size: 1.6rem; }
-.nav-dropdown-item-2:hover { background-color: #4183d7; }
-.nav-dropdown-item-2:hover .icon-display { color: white; }
 
-.icon-stats-bars { color: #2ecc71; font-size: 1.6rem; }
-.nav-dropdown-item-3:hover { background-color: #2ecc71; }
-.nav-dropdown-item-3:hover .icon-stats-bars { color: white; }
+.icon-laptop { @include nav-laptop-color; }
+.nav-dropdown-item-1:hover { @include icon-laptop-color; }
 
-.icon-phone_in_talk { color: #d64541; font-size: 1.6rem; }
-.nav-dropdown-item-4:hover { background-color: #d64541; }
-.nav-dropdown-item-4:hover .icon-phone_in_talk { color: white; }
 
-.icon-embed { color: #926fb1; font-size: 1.6rem; }
-.nav-dropdown-item-5:hover { background-color: #926fb1; }
-.nav-dropdown-item-5:hover .icon-embed { color: white; }
+.icon-display { @include nav-display-color; }
+.nav-dropdown-item-2:hover { @include icon-display-color; }
 
-.icon-security { color: #f62459; font-size: 1.6rem; }
-.nav-dropdown-item-6:hover { background-color: #f62459; }
-.nav-dropdown-item-6:hover .icon-security { color: white; }
 
-.icon-graduate { color: #ce4125; font-size: 1.6rem; }
-.nav-dropdown-item-7:hover { background-color: #ce4125; }
-.nav-dropdown-item-7:hover .icon-graduate { color: white; }
+.icon-stats-bars { @include nav-stats-bar-color;  }
+.nav-dropdown-item-3:hover { @include icon-stats-bars-color; }
+
+
+.icon-phone_in_talk { @include nav-phone_in_talk-color; }
+.nav-dropdown-item-4:hover { @include icon-phone_in_talk-color }
+
+
+.icon-embed { @include nav-embed-color;  }
+.nav-dropdown-item-5:hover { @include icon-embed-color }
+
+
+.icon-security { @include nav-security-color;}
+.nav-dropdown-item-6:hover { @include icon-security-color }
+
+
+.icon-graduate { @include nav-graduate-color }
+.nav-dropdown-item-7:hover { @include icon-graduate-color }
+ 
+
+.nav-dropdown-item-1:hover .icon-laptop, 
+.nav-dropdown-item-2:hover .icon-display, 
+.nav-dropdown-item-3:hover .icon-stats-bars,
+.nav-dropdown-item-4:hover .icon-phone_in_talk,
+.nav-dropdown-item-5:hover .icon-embed,
+.nav-dropdown-item-6:hover .icon-security,
+.nav-dropdown-item-7:hover .icon-graduate {
+
+    @include basic-white;
+
+}
 
 
 
@@ -159,32 +173,34 @@
 
 
 /* Triangle color for each dropdown item */
+
+
 .nav-dropdown-item-1 .dropdown-triangle {
-    border-color: #67809f transparent transparent transparent;
+   @include triangle-laptop-color; 
 }
 
 .nav-dropdown-item-2 .dropdown-triangle {
-    border-color: #4183d7 transparent transparent transparent;
+    @include triangle-display-color; 
 }
 
 .nav-dropdown-item-3 .dropdown-triangle {
-    border-color: #2ecc71 transparent transparent transparent;
+    @include triangle-stats-bars-color; 
 }
 
 .nav-dropdown-item-4 .dropdown-triangle {
-    border-color: #d64541 transparent transparent transparent;
+    @include triangle-phone_in_talk-color;
 }
 
 .nav-dropdown-item-5 .dropdown-triangle {
-    border-color: #926fb1 transparent transparent transparent;
+    @include triangle-embed-color;
 }
 
 .nav-dropdown-item-6 .dropdown-triangle {
-    border-color: #f62459 transparent transparent transparent;
+    @include triangle-security-color;
 }
 
 .nav-dropdown-item-7 .dropdown-triangle {
-    border-color: #ce4125 transparent transparent transparent;
+    @include triangle-graduate-color;
 }
 
 

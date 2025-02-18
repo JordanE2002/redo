@@ -2177,31 +2177,31 @@ footer {
 
 /* Background for each item */
 .nav-dropdown-item-1:hover .sub-menu-container {
-  background-color: #526781;
+  background-color: #5a718a;
 }
 
 .nav-dropdown-item-2:hover .sub-menu-container {
-  background-color: #286abd;
+  background-color: #356fb5;
 }
 
 .nav-dropdown-item-3:hover .sub-menu-container {
-  background-color: #25a25a;
+  background-color: #27b863;
 }
 
 .nav-dropdown-item-4:hover .sub-menu-container {
-  background-color: #bc2c28;
+  background-color: #b53836;
 }
 
 .nav-dropdown-item-5:hover .sub-menu-container {
-  background-color: #79539a;
+  background-color: #7b5a97;
 }
 
 .nav-dropdown-item-6:hover .sub-menu-container {
-  background-color: #de093f;
+  background-color: #d11f4d;
 }
 
 .nav-dropdown-item-7:hover .sub-menu-container {
-  background-color: #a3331d;
+  background-color: #b23920;
 }
 
 /* Icons */
@@ -2211,11 +2211,8 @@ footer {
 }
 
 .nav-dropdown-item-1:hover {
+  color: #67809f;
   background-color: #67809f;
-}
-
-.nav-dropdown-item-1:hover .icon-laptop {
-  color: white;
 }
 
 .icon-display {
@@ -2224,11 +2221,8 @@ footer {
 }
 
 .nav-dropdown-item-2:hover {
+  color: #4183d7;
   background-color: #4183d7;
-}
-
-.nav-dropdown-item-2:hover .icon-display {
-  color: white;
 }
 
 .icon-stats-bars {
@@ -2237,11 +2231,8 @@ footer {
 }
 
 .nav-dropdown-item-3:hover {
+  color: #2ecc71;
   background-color: #2ecc71;
-}
-
-.nav-dropdown-item-3:hover .icon-stats-bars {
-  color: white;
 }
 
 .icon-phone_in_talk {
@@ -2250,11 +2241,8 @@ footer {
 }
 
 .nav-dropdown-item-4:hover {
+  color: #d64541;
   background-color: #d64541;
-}
-
-.nav-dropdown-item-4:hover .icon-phone_in_talk {
-  color: white;
 }
 
 .icon-embed {
@@ -2263,11 +2251,8 @@ footer {
 }
 
 .nav-dropdown-item-5:hover {
+  color: #926fb1;
   background-color: #926fb1;
-}
-
-.nav-dropdown-item-5:hover .icon-embed {
-  color: white;
 }
 
 .icon-security {
@@ -2276,11 +2261,8 @@ footer {
 }
 
 .nav-dropdown-item-6:hover {
+  color: #f62459;
   background-color: #f62459;
-}
-
-.nav-dropdown-item-6:hover .icon-security {
-  color: white;
 }
 
 .icon-graduate {
@@ -2289,9 +2271,16 @@ footer {
 }
 
 .nav-dropdown-item-7:hover {
+  color: #ce4125;
   background-color: #ce4125;
 }
 
+.nav-dropdown-item-1:hover .icon-laptop,
+.nav-dropdown-item-2:hover .icon-display,
+.nav-dropdown-item-3:hover .icon-stats-bars,
+.nav-dropdown-item-4:hover .icon-phone_in_talk,
+.nav-dropdown-item-5:hover .icon-embed,
+.nav-dropdown-item-6:hover .icon-security,
 .nav-dropdown-item-7:hover .icon-graduate {
   color: white;
 }

@@ -131,16 +131,16 @@
 
 
 .icon-embed { @include nav-embed-color;  }
-.nav-dropdown-item-5:hover { @include icon-embed-color}
+.nav-dropdown-item-5:hover { @include icon-embed-color }
 
 
-.icon-security { @include nav-security-color }
+.icon-security { @include nav-security-color;}
 .nav-dropdown-item-6:hover { @include icon-security-color }
 
 
-.icon-graduate { @include nav-graduate-color}
-.nav-dropdown-item-7:hover { @include icon-graduate-color}
-
+.icon-graduate { @include nav-graduate-color }
+.nav-dropdown-item-7:hover { @include icon-graduate-color }
+ 
 
 .nav-dropdown-item-1:hover .icon-laptop, 
 .nav-dropdown-item-2:hover .icon-display, 
@@ -208,7 +208,6 @@
 /* Show triangle when hovering over the dropdown item */
 .nav-dropdown-item:hover .dropdown-triangle {
     display: block;
-    position: sticky;
 }
 
 @media (max-width: 992px) {

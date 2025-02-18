@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* Right Menu Styles */
 .right-menu {
-  position: absolute; /* Sidebar stays fixed relative to the viewport */
+  position: fixed; /* Sidebar stays fixed relative to the viewport */
   right: -333px;
   width: 333px;
   height: 100vh;
@@ -10,7 +10,7 @@
   transition: right 0.3s ease, width 0.3s ease;
   padding: 0;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  z-index: 0;
+  z-index: 1000000000;
   overflow-y: auto;
   top: 0;
 }

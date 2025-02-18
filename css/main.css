@@ -38,7 +38,6 @@ body {
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-  z-index: 999999999999999;
 }
 
 /* Logo and image styles */
@@ -372,7 +371,7 @@ body {
   }
 }
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   background-color: white;
@@ -588,7 +587,7 @@ html .slider, .slides, .slide {
 }
 /* Right Menu Styles */
 .right-menu {
-  position: absolute; /* Sidebar stays fixed relative to the viewport */
+  position: fixed; /* Sidebar stays fixed relative to the viewport */
   right: -333px;
   width: 333px;
   height: 100vh;
@@ -597,7 +596,7 @@ html .slider, .slides, .slide {
   transition: right 0.3s ease, width 0.3s ease;
   padding: 0;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  z-index: 0;
+  z-index: 1000000000;
   overflow-y: auto;
   top: 0;
 }
@@ -1148,10 +1147,10 @@ html .slider, .slides, .slide {
   text-decoration: none;
 }
 
+/* General styles for body */
 html, body {
+  overflow-x: hidden !important;
   max-width: 100%;
-  max-height: 100%;
-  scroll-behavior: none;
 }
 
 /* Partners Section */
@@ -1162,13 +1161,11 @@ html, body {
   padding-bottom: 50px;
   gap: 50px;
   position: relative;
-  overflow-x: hidden !important;
-  max-width: 100%;
 }
 
 /* Ensure the slick-list allows hover banner visibility */
 .slick-list {
-  overflow: hidden !important;
+  overflow: visible !important;
 }
 
 .partners img {
@@ -1178,8 +1175,6 @@ html, body {
   filter: grayscale(100%);
   padding: 0 20px;
   transition: filter 0.3s ease;
-  overflow-x: hidden !important;
-  max-width: 100%;
 }
 
 .partners img:hover {
@@ -1192,7 +1187,6 @@ html, body {
   display: inline-block;
   padding-top: 20px;
   margin-top: 20px;
-  overflow: hidden !important;
 }
 
 /* IThe hover banner */
@@ -1215,7 +1209,6 @@ html, body {
 #global-hover-banner h3 {
   letter-spacing: 0.4px;
   text-align: center;
-  overflow: visible !important;
   box-sizing: border-box;
   line-height: 1.1;
   font-weight: 400;
@@ -1843,18 +1836,22 @@ footer {
   .footer-menu {
     flex: 50%;
   }
-  .footer-logo img {
-    margin-right: 50px;
-  }
 }
 @media (min-width: 992px) {
   .footer-menu {
     flex: 20%;
   }
 }
-@media (min-width: 1023px) {
-  .footer-logo img {
-    margin-right: 500px;
+@media (min-width: 1224px) {
+  .footer-row {
+    flex-wrap: nowrap;
+  }
+  .footer-logo {
+    flex: 25%;
+  }
+  .footer-menu {
+    flex: 1;
+    margin-bottom: 0; /* Remove margin for better alignment */
   }
 }
 /* Footer Bottom */
@@ -1914,21 +1911,6 @@ footer {
   }
   .footer-bottom a:hover {
     text-decoration: underline;
-  }
-}
-@media (min-width: 1224px) {
-  .footer-row {
-    flex-wrap: nowrap;
-  }
-  .footer-logo {
-    flex: 25%;
-  }
-  .footer-menu {
-    flex: 1;
-    margin-bottom: 0;
-  }
-  .footer-logo img {
-    margin-right: 0px;
   }
 }
 /*Was not sure where to put contsent info, so i left it here */
@@ -2362,7 +2344,6 @@ footer {
 /* Show triangle when hovering over the dropdown item */
 .nav-dropdown-item:hover .dropdown-triangle {
   display: block;
-  position: sticky;
 }
 
 @media (max-width: 992px) {

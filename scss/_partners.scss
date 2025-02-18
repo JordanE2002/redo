@@ -1,10 +1,9 @@
-
+/* General styles for body */
 html, body {
- 
+    overflow-x: hidden !important;
     max-width: 100%;
-    max-height: 100%;
-    scroll-behavior: none;
-  }
+}
+
 /* Partners Section */
 .partners {
     display: flex;
@@ -13,13 +12,11 @@ html, body {
     padding-bottom: 50px;
     gap: 50px;
     position: relative; 
-    overflow-x: hidden !important;
-    max-width: 100%;
 }
 
 /* Ensure the slick-list allows hover banner visibility */
 .slick-list {
-    overflow: hidden !important;
+    overflow: visible !important;
 }
 
 .partners img {
@@ -29,8 +26,6 @@ html, body {
     filter: grayscale(100%);
     padding: 0 20px;
     transition: filter 0.3s ease;
-    overflow-x: hidden !important;
-    max-width: 100%;
 }
 
 .partners img:hover {
@@ -43,7 +38,6 @@ html, body {
     display: inline-block;
     padding-top: 20px;
     margin-top: 20px;
-    overflow: hidden !important;
 }
 
 
@@ -61,14 +55,13 @@ html, body {
     max-width: 280px;
     width: 280px; 
     margin: 0 auto 50px;
-    
 }
 
 /* Styling for hover banner text */
 #global-hover-banner h3 {
     letter-spacing: .4px;
     text-align: center;
-    overflow: visible !important;
+
     box-sizing: border-box;
     line-height: 1.1;
     font-weight: 400;

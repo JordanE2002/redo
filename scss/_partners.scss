@@ -1,8 +1,4 @@
-/* General styles for body */
-html, body {
-    overflow-x: hidden !important;
-    max-width: 100%;
-}
+
 
 /* Partners Section */
 .partners {
@@ -12,6 +8,7 @@ html, body {
     padding-bottom: 50px;
     gap: 50px;
     position: relative; 
+    overflow: hidden ;
 }
 
 /* Ensure the slick-list allows hover banner visibility */

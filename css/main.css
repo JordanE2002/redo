@@ -1214,6 +1214,7 @@ html, body {
 #global-hover-banner h3 {
   letter-spacing: 0.4px;
   text-align: center;
+  overflow: visible !important;
   box-sizing: border-box;
   line-height: 1.1;
   font-weight: 400;
@@ -1841,22 +1842,18 @@ footer {
   .footer-menu {
     flex: 50%;
   }
+  .footer-logo img {
+    margin-right: 50px;
+  }
 }
 @media (min-width: 992px) {
   .footer-menu {
     flex: 20%;
   }
 }
-@media (min-width: 1224px) {
-  .footer-row {
-    flex-wrap: nowrap;
-  }
-  .footer-logo {
-    flex: 25%;
-  }
-  .footer-menu {
-    flex: 1;
-    margin-bottom: 0; /* Remove margin for better alignment */
+@media (min-width: 1023px) {
+  .footer-logo img {
+    margin-right: 500px;
   }
 }
 /* Footer Bottom */
@@ -1916,6 +1913,21 @@ footer {
   }
   .footer-bottom a:hover {
     text-decoration: underline;
+  }
+}
+@media (min-width: 1224px) {
+  .footer-row {
+    flex-wrap: nowrap;
+  }
+  .footer-logo {
+    flex: 25%;
+  }
+  .footer-menu {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  .footer-logo img {
+    margin-right: 0px;
   }
 }
 /*Was not sure where to put contsent info, so i left it here */
@@ -2098,15 +2110,18 @@ footer {
 .nav-dropdown-menu-container {
   background-color: #333645;
   margin-bottom: 0;
+  z-index: 10000000000000000000000000000000000000000;
 }
 
 .nav-dropdown-row {
   display: flex;
   justify-content: space-between;
+  z-index: 10000000000000000000000000000000000000000;
 }
 
 .nav-main {
   width: 100%;
+  z-index: 10000000000000000000000000000000000000000;
 }
 
 /* Main dropdown Menu items*/
@@ -2119,23 +2134,26 @@ footer {
   width: 100%;
   font-size: 1.2rem;
   text-transform: uppercase;
+  z-index: 10000000000000000000000000000000000000000;
 }
 
 .nav-dropdown-item:hover {
   cursor: pointer;
   color: white;
+  z-index: 10000000000000000000000000000000000000000000000000000000000;
 }
 
 .nav-dropdown-item small {
   font-size: 10px;
   text-transform: uppercase;
   margin: 0;
+  z-index: 100000000000000000000000000000000000000000000000000000000000000000000000000000;
 }
 
 /* the 2nd menu container */
 .sub-menu-container {
   display: none;
-  z-index: 10;
+  z-index: 1000000000000000000000000000000000000000;
   position: absolute;
   padding: 0;
   min-width: 100%;
@@ -2305,7 +2323,7 @@ footer {
 
 .dropdown-triangle {
   position: relative;
-  z-index: 20;
+  z-index: 10000000000000000000000000000000000000000000000000000;
   width: 0;
   height: 0;
   border-style: solid;
@@ -2348,7 +2366,7 @@ footer {
 
 /* Show triangle when hovering over the dropdown item */
 .nav-dropdown-item:hover .dropdown-triangle {
-  display: block;
+  position: sticky;
 }
 
 @media (max-width: 992px) {

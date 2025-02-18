@@ -92,12 +92,12 @@
     display: inline;
 }
 
+
+/* Two right angle quotes (BB) */
 .bb-arrow::before {
-    content: "\00BB"; /* Two right angle quotes (BB) */
+    content: "\00BB"; 
     line-height: 1.42857143;
-    font-family: Poppins, sans-serif;
     letter-spacing: 0;
-    list-style: none;
     color: #fff;
     font-size: 0.875rem;
     margin-right: 10px;

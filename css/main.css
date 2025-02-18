@@ -675,12 +675,11 @@ html .slider, .slides, .slide {
   display: inline;
 }
 
+/* Two right angle quotes (BB) */
 .bb-arrow::before {
-  content: "»"; /* Two right angle quotes (BB) */
+  content: "»";
   line-height: 1.42857143;
-  font-family: Poppins, sans-serif;
   letter-spacing: 0;
-  list-style: none;
   color: #fff;
   font-size: 0.875rem;
   margin-right: 10px;
@@ -1161,7 +1160,7 @@ html, body {
   padding-top: 50px;
   padding-bottom: 50px;
   gap: 50px;
-  position: relative; /* Ensures child elements' absolute positioning is relative to this */
+  position: relative;
 }
 
 /* Ensure the slick-list allows hover banner visibility */
@@ -1190,59 +1189,45 @@ html, body {
   margin-top: 20px;
 }
 
-/* Hidden images inside case study */
-.hidden-image {
-  display: block;
-}
-
-/* Independent Hover Banner (NOT affected by slick slider overflow) */
+/* IThe hover banner */
 #global-hover-banner {
   position: absolute;
   line-height: 1.42857143;
-  font-family: Poppins, sans-serif;
   letter-spacing: 0.4px;
   text-align: center;
-  -webkit-tap-highlight-color: transparent;
-  user-select: auto;
   box-sizing: border-box;
   background-color: #333645;
   color: #fff;
   padding: 20px;
   font-size: 0.875rem;
   max-width: 280px;
-  width: 280px; /* Forces the width to remain consistent */
+  width: 280px;
   margin: 0 auto 50px;
 }
 
 /* Styling for hover banner text */
 #global-hover-banner h3 {
-  -webkit-text-size-adjust: 100%;
   letter-spacing: 0.4px;
   text-align: center;
-  -webkit-tap-highlight-color: transparent;
-  user-select: auto;
   box-sizing: border-box;
-  font-family: inherit;
   line-height: 1.1;
   font-weight: 400;
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
   position: relative;
   font-size: 1.125rem;
   color: #fff;
   margin: 0;
 }
 
-/* Hover Banner Arrow */
+/* Arrow for box*/
 #global-hover-banner::after {
   content: "";
   position: absolute;
-  bottom: -30px; /* Moves the arrow further below the banner */
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
-  border-top: 30px solid #333645; /* Matches banner color */
+  border-top: 30px solid #333645;
   width: 0;
   height: 0;
   display: block;
@@ -1250,12 +1235,8 @@ html, body {
 
 /* Styling for hover banner description */
 #hover-description {
-  -webkit-text-size-adjust: 100%;
-  font-family: Poppins, sans-serif;
   letter-spacing: 0.4px;
   text-align: center;
-  -webkit-tap-highlight-color: transparent;
-  user-select: auto;
   color: #fff;
   box-sizing: border-box;
   margin: 10px 10px;
@@ -1264,50 +1245,30 @@ html, body {
   margin-bottom: 0;
 }
 
-/* Ensure hover banner stays visible and aligned correctly */
-.pictures-section .case-study:hover ~ #global-hover-banner {
-  opacity: 1;
-}
-
-/* Ensure parent element of #global-hover-banner is relatively positioned */
-.pictures-section {
-  position: relative;
-}
-
-/* When only the title is visible, keep the box at the same width */
+/*Issues with the boxes keeping the same legnth if only with title, this shoud fix it */
 #hover-text {
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
-/* Increase space between Slick slider items */
+/* Increase space between images */
 .partners .slick-slide {
-  margin: 0 15px; /* Adjust the left and right margin for each slide */
+  margin: 0 15px;
 }
 
 /* Button Style */
 .hover-button {
-  -webkit-text-size-adjust: 100%;
-  font-family: Poppins, sans-serif;
   letter-spacing: 0.4px;
-  -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
-  background: transparent;
-  text-decoration: none;
-  margin-bottom: 0;
   font-weight: 400;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  background-image: none;
   border: 1px solid transparent;
-  user-select: none;
-  height: auto;
   line-height: 35px;
   padding: 5px 15px;
   text-transform: uppercase;
   border-radius: 3px;
-  white-space: normal;
   color: #fff;
   background-color: #2ecc71;
   border-color: #2ecc71;
@@ -1316,17 +1277,13 @@ html, body {
   display: flex;
 }
 
-/* Button Hover Effect */
 .hover-button:hover {
   background-color: #27b863;
   border-color: #27b863;
 }
 
-/* Icon style */
-/* Button Hover Effect */
-.hover-button:hover {
-  background-color: #27b863;
-  border-color: #27b863;
+.hover-button .icon-arrow-right {
+  margin-top: 8px;
 }
 
 /* News styles */

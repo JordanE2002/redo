@@ -181,34 +181,34 @@ document.addEventListener('keydown', function (event) {
     }
 
 });
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () { 
     const hoverBanner = document.getElementById('global-hover-banner');
     const hoverText = document.getElementById('hover-text');
     const hoverDescription = document.getElementById('hover-description');
 
     function showHover(caseStudy) {
+        // Set the hover text and description
         hoverText.textContent = caseStudy.getAttribute('data-hover') || '';
         hoverDescription.textContent = caseStudy.getAttribute('data-description') || '';
 
-        // Check for the data-button attribute and create a button if it's present
-        const buttonText = caseStudy.getAttribute('data-button');  // Get the button text from the data-button attribute
+        // Get the button text and create the button if it's present
+        const buttonText = caseStudy.getAttribute('data-button');
         let button;
 
-        // Create the button only if 'data-button' is present
         if (buttonText) {
+            // Create the button with the text
             button = document.createElement('button');
-            button.textContent = buttonText;  // Use the text from the data-button attribute
+            button.textContent = buttonText;
             button.classList.add('hover-button');
-            button.onclick = function () {
-                alert(`More info about ${hoverText.textContent}`);
-            };
+
+            // Add the right arrow icon to the button
+            const icon = document.createElement('span');
+            icon.classList.add('icon-arrow-right');
+            button.appendChild(icon);
         }
 
-        // Clear previous content in the hover banner
-        hoverBanner.innerHTML = ''; 
-
-        // Add the hover text and description
+        // Clear previous content in the hover banner and append new content
+        hoverBanner.innerHTML = '';
         hoverBanner.appendChild(hoverText);
         hoverBanner.appendChild(hoverDescription);
 
@@ -230,7 +230,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function applyHoverEffect(caseStudy) {
         caseStudy.addEventListener('mouseenter', () => showHover(caseStudy));
-        caseStudy.addEventListener('mouseleave', hideHover);
+        caseStudy.addEventListener('mouseleave', () => {
+            // Delay the hiding of the hover banner to ensure it stays visible while hovering over it
+            setTimeout(() => {
+                if (!hoverBanner.matches(':hover')) {
+                    hideHover();
+                }
+            }, 100);
+        });
+
+        // Ensure hoverBanner stays visible when hovering over it
+        hoverBanner.addEventListener('mouseenter', () => hoverBanner.style.opacity = '1');
+        hoverBanner.addEventListener('mouseleave', hideHover);
     }
 
     function applyHoverToAll() {
@@ -243,6 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // If you are using a carousel or similar feature, re-apply hover effect after changes
     $('.partners').on('init reInit afterChange', applyHoverToAll);
 });
+
 
 
 // Initialize Slick

@@ -179,7 +179,11 @@ document.addEventListener('keydown', function (event) {
         overlay.classList.remove('show'); // Hide overlay
         hamburger.setAttribute('aria-expanded', false);
     }
-});document.addEventListener('DOMContentLoaded', function () {
+
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
     const hoverBanner = document.getElementById('global-hover-banner');
     const hoverText = document.getElementById('hover-text');
     const hoverDescription = document.getElementById('hover-description');
@@ -204,14 +208,13 @@ document.addEventListener('keydown', function (event) {
     }
 
     function applyHoverToAll() {
-        document.querySelectorAll('.case-study, .slick-cloned').forEach(applyHoverEffect);
+        // Apply hover effect only to case-study elements
+        document.querySelectorAll('.case-study').forEach(applyHoverEffect);
     }
 
     applyHoverToAll();
     $('.partners').on('init reInit afterChange', applyHoverToAll);
 });
-
-
 
 // Initialize Slick
 $(document).ready(function () {

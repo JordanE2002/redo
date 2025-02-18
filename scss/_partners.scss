@@ -48,10 +48,8 @@ html, body {
 /* Independent Hover Banner (NOT affected by slick slider overflow) */
 #global-hover-banner {
     position: absolute;
-
-
     line-height: 1.42857143;
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     letter-spacing: .4px;
     text-align: center;
     -webkit-tap-highlight-color: transparent;
@@ -62,8 +60,8 @@ html, body {
     padding: 20px;
     font-size: .875rem;
     max-width: 280px;
+    width: 280px; /* Forces the width to remain consistent */
     margin: 0 auto 50px;
-    
 }
 
 /* Styling for hover banner text */
@@ -100,7 +98,6 @@ html, body {
     display: block;
 }
 
-
 /* Styling for hover banner description */
 #hover-description {
     -webkit-text-size-adjust: 100%;
@@ -117,14 +114,22 @@ html, body {
     margin-bottom: 0;
 }
 
-
-/* Show Hover Banner when hovering over any case study */
+/* Ensure hover banner stays visible and aligned correctly */
 .pictures-section .case-study:hover ~ #global-hover-banner {
     opacity: 1;
-
 }
 
 /* Ensure parent element of #global-hover-banner is relatively positioned */
 .pictures-section {
     position: relative;
+}
+
+/* When only the title is visible, keep the box at the same width */
+#hover-text {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+/* Increase space between Slick slider items */
+.partners .slick-slide {
+    margin: 0 15px; /* Adjust the left and right margin for each slide */
 }

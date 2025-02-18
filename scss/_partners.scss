@@ -133,3 +133,53 @@ html, body {
 .partners .slick-slide {
     margin: 0 15px; /* Adjust the left and right margin for each slide */
 }
+
+
+/* Button Style */
+.hover-button {
+    -webkit-text-size-adjust: 100%;
+    font-family: Poppins,sans-serif;
+    letter-spacing: .4px;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    background: transparent;
+    text-decoration: none;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    user-select: none;
+    height: auto;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    white-space: normal;
+    color: #fff;
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+    margin-top: 11px;
+    font-size: 16px;
+    display: flex;
+}
+
+/* Button Hover Effect */
+.hover-button:hover {
+    background-color: #27b863;
+    border-color: #27b863;
+
+}
+
+/* Icon style */
+.hover-button .icon-a {
+
+}
+
+/* Button Hover Effect */
+.hover-button:hover {
+    background-color: #27b863;
+    border-color: #27b863;
+}

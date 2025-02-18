@@ -182,7 +182,6 @@ document.addEventListener('keydown', function (event) {
 
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const hoverBanner = document.getElementById('global-hover-banner');
     const hoverText = document.getElementById('hover-text');
@@ -192,6 +191,33 @@ document.addEventListener('DOMContentLoaded', function () {
         hoverText.textContent = caseStudy.getAttribute('data-hover') || '';
         hoverDescription.textContent = caseStudy.getAttribute('data-description') || '';
 
+        // Check for the data-button attribute and create a button if it's present
+        const buttonText = caseStudy.getAttribute('data-button');  // Get the button text from the data-button attribute
+        let button;
+
+        // Create the button only if 'data-button' is present
+        if (buttonText) {
+            button = document.createElement('button');
+            button.textContent = buttonText;  // Use the text from the data-button attribute
+            button.classList.add('hover-button');
+            button.onclick = function () {
+                alert(`More info about ${hoverText.textContent}`);
+            };
+        }
+
+        // Clear previous content in the hover banner
+        hoverBanner.innerHTML = ''; 
+
+        // Add the hover text and description
+        hoverBanner.appendChild(hoverText);
+        hoverBanner.appendChild(hoverDescription);
+
+        // Append the button if it was created
+        if (button) {
+            hoverBanner.appendChild(button);
+        }
+
+        // Position the hover banner near the case study
         const rect = caseStudy.getBoundingClientRect();
         hoverBanner.style.opacity = '1';
         hoverBanner.style.left = `${rect.left + window.scrollX + rect.width / 2 - hoverBanner.offsetWidth / 2}px`;
@@ -213,8 +239,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     applyHoverToAll();
+
+    // If you are using a carousel or similar feature, re-apply hover effect after changes
     $('.partners').on('init reInit afterChange', applyHoverToAll);
 });
+
 
 // Initialize Slick
 $(document).ready(function () {

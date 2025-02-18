@@ -38,6 +38,7 @@ body {
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
+  z-index: 999999999999999;
 }
 
 /* Logo and image styles */
@@ -371,7 +372,7 @@ body {
   }
 }
 .sticky {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: white;
@@ -587,7 +588,7 @@ html .slider, .slides, .slide {
 }
 /* Right Menu Styles */
 .right-menu {
-  position: fixed; /* Sidebar stays fixed relative to the viewport */
+  position: absolute; /* Sidebar stays fixed relative to the viewport */
   right: -333px;
   width: 333px;
   height: 100vh;
@@ -596,7 +597,7 @@ html .slider, .slides, .slide {
   transition: right 0.3s ease, width 0.3s ease;
   padding: 0;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  z-index: 1000000000;
+  z-index: 0;
   overflow-y: auto;
   top: 0;
 }

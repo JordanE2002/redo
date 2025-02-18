@@ -5,6 +5,7 @@
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
+    z-index: 999999999999999;
 }
 
 /* Logo and image styles */
@@ -378,7 +379,7 @@ border-radius: 0 3px 3px 0;
 
 
 .sticky {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
 background-color: white;

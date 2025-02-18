@@ -1147,10 +1147,10 @@ html .slider, .slides, .slide {
   text-decoration: none;
 }
 
-/* General styles for body */
 html, body {
-  overflow-x: hidden !important;
   max-width: 100%;
+  max-height: 100%;
+  scroll-behavior: none;
 }
 
 /* Partners Section */
@@ -1161,11 +1161,13 @@ html, body {
   padding-bottom: 50px;
   gap: 50px;
   position: relative;
+  overflow-x: hidden !important;
+  max-width: 100%;
 }
 
 /* Ensure the slick-list allows hover banner visibility */
 .slick-list {
-  overflow: visible !important;
+  overflow: hidden !important;
 }
 
 .partners img {
@@ -1175,6 +1177,8 @@ html, body {
   filter: grayscale(100%);
   padding: 0 20px;
   transition: filter 0.3s ease;
+  overflow-x: hidden !important;
+  max-width: 100%;
 }
 
 .partners img:hover {
@@ -1187,6 +1191,7 @@ html, body {
   display: inline-block;
   padding-top: 20px;
   margin-top: 20px;
+  overflow: hidden !important;
 }
 
 /* IThe hover banner */

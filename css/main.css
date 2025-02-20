@@ -382,6 +382,30 @@ body {
   top: 0;
 }
 
+/* Sticky header when hamburger is inactive */
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 999999;
+}
+
+/* Fixed header when hamburger menu is active */
+.hamburger-active #header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 999999;
+}
+
+/* When header has both sticky and show-header classes */
+#header.sticky.show-header {
+  top: 0;
+}
+
 /* Slider Container */
 .slider {
   position: relative;

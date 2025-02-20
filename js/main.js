@@ -1,7 +1,3 @@
-
-
-
-
 // Banner Carousel
 $(document).ready(function(){
     $('.slides').slick({
@@ -15,10 +11,7 @@ $(document).ready(function(){
     });
 });
 
-
-
-
-
+// Cookie Consent
 document.addEventListener('DOMContentLoaded', () => {
     const cookiePopup = document.getElementById('cookie-popup');
     const acceptCookiesButton = document.getElementById('accept-cookies');
@@ -68,14 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
-
-
-
+// Header behavior with sticky/fixed
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('header'); // Targets the <header> tag
     const rightMenu = document.querySelector('.right-menu'); // The right menu element
+    const hamburger = document.getElementById('hamburger'); // The hamburger button
     let lastScrollTop = 0; // Track the last scroll position
     const threshold = 150; // Distance from the top to start sticky behavior
     let showTimeout; // Variable to store the timeout for showing the header
@@ -86,32 +76,38 @@ document.addEventListener('DOMContentLoaded', function () {
         // Check if right menu is open (you may want to adjust based on your logic for showing/hiding the menu)
         const isRightMenuOpen = rightMenu.classList.contains('open');
 
-        if (currentScroll > threshold && !isRightMenuOpen) {
-            if (currentScroll < lastScrollTop) {
-                // Scrolling up - Show header after a delay
-                if (showTimeout) {
-                    clearTimeout(showTimeout); // Clear any existing timeout if the user scrolls up again
-                }
+        if (hamburger.classList.contains('hamburger-active')) {
+            // When hamburger menu is active, make the header fixed
+            header.classList.add('fixed');
+            header.classList.remove('sticky');
+        } else {
+            if (currentScroll > threshold && !isRightMenuOpen) {
+                if (currentScroll < lastScrollTop) {
+                    // Scrolling up - Show header after a delay
+                    if (showTimeout) {
+                        clearTimeout(showTimeout); // Clear any existing timeout if the user scrolls up again
+                    }
 
-                // Set timeout to show header after a delay (1 seconds or any delay)
-                showTimeout = setTimeout(() => {
-                    header.classList.add('sticky', 'show-header');
-                }, 500); // Delay before showing the header (1 second)
+                    // Set timeout to show header after a delay (1 seconds or any delay)
+                    showTimeout = setTimeout(() => {
+                        header.classList.add('sticky', 'show-header');
+                    }, 500); // Delay before showing the header (1 second)
+                } else {
+                    // Scrolling down - Hide header immediately
+                    header.classList.remove('show-header');
+                    header.classList.remove('sticky');
+                    // Clear any existing show timeout to ensure it doesn't show if scrolling down
+                    if (showTimeout) {
+                        clearTimeout(showTimeout);
+                    }
+                }
             } else {
-                // Scrolling down - Hide header immediately
-                header.classList.remove('show-header');
-                header.classList.remove('sticky');
-                // Clear any existing show timeout to ensure it doesn't show if scrolling down
+                // Remove sticky and animation when within threshold (at the top of the page)
+                header.classList.remove('sticky', 'show-header');
+                // Clear any existing show timeout when back to the top
                 if (showTimeout) {
                     clearTimeout(showTimeout);
                 }
-            }
-        } else {
-            // Remove sticky and animation when within threshold (at the top of the page)
-            header.classList.remove('sticky', 'show-header');
-            // Clear any existing show timeout when back to the top
-            if (showTimeout) {
-                clearTimeout(showTimeout);
             }
         }
 
@@ -120,9 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-
-
+// Right Menu behavior
 document.addEventListener('scroll', function() {
     const rightMenu = document.querySelector('.right-menu');
     const scrollPosition = window.scrollY;  // Get current scroll position
@@ -179,8 +173,9 @@ document.addEventListener('keydown', function (event) {
         overlay.classList.remove('show'); // Hide overlay
         hamburger.setAttribute('aria-expanded', false);
     }
-
 });
+
+// Hover Banner behavior
 document.addEventListener('DOMContentLoaded', function () { 
     const hoverBanner = document.getElementById('global-hover-banner');
     const hoverText = document.getElementById('hover-text');
@@ -254,8 +249,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // If you are using a carousel or similar feature, re-apply hover effect after changes
     $('.partners').on('init reInit afterChange', applyHoverToAll);
 });
-
-
 
 // Initialize Slick
 $(document).ready(function () {

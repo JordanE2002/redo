@@ -1,3 +1,7 @@
+
+
+
+
 // Banner Carousel
 $(document).ready(function(){
     $('.slides').slick({
@@ -11,7 +15,10 @@ $(document).ready(function(){
     });
 });
 
-// Cookie Consent
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const cookiePopup = document.getElementById('cookie-popup');
     const acceptCookiesButton = document.getElementById('accept-cookies');
@@ -61,11 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Header behavior with sticky/fixed
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('header'); // Targets the <header> tag
     const rightMenu = document.querySelector('.right-menu'); // The right menu element
-    const hamburger = document.getElementById('hamburger'); // The hamburger button
     let lastScrollTop = 0; // Track the last scroll position
     const threshold = 150; // Distance from the top to start sticky behavior
     let showTimeout; // Variable to store the timeout for showing the header
@@ -76,38 +86,32 @@ document.addEventListener('DOMContentLoaded', function () {
         // Check if right menu is open (you may want to adjust based on your logic for showing/hiding the menu)
         const isRightMenuOpen = rightMenu.classList.contains('open');
 
-        if (hamburger.classList.contains('hamburger-active')) {
-            // When hamburger menu is active, make the header fixed
-            header.classList.add('fixed');
-            header.classList.remove('sticky');
-        } else {
-            if (currentScroll > threshold && !isRightMenuOpen) {
-                if (currentScroll < lastScrollTop) {
-                    // Scrolling up - Show header after a delay
-                    if (showTimeout) {
-                        clearTimeout(showTimeout); // Clear any existing timeout if the user scrolls up again
-                    }
-
-                    // Set timeout to show header after a delay (1 seconds or any delay)
-                    showTimeout = setTimeout(() => {
-                        header.classList.add('sticky', 'show-header');
-                    }, 500); // Delay before showing the header (1 second)
-                } else {
-                    // Scrolling down - Hide header immediately
-                    header.classList.remove('show-header');
-                    header.classList.remove('sticky');
-                    // Clear any existing show timeout to ensure it doesn't show if scrolling down
-                    if (showTimeout) {
-                        clearTimeout(showTimeout);
-                    }
+        if (currentScroll > threshold && !isRightMenuOpen) {
+            if (currentScroll < lastScrollTop) {
+                // Scrolling up - Show header after a delay
+                if (showTimeout) {
+                    clearTimeout(showTimeout); // Clear any existing timeout if the user scrolls up again
                 }
+
+                // Set timeout to show header after a delay (1 seconds or any delay)
+                showTimeout = setTimeout(() => {
+                    header.classList.add('sticky', 'show-header');
+                }, 500); // Delay before showing the header (1 second)
             } else {
-                // Remove sticky and animation when within threshold (at the top of the page)
-                header.classList.remove('sticky', 'show-header');
-                // Clear any existing show timeout when back to the top
+                // Scrolling down - Hide header immediately
+                header.classList.remove('show-header');
+                header.classList.remove('sticky');
+                // Clear any existing show timeout to ensure it doesn't show if scrolling down
                 if (showTimeout) {
                     clearTimeout(showTimeout);
                 }
+            }
+        } else {
+            // Remove sticky and animation when within threshold (at the top of the page)
+            header.classList.remove('sticky', 'show-header');
+            // Clear any existing show timeout when back to the top
+            if (showTimeout) {
+                clearTimeout(showTimeout);
             }
         }
 
@@ -116,7 +120,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Right Menu behavior
+
+
+
 document.addEventListener('scroll', function() {
     const rightMenu = document.querySelector('.right-menu');
     const scrollPosition = window.scrollY;  // Get current scroll position
@@ -174,81 +180,54 @@ document.addEventListener('keydown', function (event) {
         hamburger.setAttribute('aria-expanded', false);
     }
 });
-
-// Hover Banner behavior
-document.addEventListener('DOMContentLoaded', function () { 
+document.addEventListener('DOMContentLoaded', function () {
     const hoverBanner = document.getElementById('global-hover-banner');
     const hoverText = document.getElementById('hover-text');
     const hoverDescription = document.getElementById('hover-description');
 
-    function showHover(caseStudy) {
-        // Set the hover text and description
-        hoverText.textContent = caseStudy.getAttribute('data-hover') || '';
-        hoverDescription.textContent = caseStudy.getAttribute('data-description') || '';
-
-        // Get the button text and create the button if it's present
-        const buttonText = caseStudy.getAttribute('data-button');
-        let button;
-
-        if (buttonText) {
-            // Create the button with the text
-            button = document.createElement('button');
-            button.textContent = buttonText;
-            button.classList.add('hover-button');
-
-            // Add the right arrow icon to the button
-            const icon = document.createElement('span');
-            icon.classList.add('icon-arrow-right');
-            button.appendChild(icon);
-        }
-
-        // Clear previous content in the hover banner and append new content
-        hoverBanner.innerHTML = '';
-        hoverBanner.appendChild(hoverText);
-        hoverBanner.appendChild(hoverDescription);
-
-        // Append the button if it was created
-        if (button) {
-            hoverBanner.appendChild(button);
-        }
-
-        // Position the hover banner near the case study
-        const rect = caseStudy.getBoundingClientRect();
-        hoverBanner.style.opacity = '1';
-        hoverBanner.style.left = `${rect.left + window.scrollX + rect.width / 2 - hoverBanner.offsetWidth / 2}px`;
-        hoverBanner.style.top = `${rect.top + window.scrollY - hoverBanner.offsetHeight - 20}px`;
-    }
-
-    function hideHover() {
-        hoverBanner.style.opacity = '0';
-    }
-
     function applyHoverEffect(caseStudy) {
-        caseStudy.addEventListener('mouseenter', () => showHover(caseStudy));
-        caseStudy.addEventListener('mouseleave', () => {
-            // Delay the hiding of the hover banner to ensure it stays visible while hovering over it
-            setTimeout(() => {
-                if (!hoverBanner.matches(':hover')) {
-                    hideHover();
-                }
-            }, 100);
+        caseStudy.addEventListener('mouseenter', function () {
+            const hoverContent = caseStudy.getAttribute('data-hover');
+            const description = caseStudy.getAttribute('data-description');
+
+            if (hoverContent) {
+                hoverText.textContent = hoverContent;
+            } else {
+                hoverText.textContent = ''; // Clear text if hoverContent is not available
+            }
+
+            if (description) {
+                hoverDescription.textContent = description;
+            } else {
+                hoverDescription.textContent = ''; // Clear description if not available
+            }
+
+            const caseStudyRect = caseStudy.getBoundingClientRect();
+            hoverBanner.style.opacity = '1';
+            hoverBanner.style.left = `${caseStudyRect.left + window.scrollX + (caseStudyRect.width / 2) - (hoverBanner.offsetWidth / 2)}px`;
+            hoverBanner.style.top = `${caseStudyRect.top + window.scrollY - hoverBanner.offsetHeight - 20}px`;
+            hoverBanner.style.transform = 'translateY(0)';
         });
 
-        // Ensure hoverBanner stays visible when hovering over it
-        hoverBanner.addEventListener('mouseenter', () => hoverBanner.style.opacity = '1');
-        hoverBanner.addEventListener('mouseleave', hideHover);
+        caseStudy.addEventListener('mouseleave', function () {
+            hoverBanner.style.opacity = '0';
+        });
     }
 
-    function applyHoverToAll() {
-        // Apply hover effect only to case-study elements
-        document.querySelectorAll('.case-study').forEach(applyHoverEffect);
+    // Apply hover effect to all case studies, including Slick duplicates
+    function applyHoverToAllSlides() {
+        const caseStudies = document.querySelectorAll('.case-study, .slick-cloned');
+        caseStudies.forEach(applyHoverEffect);
     }
 
-    applyHoverToAll();
+    applyHoverToAllSlides(); // Apply initially
 
-    // If you are using a carousel or similar feature, re-apply hover effect after changes
-    $('.partners').on('init reInit afterChange', applyHoverToAll);
+    // Reapply hover effect after Slick initializes
+    $('.partners').on('init reInit afterChange', function () {
+        applyHoverToAllSlides();
+    });
 });
+
 
 // Initialize Slick
 $(document).ready(function () {

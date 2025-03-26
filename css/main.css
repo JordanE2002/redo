@@ -170,7 +170,6 @@ body {
   color: #fff;
   padding: 7px 20px 3px;
   border: none;
-  border-radius: 0 3px 3px 0;
 }
 
 /* Large form hover*/
@@ -338,6 +337,11 @@ body {
 @media (min-width: 1023px) {
   .header-large-form-icon-container {
     border-radius: 3px;
+  }
+}
+@media (min-width: 1240px) {
+  .header-large-form-icon-container {
+    border-radius: 0 3px 3px 0 !important;
   }
 }
 /* For larger screens, hide the small search form */
@@ -2302,7 +2306,7 @@ footer {
   border-width: 40px 83px 0 83px;
   left: 0;
   top: 0px;
-  margin-top: 13px;
+  margin-top: 1px;
   display: none;
   align-self: center;
 }

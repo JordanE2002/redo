@@ -144,7 +144,7 @@ bottom: 20%;
     color: #fff;
     padding: 7px 20px 3px;
     border: none;
-    border-radius: 0 3px 3px 0;
+
 }
 
 /* Large form hover*/
@@ -338,6 +338,11 @@ border-radius: 0 3px 3px 0;
     border-radius: 3px;
         }
         }
+        @media (min-width: 1240px) {
+            .header-large-form-icon-container {
+                border-radius: 0 3px 3px 0 !important;
+            }
+            }
 
 
 /* For larger screens, hide the small search form */
